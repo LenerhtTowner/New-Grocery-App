@@ -1,14 +1,6 @@
 #Grocery app
 import math
-
-class Ingredient:
-    def __init__(self, amount:float, unit:str, name:str):
-        self.amount = amount
-        self.unit = unit
-        self.name = name
-
-    def __str__(self):
-        return "{0} {1} {2}".format(self.amount, self.unit, self.name)
+from Recipies import *
 
 class Grocery_Item:
     def __init__(self, amount:int, name:str):
@@ -18,48 +10,7 @@ class Grocery_Item:
     def __str__(self):
         return "{0} {1}".format(self.amount, self.name)
 
-class Recipe:
-    def __init__(self, name:str, ingredients:Ingredient):
-        self.name = name
-        self.ingredients = ingredients
-
-    def __repr__():
-        return "Recipe()"
-
-    def __str__(self):
-        return self.name
-
-recipes = {
-    "pancakes" : Recipe
-    (
-        "pancakes", 
-        [
-            Ingredient(1.5, "cup", "all-purpose flour"),
-            Ingredient(3.5, 'tbs', 'baking powder'),
-            Ingredient(.25, 'tsp', 'salt'),
-            Ingredient(1.25, 'cup', 'milk'),
-            Ingredient(3, 'tbs', 'butter'),
-            Ingredient(1, 'whole', 'egg')
-        ]
-    ),
-
-    "broccoli cheddar soup":Recipe
-    (
-        "broccoli cheddar soup",
-        [
-            Ingredient(1, 'whole', 'onion'),
-            Ingredient(3, 'clove', 'garlic'),
-            Ingredient(1, 'whole', 'potato'),
-            Ingredient(1, 'whole', 'broccoli'),
-            Ingredient(200, 'gram', 'spinach'),
-            Ingredient(1, 'liter', 'chicken stock'),
-            Ingredient(100, "ml", 'cream'),
-            Ingredient(400, 'gram', 'cheddar'),
-            Ingredient(2, 'tbs', 'olive oil')
-        ]
-    )
-}
-
+# purcaseable units of each item
 unit_items = {
     "all-purpose flour":2267.962, 
     "baking powder":230, 
@@ -77,27 +28,31 @@ unit_items = {
     'potato':1
 }
 
+# gram conversion for each relevant item
 gram_list = {
-    "all-purpose flour":{"cup":120, 'tbs':7.8, 'tsp':2.6, 'gram':1}, 
-    "baking powder":{"cup":220.8, 'tbs':13.8, 'tsp':4, 'gram':1}, 
-    "salt":{"cup":273, 'tbs':17.06, 'tsp':7, 'gram':1}, 
-    "butter":{"cup":227, 'tbs':14, 'tsp':4.7, 'gram':1}, 
-    'spinach':{"cup":30.0467060355, 'gram':1}, 
-    'cheddar':{"cup":120, 'gram':1}
+    "all-purpose flour":{"cup":120, 'tbs':7.8, 'tsp':2.6, 'gram':1},
+    "baking powder":{"cup":220.8, 'tbs':13.8, 'tsp':4, 'gram':1},
+    "salt":{"cup":273, 'tbs':17.06, 'tsp':7, 'gram':1},
+    "butter":{"cup":227, 'tbs':14, 'tsp':4.7, 'gram':1},
+    'spinach':{"cup":30.0467060355, 'tbs':1.87792, 'tsp':0.625973, 'gram':1},
+    'cheddar':{"cup":120, 'tbs':7.5, 'tsp':2.5, 'gram':1}
 }
 
+
+# lister conversion for each relevant item
 liter_list = {
-    "milk":{"cup":.236588, 'tbs':.0147868, 'tsp':.00492892, 'ml':.001, 'liter':1}, 
-    'chicken stock':{'cup':0.236588, 'tbs':0.0147868, 'tsp':0.00492892, 'ml':.001, 'liter':1}, 
-    'cream':{'cup':0.236588, 'tbs':0.0147868, 'tsp':0.00492892, 'ml':.001, 'liter':1}, 
-    'olive oil':{'cup':0.236588, 'tbs':0.0147868, 'tsp':0.00492892, 'ml':.001, 'liter':1}
+    "milk":         {"cup":0.236588, 'tbs':0.0147868, 'tsp':0.00492892, 'ml':0.001, 'liter':1},
+    'chicken stock':{'cup':0.236588, 'tbs':0.0147868, 'tsp':0.00492892, 'ml':0.001, 'liter':1},
+    'cream':        {'cup':0.236588, 'tbs':0.0147868, 'tsp':0.00492892, 'ml':0.001, 'liter':1},
+    'olive oil':    {'cup':0.236588, 'tbs':0.0147868, 'tsp':0.00492892, 'ml':0.001, 'liter':1}
 }
 
+# whole conversion for each relevant item
 whole_list = {
-    "egg": {"carton": 12, "whole": 1}, 
+    "egg": {"whole": 1, "carton": 12}, 
     'garlic':{'whole':1, "bulb":1, 'clove':1}, 
     "onion":{'whole': 1}, 
-    'broccoli':{"head": 1, 'whole':1}, 
+    'broccoli':{'whole':1, "head": 1}, 
     'potato':{'whole':1}
 }
 

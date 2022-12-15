@@ -1,0 +1,87 @@
+{
+    "pancakes": {
+        "name": "pancakes",
+        "ingredients": [
+            {
+                "name": "all-purpose flour",
+                "amount": 1.5,
+                "unit": "cup"
+            },
+            {
+                "name": "baking powder",
+                "amount": 3.5,
+                "unit": "tbs"
+            },
+            {
+                "name": "salt",
+                "amount": 0.25,
+                "unit": "tsp"
+            },
+            {
+                "name": "milk",
+                "amount": 1.25,
+                "unit": "cup"
+            },
+            {
+                "name": "butter",
+                "amount": 3,
+                "unit": "tbs"
+            },
+            {
+                "name": "egg",
+                "amount": 1,
+                "unit": "whole"
+            }
+        ]
+    },
+    "broccoli cheddar soup": {
+        "name": "broccoli cheddar soup",
+        "ingredients": [
+            {
+                "name": "onion",
+                "amount": 1,
+                "unit": "whole"
+            },
+            {
+                "name": "garlic",
+                "amount": 3,
+                "unit": "clove"
+            },
+            {
+                "name": "potato",
+                "amount": 1,
+                "unit": "whole"
+            },
+            {
+                "name": "broccoli",
+                "amount": 1,
+                "unit": "whole"
+            },
+            {
+                "name": "spinach",
+                "amount": 200,
+                "unit": "gram"
+            },
+            {
+                "name": "chicken stock",
+                "amount": 1,
+                "unit": "liter"
+            },
+            {
+                "name": "cream",
+                "amount": 100,
+                "unit": "ml"
+            },
+            {
+                "name": "cheddar",
+                "amount": 400,
+                "unit": "gram"
+            },
+            {
+                "name": "olive oil",
+                "amount": 2,
+                "unit": "tbs"
+            }
+        ]
+    }
+}
