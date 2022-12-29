@@ -1,0 +1,38 @@
+{
+    "all-purpose flour": {
+        "cup": 120,
+        "tbs": 7.8,
+        "tsp": 2.6,
+        "gram": 1
+    },
+    "baking powder": {
+        "cup": 220.8,
+        "tbs": 13.8,
+        "tsp": 4,
+        "gram": 1
+    },
+    "salt": {
+        "cup": 273,
+        "tbs": 17.06,
+        "tsp": 7,
+        "gram": 1
+    },
+    "butter": {
+        "cup": 227,
+        "tbs": 14,
+        "tsp": 4.7,
+        "gram": 1
+    },
+    "spinach": {
+        "cup": 30.0467060355,
+        "tbs": 1.87792,
+        "tsp": 0.625973,
+        "gram": 1
+    },
+    "cheddar": {
+        "cup": 120,
+        "tbs": 7.5,
+        "tsp": 2.5,
+        "gram": 1
+    }
+}

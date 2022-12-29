@@ -1,0 +1,97 @@
+{
+    "pancakes": {
+        "__name": "pancakes",
+        "__ingredients": [
+            {
+                "__name": "all-purpose flour",
+                "__amount": 1.5,
+                "__unit": "cup"
+            },
+            {
+                "__name": "baking powder",
+                "__amount": 3.5,
+                "__unit": "tbs"
+            },
+            {
+                "__name": "salt",
+                "__amount": 0.25,
+                "__unit": "tsp"
+            },
+            {
+                "__name": "milk",
+                "__amount": 1.25,
+                "__unit": "cup"
+            },
+            {
+                "__name": "butter",
+                "__amount": 3,
+                "__unit": "tbs"
+            },
+            {
+                "__name": "egg",
+                "__amount": 1,
+                "__unit": "whole"
+            }
+        ]
+    },
+    "broccoli cheddar soup": {
+        "__name": "broccoli cheddar soup",
+        "__ingredients": [
+            {
+                "__name": "onion",
+                "__amount": 1,
+                "__unit": "whole"
+            },
+            {
+                "__name": "garlic",
+                "__amount": 3,
+                "__unit": "clove"
+            },
+            {
+                "__name": "potato",
+                "__amount": 1,
+                "__unit": "whole"
+            },
+            {
+                "__name": "broccoli",
+                "__amount": 1,
+                "__unit": "whole"
+            },
+            {
+                "__name": "spinach",
+                "__amount": 200,
+                "__unit": "gram"
+            },
+            {
+                "__name": "chicken stock",
+                "__amount": 1,
+                "__unit": "liter"
+            },
+            {
+                "__name": "cream",
+                "__amount": 100,
+                "__unit": "ml"
+            },
+            {
+                "__name": "cheddar",
+                "__amount": 400,
+                "__unit": "gram"
+            },
+            {
+                "__name": "olive oil",
+                "__amount": 2,
+                "__unit": "tbs"
+            }
+        ]
+    },
+    "new Recipe": {
+        "__name": "new Recipe",
+        "__ingredients": [
+            {
+                "__name": "baking pop",
+                "__amount": 1.5,
+                "__unit": "ox"
+            }
+        ]
+    }
+}

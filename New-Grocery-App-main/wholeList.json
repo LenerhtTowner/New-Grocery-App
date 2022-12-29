@@ -1,0 +1,21 @@
+{
+    "egg": {
+        "whole": 1,
+        "carton": 12
+    },
+    "garlic": {
+        "whole": 1,
+        "bulb": 1,
+        "clove": 1
+    },
+    "onion": {
+        "whole": 1
+    },
+    "broccoli": {
+        "whole": 1,
+        "head": 1
+    },
+    "potato": {
+        "whole": 1
+    }
+}
