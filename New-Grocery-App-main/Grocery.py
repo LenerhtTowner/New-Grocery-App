@@ -10,11 +10,13 @@ with open("literlist.json", 'r') as literFile:
     # liter conversion for each relevant item
     liter_list = json.load(literFile)
 
-with open("unitItem.json", 'r') as wholeFile:
+with open("unitItem.json", 'r') as unitFile:
+    # unit conversion for each relevant item
+    unit_items = json.load(unitFile)
+
+with open("wholeList.json", 'r') as wholeFile:
     # whole conversion for each relevant item
     whole_list = json.load(wholeFile)
-
-with open("unit_item")
 
 class Grocery_Item:
     def __init__(self, amount:int, name:str):
