@@ -1,5 +1,6 @@
 #Grocery app
 import math
+
 from Recipies import *
 
 with open("gramList.json", 'r') as gramFile:
@@ -18,6 +19,7 @@ with open("wholeList.json", 'r') as wholeFile:
     # whole conversion for each relevant item
     whole_list = json.load(wholeFile)
 
+
 class Grocery_Item:
     def __init__(self, amount:int, name:str):
         self.__amount = amount
@@ -25,7 +27,6 @@ class Grocery_Item:
 
     def __str__(self):
         return "{0} {1}".format(self.__amount, self.__name)
-
 
 
 selected_recipes = []
