@@ -19,6 +19,26 @@
                 pos_hint: {'center_y':.5}
                 multiline: False
                 text: '1'
+                on_text: root.UpdateCount(root.ids.pancakes.text, self.text, root.ids.pancakes_checkBox.active)
+            
+        BoxLayout:
+            orientation:'horizontal'
+            Label:
+                id: broccoli_cheddar_soup_label
+                text: 'broccoli cheddar soup'
+
+            CheckBox:
+                id: broccoli_cheddar_soup_checkbox
+                on_active: root.GetRecipe(root.ids.broccoli_cheddar_soup_label.text, root.ids.broccoli_cheddar_soup_count.text, self.active)
+                
+            TextInput:
+                id: broccoli_cheddar_soup_count
+                size_hint: .2,.2
+                pos_hint: {'center_y':.5}
+                multiline: False
+                text: '1'
+                on_text: root.UpdateCount(root.ids.broccoli_cheddar_soup_label.text, self.text, root.ids.broccoli_cheddar_soup_checkbox.active)
+
 
         BoxLayout:
             size_hint: 1, .5
@@ -35,7 +55,7 @@
                     root.manager.current = 'NewRecipe'
             Button:
                 text: 'Quit'
-
+                on_press: exit()
 
 
 <NewRecipeScreen>:

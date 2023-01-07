@@ -1,3 +1,14 @@
+# TODO-Add functionality to allow app to add multiple recipes ingradients.(Priority 1)
+# TODO-Create Screen for Recipe entry(too include askin the user to find iten weights. It ocurs to me that the way to handle liquid measurments is to have a way to tack on the value section of a dictionary to the item, effectivy auto filling the liter measurments.)(Priority 2)
+    #SUB-TASKS TBD
+# TODO-Creat functionality to allow user to add recipes to a JSON file for local use.(Pri 2)
+    #SUB-TASKS TBD
+# TODO-Create functionality for dynamic widget generation.(Pri 3)
+###ROBERT'S NOTES TO ETHAN
+###
+###ETHAN'S NOTES TO ROBERT
+###
+
 from kivy.factory import Factory
 from kivy.app import App
 from kivy.uix.widget import Widget 
@@ -24,15 +35,19 @@ class RecipeScreen(Screen):
     ingredient_dict = {}
     shopping_list = []
 
+    def UpdateCount(self, recipeName:str, recipeCount:str, value:bool):
+        if value and recipeCount != '':
+            self.GetRecipe(recipeName, recipeCount, value)
 
     def GetRecipe(self, recipeName:str, recipeCount:str, value:bool):
         count = int(recipeCount)
         recipe = recipes[recipeName]
         
         if not value:
-            recipeCount = 0
+            count = 0
         
         self.Add_Recipe_To_Ingredient_List(recipe, count)
+
 
         for i in self.ingredient_dict[recipe.GetName()]:
             print(i.GetName())
