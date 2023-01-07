@@ -62,6 +62,7 @@ class RecipeScreen(Screen):
     with open("./GroceryFiles/wholeList.json", 'r') as wholeFile:
         # whole conversion for each relevant item
         whole_list = json.load(wholeFile)
+        
 
 
 #####            
