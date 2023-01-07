@@ -35,8 +35,11 @@ class RecipeScreen(Screen):
     ingredient_dict = {}
     shopping_list = []
 
-    def UpdateCount(self, recipeName:str, recipeCount:str, value:bool):
-        if value and recipeCount != '':
+    def UpdateCount(self, instance, recipeName:str, recipeCount:str, value:bool):
+        if recipeCount == '' or not recipeCount.isnumeric():
+            instance.text = None
+
+        if value:
             self.GetRecipe(recipeName, recipeCount, value)
 
     def GetRecipe(self, recipeName:str, recipeCount:str, value:bool):
