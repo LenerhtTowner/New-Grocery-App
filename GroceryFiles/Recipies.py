@@ -10,13 +10,31 @@ class Ingredient:
         self.__unit = unit
 
     def __str__(self):
-        return "{0} {1} {2}".format(self.__amount, self.__unit, self.__name)
+        return "{0} {1} {2}".format(round(self.__amount, 2), self.__unit, self.__name)
+    
+    def GetName(self):
+        return self.__name
+    
+    def GetAmount(self):
+        return self.__amount
+    
+    def Add(self, amount):
+        self.__amount += amount
+    
+    def GetUnit(self):
+        return self.__unit
 
 
 class Recipe:
     def __init__(self, name:str, ingredients:Ingredient):
         self.__name = name
         self.__ingredients = ingredients
+        
+    def GetName(self):
+        return self.__name
+    
+    def GetIngredients(self):
+        return self.__ingredients
 
     def ToDict(self):
         jsonData = {'name': self.__name, '__ingredients': []}
@@ -33,7 +51,7 @@ class Recipe:
 
 
 def EncodeRecipesToJson():
-    with open('recipes.json', 'w') as outfile:
+    with open('./venv/recipes.json', 'w') as outfile:
         recipeData = {}
 
         for key in recipes.keys():
@@ -45,7 +63,7 @@ def EncodeRecipesToJson():
 def LoadRecipesFromJson():
     newRecipeDict = {}
     recipeData = None
-    with open('recipes.json', 'r') as inFile:
+    with open('./GroceryFiles/recipes.json', 'r') as inFile:
         recipeData = json.load(inFile)
         
         if recipeData == None:

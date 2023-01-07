@@ -1,0 +1,47 @@
+<RecipeScreen>:
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            orientation:'horizontal'
+            Label:
+                id: pancakes
+                text: 'pancakes'
+
+            CheckBox:
+                id: pancakes_checkBox
+                on_active: root.GetRecipe(root.ids.pancakes.text, root.ids.pancakes_count.text, self.active)
+
+            TextInput:
+                id: pancakes_count
+                size_hint: .2,.2
+                pos_hint: {'center_y':.5}
+                multiline: False
+                text: '1'
+
+        BoxLayout:
+            size_hint: 1, .5
+            Label:
+                id: Recipe_List
+                text: "test"
+
+        BoxLayout:
+            orientation: 'vertical'
+
+            Button:
+                text: 'Goto "Make New Recipe" Screen'
+                on_press:
+                    root.manager.current = 'NewRecipe'
+            Button:
+                text: 'Quit'
+
+
+
+<NewRecipeScreen>:
+    BoxLayout:
+        Button:
+            text: 'My settings button'
+        Button:
+            text: 'Back to "Add Recipe" Screen'
+            on_press: root.manager.current = 'Recipe'
