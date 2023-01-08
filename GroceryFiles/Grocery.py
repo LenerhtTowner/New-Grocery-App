@@ -1,5 +1,5 @@
-# TODO-Add functionality to allow app to add multiple recipes ingradients.(Priority 1)
-# TODO-Create Screen for Recipe entry(too include askin the user to find iten weights. It ocurs to me that the way to handle liquid measurments is to have a way to tack on the value section of a dictionary to the item, effectivy auto filling the liter measurments.)(Priority 2)
+# COMPLETED - TODO-Add functionality to allow app to add multiple recipes ingradients.(Priority 1)
+# TODO-Create Screen for Recipe entry(too include asking the user to find iten weights. It occurs to me that the way to handle liquid measurments is to have a way to tack on the value section of a dictionary to the item, effectivy auto filling the liter measurments.)(Priority 2)
     #SUB-TASKS TBD
 # TODO-Creat functionality to allow user to add recipes to a JSON file for local use.(Pri 2)
     #SUB-TASKS TBD
@@ -50,11 +50,6 @@ class RecipeScreen(Screen):
             count = 0
         
         self.Add_Recipe_To_Ingredient_List(recipe, count)
-
-
-        for i in self.ingredient_dict[recipe.GetName()]:
-            print(i.GetName())
-
 
         shopping_list = self.unit_item_calc(self.ingredient_dict[recipe.GetName()])
         shoppingListText = ''
@@ -136,10 +131,10 @@ class RecipeScreen(Screen):
 
         return newList
 
-kv = Builder.load_file("grocerykivy.kv")
-
 class NewRecipeScreen(Screen):
     pass
+
+kv = Builder.load_file("grocerykivy.kv")
 
 class TestApp(App):
 
