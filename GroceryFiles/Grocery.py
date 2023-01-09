@@ -1,11 +1,12 @@
 # COMPLETED - TODO-Add functionality to allow app to add multiple recipes ingradients.(Priority 1)
 # TODO-Create Screen for Recipe entry(too include asking the user to find iten weights. It occurs to me that the way to handle liquid measurments is to have a way to tack on the value section of a dictionary to the item, effectivy auto filling the liter measurments.)(Priority 2)
-    #SUB-TASKS TBD
+    #Create funcionality for the user to dynamically add widgets for ingredients.
+    #Create def(s) for converting user recipes into local recipes
 # TODO-Creat functionality to allow user to add recipes to a JSON file for local use.(Pri 2)
     #SUB-TASKS TBD
 # TODO-Create functionality for dynamic widget generation.(Pri 3)
 ###ROBERT'S NOTES TO ETHAN
-###
+### Completed the first TODO on lines 77 - 86
 ###ETHAN'S NOTES TO ROBERT
 ###
 
@@ -17,10 +18,14 @@ from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen, ScreenManager
 from kivy.uix.dropdown import DropDown
 from kivy.garden.moretransitions import PixelTransition,RippleTransition,BlurTransition,RVBTransition
+from kivy.uix.gridlayout import GridLayout
 import math
 from math import sqrt
 
 from Recipies import *
+
+class IngredientInfo(GridLayout):
+    pass
 
 class Grocery_Item:
     def __init__(self, amount:int, name:str):
@@ -35,6 +40,24 @@ class RecipeScreen(Screen):
     ingredient_dict = {}
     shopping_list = []
 
+
+    with open("./GroceryFiles/gramList.json", 'r') as gramFile:
+        # gram conversion for each relevant item
+        gram_list = json.load(gramFile)
+
+    with open("./GroceryFiles/literlist.json", 'r') as literFile:
+        # liter conversion for each relevant item
+        liter_list = json.load(literFile)
+
+    with open("./GroceryFiles/unitItem.json", 'r') as unitFile:
+        # unit conversion for each relevant item
+        unit_items = json.load(unitFile)
+
+    with open("./GroceryFiles/wholeList.json", 'r') as wholeFile:
+        # whole conversion for each relevant item
+        whole_list = json.load(wholeFile) 
+        
+    
     def UpdateCount(self, instance, recipeName:str, recipeCount:str, value:bool):
         if recipeCount == '' or not recipeCount.isnumeric():
             instance.text = None
@@ -51,8 +74,11 @@ class RecipeScreen(Screen):
         
         self.Add_Recipe_To_Ingredient_List(recipe, count)
 
-        shopping_list = self.unit_item_calc(self.ingredient_dict[recipe.GetName()])
+        shopping_list = []
         shoppingListText = ''
+
+        for i in self.ingredient_dict.keys():
+            shopping_list += self.unit_item_calc(self.ingredient_dict[i])
         
         for i in shopping_list:
             shoppingListText += str(i) + "\n"
@@ -60,27 +86,6 @@ class RecipeScreen(Screen):
         self.ids.Recipe_List.text = shoppingListText
         
         
-    with open("./GroceryFiles/gramList.json", 'r') as gramFile:
-        # gram conversion for each relevant item
-        gram_list = json.load(gramFile)
-
-    with open("./GroceryFiles/literlist.json", 'r') as literFile:
-        # liter conversion for each relevant item
-        liter_list = json.load(literFile)
-
-    with open("./GroceryFiles/unitItem.json", 'r') as unitFile:
-        # unit conversion for each relevant item
-        unit_items = json.load(unitFile)
-
-    with open("./GroceryFiles/wholeList.json", 'r') as wholeFile:
-        # whole conversion for each relevant item
-        whole_list = json.load(wholeFile)
-        
-
-
-#####            
-        
-    
     def Add_Recipe_To_Ingredient_List(self, recipe, mult):
         self.ingredient_dict[recipe.GetName()] = []
         for ingredient in recipe.GetIngredients():

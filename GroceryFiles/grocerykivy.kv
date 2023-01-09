@@ -59,8 +59,50 @@
 
 <NewRecipeScreen>:
     BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: 'Add A New Recipe'
+
+        BoxLayout:
+            orientation: 'horizontal'
+
+            Label:
+                text: "Recipe Name"
+
+            TextInput:
+                multiline: False
+            
+        IngredientInfo:
+            
         Button:
-            text: 'My settings button'
-        Button:
-            text: 'Back to "Add Recipe" Screen'
+            text: 'Recipe Screen:'
             on_press: root.manager.current = 'Recipe'
+
+<IngredientInfo>
+    cols: 4
+    Label:
+        text: 'Ingr 1, Liquid or solid'
+    TextInput:
+        multiline: False
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            text: 'solid'
+        CheckBox:
+            group: 'sol-liq'
+    BoxLayout:
+        orientation: 'horizontal'
+        Label:
+            text: 'liquid'
+        CheckBox:
+            group: 'sol-liq'
+            
+    Label:
+        text: 'Weight in Cups, Tbs, tsp'
+    TextInput:
+        multiline: False
+    TextInput:
+        multiline: False
+    TextInput:
+        multiline: False
