@@ -5,24 +5,62 @@
 # TODO-Creat functionality to allow user to add recipes to a JSON file for local use.(Pri 2)
     #SUB-TASKS TBD
 # TODO-Create functionality for dynamic widget generation.(Pri 3)
-###ROBERT'S NOTES TO ETHAN
-### Completed the first TODO on lines 77 - 86
-###ETHAN'S NOTES TO ROBERT
-###
+'''
+ROBERT'S NOTES TO ETHAN
+    Completed the first TODO on lines 77 - 86.
+    I got all the recipe data into the database.
+    The recipes can not currently be retrieved by name.
+    Each recipe has an ID number (from 1 to 38156). To fetch a recipe use: fetch_recipe(recipe_id:int)
 
-from kivy.factory import Factory
+    example:
+
+        from Recipes import *
+
+        recipe = fetch_recipe(1).ToDict()
+
+        print(recipe['__name'])
+
+        for ingredient in recipe["__ingredients"]:
+            print(ingredient)
+
+    result:
+        Instant Pot Hamburger Soup
+        {'_Ingredient__name': 'ground beef', '_Ingredient__amount': '1.5', '_Ingredient__unit': 'pounds'}
+        {'_Ingredient__name': 'onion, finely chopped', '_Ingredient__amount': '1', '_Ingredient__unit': 'medium'}
+        {'_Ingredient__name': 'beef consomme', '_Ingredient__amount': '3', '_Ingredient__unit': '(14.5 ounce) cans'}
+        {'_Ingredient__name': 'diced tomatoes', '_Ingredient__amount': '1', '_Ingredient__unit': '(28 ounce) can'}
+        {'_Ingredient__name': 'water', '_Ingredient__amount': '2', '_Ingredient__unit': 'cups'}
+        {'_Ingredient__name': 'condensed tomato soup', '_Ingredient__amount': '1', '_Ingredient__unit': '(10.75 ounce) can '}
+        {'_Ingredient__name': 'carrots, finely chopped', '_Ingredient__amount': '4', '_Ingredient__unit': ''}
+        {'_Ingredient__name': 'celery, finely chopped', '_Ingredient__amount': '3', '_Ingredient__unit': 'stalks'}
+        {'_Ingredient__name': 'pearl barley', '_Ingredient__amount': '4', '_Ingredient__unit': 'tablespoons'}
+        {'_Ingredient__name': 'dried thyme', '_Ingredient__amount': '0.5', '_Ingredient__unit': 'teaspoon'}
+        {'_Ingredient__name': 'bay leaf', '_Ingredient__amount': '1', '_Ingredient__unit': ''}
+
+ETHAN'S NOTES TO ROBERT
+
+'''
+
 from kivy.app import App
+from kivy.factory import Factory
 from kivy.uix.widget import Widget 
-from kivy.properties import ObjectProperty 
-from kivy.lang import Builder
 from kivy.uix.screenmanager import Screen, ScreenManager
 from kivy.uix.dropdown import DropDown
-from kivy.garden.moretransitions import PixelTransition,RippleTransition,BlurTransition,RVBTransition
 from kivy.uix.gridlayout import GridLayout
-import math
-from math import sqrt
-
+from kivy.uix.carousel import Carousel
+from kivy.properties import ObjectProperty 
+from kivy.lang import Builder
+from kivy.garden.moretransitions import PixelTransition,RippleTransition,BlurTransition,RVBTransition
+from kivy.core.window import Window
+from math import ceil
 from Recipies import *
+
+
+Window.size = (600, 1200)
+
+
+class RecipeCarousel(Carousel):
+    pass
 
 class IngredientInfo(GridLayout):
     pass
@@ -65,9 +103,9 @@ class RecipeScreen(Screen):
         if value:
             self.GetRecipe(recipeName, recipeCount, value)
 
-    def GetRecipe(self, recipeName:str, recipeCount:str, value:bool):
+    def GetRecipe(self, recipeID:int, recipeCount:str, value:bool):
         count = int(recipeCount)
-        recipe = recipes[recipeName]
+        recipe = fetch_recipe(recipeID)
         
         if not value:
             count = 0
@@ -132,7 +170,7 @@ class RecipeScreen(Screen):
             if ingr == None:
                 continue
             if ingr.GetName() in self.unit_items:
-                newList.append(Grocery_Item(math.ceil(ingr.GetAmount() / self.unit_items[ingr.GetName()]), ingr.GetName()))
+                newList.append(Grocery_Item(ceil(ingr.GetAmount() / self.unit_items[ingr.GetName()]), ingr.GetName()))
 
         return newList
 
