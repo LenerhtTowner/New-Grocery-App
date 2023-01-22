@@ -104,7 +104,7 @@ class RecipeScreen(Screen):
 
     def GetRecipe(self, recipeID:int, recipeCount:str, value:bool):
         count = int(recipeCount)
-        recipe = fetch_recipe(recipeID)
+        recipe = fetch_recipe_ID(recipeID)
         
         if not value:
             count = 0

@@ -137,7 +137,7 @@ def push_recipe(recipe):
     conn.commit()
     conn.close()
 
-def fetch_recipe(recipe_id:int):
+def fetch_recipe_ID(recipe_id:int):
     conn = sqlite3.connect('recipes.db')
     cursor = conn.cursor()
 
@@ -150,11 +150,11 @@ def fetch_recipe(recipe_id:int):
     FROM recipes
     JOIN recipe_ingredient ON recipes.id = recipe_ingredient.recipe_id
     JOIN ingredients ON recipe_ingredient.ingredient_id = ingredients.id
-    WHERE recipes.id = 1
+    WHERE recipes.id = ?
     """
 
     # Execute the query
-    cursor.execute(query)
+    cursor.execute(query, (recipe_id,))
 
     # Fetch the results
     results = cursor.fetchall()
@@ -171,17 +171,68 @@ def fetch_recipe(recipe_id:int):
 
     return recipe
 
+def fetch_recipe_name(name:str):
+    conn = sqlite3.connect('recipes.db')
+    cursor = conn.cursor()
+
+    query = "SELECT id FROM recipes WHERE name = ?"
+    cursor.execute(query, (name,))
+    recipe_id = cursor.fetchone()[0]
+
+    query =  """
+    SELECT recipe_ingredient.amount, recipe_ingredient.unit, ingredients.name
+    FROM recipes
+    JOIN recipe_ingredient ON recipes.id = recipe_ingredient.recipe_id
+    JOIN ingredients ON recipe_ingredient.ingredient_id = ingredients.id
+    WHERE recipes.id = ?
+    """
+
+    # Execute the query
+    cursor.execute(query, (recipe_id,))
+
+    # Fetch the results
+    results = cursor.fetchall()
+
+    ingredients = []
+
+    for i in results:
+        ingredient = Ingredient(i[0], i[1], i[2])
+        ingredients.append(ingredient)
+
+    recipe = Recipe(name, ingredients)
+
+    conn.close()
+
+    return recipe
+
+def search_recipe(name:str):
+    conn = sqlite3.connect('recipes.db')
+    cursor = conn.cursor()
+
+    recipe_data = cursor.execute(f"SELECT * FROM recipes WHERE name = '{name}'")
+    result = cursor.fetchall()
+
+    for i in result:
+        print(i)
+
+    conn.close()
+
+    return result
+
 recipeCount = -1
 
-conn = sqlite3.connect('recipes.db')
-cursor = conn.cursor()
-cursor.execute("SELECT COUNT(*) FROM recipes")
-recipeCount = cursor.fetchone()[0]
-
-tempRecipe = fetch_recipe(1).ToDict()
+# Get Recipe by ID
+tempRecipe = fetch_recipe_ID(60).ToDict()
 print(tempRecipe['__name'])
 
 for ing in tempRecipe["__ingredients"]:
     print(ing)
 
-conn.close()
+print()
+
+# Get Recipe by NAME
+tempRecipe = fetch_recipe_name("Mississippi Chicken").ToDict()
+print(tempRecipe['__name'])
+
+for ing in tempRecipe["__ingredients"]:
+    print(ing)
