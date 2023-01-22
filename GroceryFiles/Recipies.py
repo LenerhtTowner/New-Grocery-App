@@ -1,7 +1,6 @@
 import sqlite3
 import json
 from json import JSONEncoder
-import pickle
 
 
 class Ingredient:
@@ -205,19 +204,22 @@ def fetch_recipe_name(name:str):
 
     return recipe
 
-def search_recipe(name:str):
+def fuzzy_recipe_search(name:str):
     conn = sqlite3.connect('recipes.db')
     cursor = conn.cursor()
 
-    recipe_data = cursor.execute(f"SELECT * FROM recipes WHERE name = '{name}'")
-    result = cursor.fetchall()
+    query = f"SELECT id, name FROM recipes WHERE name LIKE '%{name}%'"
+    cursor.execute(query)
+    matches = cursor.fetchall()
 
-    for i in result:
-        print(i)
+    recipeDict = {}
+
+    for match in matches:
+        recipeDict[match[1]] = match[0]
 
     conn.close()
 
-    return result
+    return recipeDict
 
 recipeCount = -1
 
@@ -231,8 +233,12 @@ for ing in tempRecipe["__ingredients"]:
 print()
 
 # Get Recipe by NAME
-tempRecipe = fetch_recipe_name("Mississippi Chicken").ToDict()
+tempRecipe = fetch_recipe_name("Chicken Biryani").ToDict()
 print(tempRecipe['__name'])
 
 for ing in tempRecipe["__ingredients"]:
     print(ing)
+
+recipe_matches = fuzzy_recipe_search("chicken")
+print(len(recipe_matches))
+print()
