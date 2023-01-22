@@ -41,7 +41,7 @@ ETHAN'S NOTES TO ROBERT
 
 '''
 
-from kivy.app import App
+from kivymd.app import MDApp
 from kivy.factory import Factory
 from kivy.uix.widget import Widget 
 from kivy.uix.screenmanager import Screen, ScreenManager
@@ -55,8 +55,11 @@ from kivy.core.window import Window
 from math import ceil
 from Recipies import *
 
+from kivymd.uix.list import MDList
+from kivymd.uix.list import OneLineListItem
 
-Window.size = (600, 1200)
+
+Window.size = (600, 900)
 
 
 class RecipeCarousel(Carousel):
@@ -180,18 +183,19 @@ class NewRecipeScreen(Screen):
 class SearchRecipeScreen(Screen):
     def search_Rsql(self, searchStr):
         recipe_matches = fuzzy_recipe_search(searchStr)
+        list = self.ids.recipe_list
 
         label_count = 0
         for match in recipe_matches:
-            newLabel = Label(text=match)
-            self.ids.inner_grid.add_widget(newLabel)
+            listItem = OneLineListItem(text=match)
+            list.add_widget(listItem)
             
             label_count += 1
             if label_count >= 100: break
 
 kv = Builder.load_file("grocerykivy.kv")
 
-class TestApp(App):
+class TestApp(MDApp):
 
     def build(self):
         # Create the screen manager

@@ -1,4 +1,10 @@
 <RecipeScreen>:
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
 
     BoxLayout:
         orientation: 'vertical'
@@ -58,6 +64,13 @@
                 on_press: exit()
 
 <NewRecipeScreen>:
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
     BoxLayout:
         orientation: 'vertical'
 
@@ -84,6 +97,13 @@
             on_press: root.manager.current = 'SearchRecipe'
 
 <IngredientInfo>
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
     cols: 4
     Label:
         text: 'Ingr 1, Liquid or solid'
@@ -125,6 +145,7 @@
             TextInput:
                 id: URS
                 multiline: False
+                on_text_validate: root.search_Rsql(self.text)
             Button:
                 text: "Q"
                 size_hint: .05, 1
@@ -134,11 +155,6 @@
         BoxLayout:
             orientation: "vertical"
 
-            ScrollView:
-                size_hint: (1, None)
-                size: (1, 400)
-                GridLayout:
-                    id: inner_grid
-                    size_hint_y: None
-                    height: self.minimum_height
-                    cols: 1
+            MDScrollView:
+                MDList:
+                    id: recipe_list
