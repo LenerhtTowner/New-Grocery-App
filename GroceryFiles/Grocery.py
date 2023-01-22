@@ -7,37 +7,17 @@
 # TODO-Create functionality for dynamic widget generation.(Pri 3)
 '''
 ROBERT'S NOTES TO ETHAN
-    Completed the first TODO on lines 77 - 86.
-    I got all the recipe data into the database.
-    The recipes can not currently be retrieved by name.
-    Each recipe has an ID number (from 1 to 38156). To fetch a recipe use: fetch_recipe(recipe_id:int)
-
-    example:
-
-        from Recipes import *
-
-        recipe = fetch_recipe(1).ToDict()
-
-        print(recipe['__name'])
-
-        for ingredient in recipe["__ingredients"]:
-            print(ingredient)
-
-    result:
-        Instant Pot Hamburger Soup
-        {'_Ingredient__name': 'ground beef', '_Ingredient__amount': '1.5', '_Ingredient__unit': 'pounds'}
-        {'_Ingredient__name': 'onion, finely chopped', '_Ingredient__amount': '1', '_Ingredient__unit': 'medium'}
-        {'_Ingredient__name': 'beef consomme', '_Ingredient__amount': '3', '_Ingredient__unit': '(14.5 ounce) cans'}
-        {'_Ingredient__name': 'diced tomatoes', '_Ingredient__amount': '1', '_Ingredient__unit': '(28 ounce) can'}
-        {'_Ingredient__name': 'water', '_Ingredient__amount': '2', '_Ingredient__unit': 'cups'}
-        {'_Ingredient__name': 'condensed tomato soup', '_Ingredient__amount': '1', '_Ingredient__unit': '(10.75 ounce) can '}
-        {'_Ingredient__name': 'carrots, finely chopped', '_Ingredient__amount': '4', '_Ingredient__unit': ''}
-        {'_Ingredient__name': 'celery, finely chopped', '_Ingredient__amount': '3', '_Ingredient__unit': 'stalks'}
-        {'_Ingredient__name': 'pearl barley', '_Ingredient__amount': '4', '_Ingredient__unit': 'tablespoons'}
-        {'_Ingredient__name': 'dried thyme', '_Ingredient__amount': '0.5', '_Ingredient__unit': 'teaspoon'}
-        {'_Ingredient__name': 'bay leaf', '_Ingredient__amount': '1', '_Ingredient__unit': ''}
 
 ETHAN'S NOTES TO ROBERT
+    Began construction on the popup window on lines 14 --> 23. It
+    wored at first, but after trying to impliment a dismiss button
+    the whole thing stopped working. you'll see that I had the
+    dismiss() at line 23 and that iteration(minus line 18) was the
+    most promising of all the methods I used to try and fix the 
+    issue. However the whole thing might need refactored to call
+    the pop up windows in a completly different manner. Maybe even
+    setting up a pop up window in the .kv file and calling it from
+    Python.
 
 '''
 
