@@ -1,4 +1,4 @@
-# COMPLETED - TODO-Add functionality to allow app to add multiple recipes ingradients.(Priority 1)
+# COMPLETED - TODO-Add functionality to allow app to add multiple recipes ingredients.(Priority 1)
 # TODO-Create Screen for Recipe entry(too include asking the user to find iten weights. It occurs to me that the way to handle liquid measurments is to have a way to tack on the value section of a dictionary to the item, effectivy auto filling the liter measurments.)(Priority 2)
     #Create funcionality for the user to dynamically add widgets for ingredients.
     #Create def(s) for converting user recipes into local recipes
@@ -83,7 +83,7 @@ class RecipeScreen(Screen):
         # gram conversion for each relevant item
         gram_list = json.load(gramFile)
 
-    with open("./GroceryFiles/literlist.json", 'r') as literFile:
+    with open("./GroceryFiles/literList.json", 'r') as literFile:
         # liter conversion for each relevant item
         liter_list = json.load(literFile)
 
