@@ -181,14 +181,23 @@ class NewRecipeScreen(Screen):
     pass
 
 class SearchRecipeScreen(Screen):
+    listItems = []
+
     def search_Rsql(self, searchStr):
         recipe_matches = fuzzy_recipe_search(searchStr)
         list = self.ids.recipe_list
 
+        for i in self.listItems:
+            list.remove_widget(i)
+        listItem = []
+
         label_count = 0
         for match in recipe_matches:
             listItem = OneLineListItem(text=match)
+            listItem.text_color = (1, 1, 1, 1)
+            listItem.background_color = (0, 0, 0, 1)
             list.add_widget(listItem)
+            self.listItems.append(listItem)
             
             label_count += 1
             if label_count >= 100: break
@@ -208,52 +217,3 @@ class TestApp(MDApp):
 
 if __name__ == '__main__':
     TestApp().run()
-    
-    
-        # def main():
-    #     # this section of code will repeat until the user is done selecting recipes
-    #     while True:
-    #         choice = Get_Recipe_Choice()
-
-    #         # we only get here if the user did not make a recipe selection int Get_Recipe_Choice()
-    #         # so we should be done getting recipes, break out of the loop
-    #         if choice == None:
-    #             break
-            
-    #         #extract the selected recipe from the dictionary
-    #         newRecipe = recipes[choice]
-
-    #         # TODO this is unreliable, should enforce integer input
-    #         multi = int(input("How many times will you make this meal? ")) 
-
-    #         # For each ingredient in the recipe we add it to the list if it's new
-    #         # otherwise we add it's ammount to whatever already exists
-    #         Add_Recipe_To_Ingredient_List(newRecipe, multi)
-            
-    #         confirm = input('Add another recipe? [y] or [n] ')
-    #         if confirm != 'y' and confirm != 'yes':
-    #             break
-
-    #     # convert all ingredients to grocery items
-    #     # their ammounts are expressed in grams, liters, or wholes
-    #     shopping_list = unit_item_calc(ingredient_list)
-
-    #     for item in shopping_list:
-    #         print(item)
-
-
-    # def Get_Recipe_Choice():
-    #     while True:
-    #         choice = input('Which recipes do you want to shop for: ')
-
-    #         if choice not in recipes.keys():
-    #             print("'" + choice + "' was not a valid selection.")
-    #             confirm = input('Add another? [y] or [n] ')
-
-    #             if confirm.lower() != "y" and confirm.lower() != "yes":
-    #                 choice = None
-    #                 break
-    #         else:
-    #             break
-
-    #     return choice

@@ -133,6 +133,7 @@
 
 
 <SearchRecipeScreen>
+            
     BoxLayout:
         orientation: 'vertical'
 
@@ -144,6 +145,7 @@
                 size_hint: .25, 1
             TextInput:
                 id: URS
+                text: 'Chicken'
                 multiline: False
                 on_text_validate: root.search_Rsql(self.text)
             Button:
@@ -156,5 +158,7 @@
             orientation: "vertical"
 
             MDScrollView:
+                bar_width: 10
                 MDList:
                     id: recipe_list
+                    background_color: 0, 0, 0, 1
