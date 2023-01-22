@@ -48,6 +48,7 @@ from kivy.uix.screenmanager import Screen, ScreenManager
 from kivy.uix.dropdown import DropDown
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.carousel import Carousel
+from kivy.uix.label import Label
 from kivy.properties import ObjectProperty 
 from kivy.lang import Builder
 from kivy.core.window import Window
@@ -176,6 +177,18 @@ class RecipeScreen(Screen):
 class NewRecipeScreen(Screen):
     pass
 
+class SearchRecipeScreen(Screen):
+    def search_Rsql(self, searchStr):
+        recipe_matches = fuzzy_recipe_search(searchStr)
+
+        label_count = 0
+        for match in recipe_matches:
+            newLabel = Label(text=match)
+            self.ids.inner_grid.add_widget(newLabel)
+            
+            label_count += 1
+            if label_count >= 100: break
+
 kv = Builder.load_file("grocerykivy.kv")
 
 class TestApp(App):
@@ -185,7 +198,8 @@ class TestApp(App):
         sm = ScreenManager()
         sm.add_widget(RecipeScreen(name='Recipe'))
         sm.add_widget(NewRecipeScreen(name='NewRecipe'))
-
+        sm.add_widget(SearchRecipeScreen(name='SearchRecipe'))
+        
         return sm
 
 if __name__ == '__main__':

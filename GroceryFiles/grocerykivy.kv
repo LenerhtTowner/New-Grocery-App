@@ -78,6 +78,10 @@
         Button:
             text: 'Recipe Screen:'
             on_press: root.manager.current = 'Recipe'
+            
+        Button:
+            text: 'Search Recipe Screen:'
+            on_press: root.manager.current = 'SearchRecipe'
 
 <IngredientInfo>
     cols: 4
@@ -106,3 +110,35 @@
         multiline: False
     TextInput:
         multiline: False
+
+
+<SearchRecipeScreen>
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: 1, .05
+            Label:
+                text: 'Search Recipe'
+                size_hint: .25, 1
+            TextInput:
+                id: URS
+                multiline: False
+            Button:
+                text: "Q"
+                size_hint: .05, 1
+                on_press: root.search_Rsql(root.ids.URS.text)
+            
+        
+        BoxLayout:
+            orientation: "vertical"
+
+            ScrollView:
+                size_hint: (1, None)
+                size: (1, 400)
+                GridLayout:
+                    id: inner_grid
+                    size_hint_y: None
+                    height: self.minimum_height
+                    cols: 1

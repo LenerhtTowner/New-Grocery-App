@@ -239,6 +239,6 @@ print(tempRecipe['__name'])
 for ing in tempRecipe["__ingredients"]:
     print(ing)
 
-recipe_matches = fuzzy_recipe_search("chicken")
+recipe_matches = fuzzy_recipe_search("indian")
 print(len(recipe_matches))
 print()
