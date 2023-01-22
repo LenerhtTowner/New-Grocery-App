@@ -1,0 +1,3 @@
+kivy
+garden
+sqlite3
