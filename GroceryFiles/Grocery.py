@@ -10,7 +10,7 @@ ROBERT'S NOTES TO ETHAN
 
 ETHAN'S NOTES TO ROBERT
     Began construction on the popup window on lines 14 --> 23. It
-    wored at first, but after trying to impliment a dismiss button
+    worked at first, but after trying to impliment a dismiss button
     the whole thing stopped working. you'll see that I had the
     dismiss() at line 23 and that iteration(minus line 18) was the
     most promising of all the methods I used to try and fix the 

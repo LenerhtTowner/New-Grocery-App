@@ -4,23 +4,45 @@ from kivymd.uix.list import OneLineListItem
 from kivy.uix.popup import Popup 
 from kivy.uix.label import Label
 from kivy.uix.button import Button
+from kivy.uix.boxlayout import BoxLayout
 
 class SearchRecipeScreen(Screen):
     listItems = []
+    popupPane = None
 
     def show_details(self, instance):
         # TODO create and display a popup to show the recipe
         
-        # Create the popup window(Button Doesn't work right. Cant get the dismiss function to work)
+        # Create a layout for the popup because popup can only contain one widget
+        layout = BoxLayout(orientation="vertical")
+
+        # Create the lable for the popup
+        label = Label(text = 'The code nessisary to populate the recipe')
+
+        # Create the Close Button and then bind it to the close details function
+        CloseButton = Button(text = "nvm")
+        CloseButton.bind(on_release = self.close_details)
+
+        # Add the label and button to the box layout
+        layout.add_widget(label)
+        layout.add_widget(CloseButton)
+
+        # Create the popup window passing in the above layout as the content
         popup = Popup(title = 'Recipe',
-                      content = Label(text = 'The code nessisary to populate the recipe'),
-                      size_hint = (None, None), size = (self.height, self.width),
-                      CloseButton = Button(text = "nvm"), CloseButton.bind(on_release = popup.dismiss))
+                      content = layout,
+                      size_hint = (None, None),
+                      size = (self.height, self.width),
+                      )
+
+        # Save a reference to the popup so that it can be easily closed later                      
+        self.popupPane = popup
 
         # Open the popup window
         popup.open()
-        
-        # CloseButton.bind(on_release = popup.dismiss)
+
+    # close the recipe details popup
+    def close_details(self, instance):
+        self.popupPane.dismiss()
 
     def search_Rsql(self, searchStr):
         recipe_matches = fuzzy_recipe_search(searchStr)
