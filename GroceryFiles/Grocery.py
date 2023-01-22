@@ -50,7 +50,6 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.carousel import Carousel
 from kivy.properties import ObjectProperty 
 from kivy.lang import Builder
-from kivy.garden.moretransitions import PixelTransition,RippleTransition,BlurTransition,RVBTransition
 from kivy.core.window import Window
 from math import ceil
 from Recipies import *
@@ -184,7 +183,6 @@ class TestApp(App):
     def build(self):
         # Create the screen manager
         sm = ScreenManager()
-        sm = ScreenManager(transition=RVBTransition())
         sm.add_widget(RecipeScreen(name='Recipe'))
         sm.add_widget(NewRecipeScreen(name='NewRecipe'))
 
