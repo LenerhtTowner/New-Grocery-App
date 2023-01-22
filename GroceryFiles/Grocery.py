@@ -42,166 +42,24 @@ ETHAN'S NOTES TO ROBERT
 '''
 
 from kivymd.app import MDApp
-from kivy.factory import Factory
-from kivy.uix.widget import Widget 
-from kivy.uix.screenmanager import Screen, ScreenManager
-from kivy.uix.dropdown import DropDown
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.carousel import Carousel
-from kivy.uix.label import Label
-from kivy.properties import ObjectProperty 
+from kivy.uix.screenmanager import ScreenManager
 from kivy.lang import Builder
 from kivy.core.window import Window
-from math import ceil
-from kivymd.uix.list import MDList
-from kivymd.uix.list import OneLineListItem
+
+#Imports functionality to allow user to search recipies from the recipes.db database.
+from RecipeSearchScreen import SearchRecipeScreen
+
+#StubClasses refers to classes that MUST exist to bulster the Kivy framework but have no actual functionality.
+from StubClasses import *
+
+#Imports the recipe screen from external file.
+from RecipeScreen import RecipeScreen
 
 #Imports functionality from the Recipies.py file
 from Recipies import *
 
 #Sets a standard window size(*MUST be altered to fit any window size before going into BETA trials)
 Window.size = (600, 900)
-
-
-class RecipeCarousel(Carousel):
-    pass
-
-class IngredientInfo(GridLayout):
-    pass
-
-class Grocery_Item:
-    def __init__(self, amount:int, name:str):
-        self.__amount = amount
-        self.__name = name
-
-    def __str__(self):
-        return "{0} {1}".format(self.__amount, self.__name)
-
-class RecipeScreen(Screen):
-    selected_recipes = []
-    ingredient_dict = {}
-    shopping_list = []
-
-
-    with open("./GroceryFiles/gramList.json", 'r') as gramFile:
-        # gram conversion for each relevant item
-        gram_list = json.load(gramFile)
-
-    with open("./GroceryFiles/literList.json", 'r') as literFile:
-        # liter conversion for each relevant item
-        liter_list = json.load(literFile)
-
-    with open("./GroceryFiles/unitItem.json", 'r') as unitFile:
-        # unit conversion for each relevant item
-        unit_items = json.load(unitFile)
-
-    with open("./GroceryFiles/wholeList.json", 'r') as wholeFile:
-        # whole conversion for each relevant item
-        whole_list = json.load(wholeFile) 
-        
-    
-    def UpdateCount(self, instance, recipeName:str, recipeCount:str, value:bool):
-        if recipeCount == '' or not recipeCount.isnumeric():
-            instance.text = None
-
-        if value:
-            self.GetRecipe(recipeName, recipeCount, value)
-
-    def GetRecipe(self, recipeID:int, recipeCount:str, value:bool):
-        count = int(recipeCount)
-        recipe = fetch_recipe_ID(recipeID)
-        
-        if not value:
-            count = 0
-        
-        self.Add_Recipe_To_Ingredient_List(recipe, count)
-
-        shopping_list = []
-        shoppingListText = ''
-
-        for i in self.ingredient_dict.keys():
-            shopping_list += self.unit_item_calc(self.ingredient_dict[i])
-        
-        for i in shopping_list:
-            shoppingListText += str(i) + "\n"
-            
-        self.ids.Recipe_List.text = shoppingListText
-        
-        
-    def Add_Recipe_To_Ingredient_List(self, recipe, mult):
-        self.ingredient_dict[recipe.GetName()] = []
-        for ingredient in recipe.GetIngredients():
-            nextIngr = self.convert_to_g_L(ingredient, mult)
-
-            # check to see if this ingredient is already in the list
-            for ingr in self.ingredient_dict[recipe.GetName()]:
-                if ingr.GetName() == nextIngr.GetName():
-                    # the ingredient already exists so add it to the existing item
-                    ingr.Add(nextIngr.GetAmount())
-                    nextIngr = None
-                    break
-
-            # if the item was found previously it will be null now
-            # otherwise add it to the list
-            if nextIngr != None and nextIngr.GetAmount() > 0:
-                self.ingredient_dict[recipe.GetName()].append(nextIngr)
-
-
-    def convert_to_g_L(self, ingredient, multi = 1):
-        converted_ingredient = None
-        converted_measure = 0
-        converted_unit = ""
-
-        # calculate converted measure and new unit based on the type of unit used
-        if ingredient.GetName() in self.gram_list:
-            converted_measure = ingredient.GetAmount() * multi * self.gram_list[ingredient.GetName()][ingredient.GetUnit()]
-            converted_unit = "grams"
-        elif ingredient.GetName() in self.liter_list:
-            converted_measure = ingredient.GetAmount() * multi * self.liter_list[ingredient.GetName()][ingredient.GetUnit()]
-            converted_unit = "liters"
-        else:
-            converted_measure = ingredient.GetAmount() * multi * self.whole_list[ingredient.GetName()][ingredient.GetUnit()]
-            converted_unit = ingredient.GetUnit()
-
-        # create a new ingredient item based on the new unit and measure
-        converted_ingredient = Ingredient(converted_measure, converted_unit, ingredient.GetName())
-        return (converted_ingredient)
-
-
-    def unit_item_calc(self, groceryList):
-        newList = []
-        for ingr in groceryList:
-            if ingr == None:
-                continue
-            if ingr.GetName() in self.unit_items:
-                newList.append(Grocery_Item(ceil(ingr.GetAmount() / self.unit_items[ingr.GetName()]), ingr.GetName()))
-
-        return newList
-
-class NewRecipeScreen(Screen):
-    pass
-
-class SearchRecipeScreen(Screen):
-    listItems = []
-
-    def search_Rsql(self, searchStr):
-        recipe_matches = fuzzy_recipe_search(searchStr)
-        list = self.ids.recipe_list
-
-        for i in self.listItems:
-            list.remove_widget(i)
-        listItem = []
-
-        label_count = 0
-        for match in recipe_matches:
-            listItem = OneLineListItem(text=match)
-            listItem.text_color = (1, 1, 1, 1)
-            listItem.background_color = (0, 0, 0, 1)
-            list.add_widget(listItem)
-            self.listItems.append(listItem)
-            
-            label_count += 1
-            if label_count >= 100: break
 
 kv = Builder.load_file("grocerykivy.kv")
 

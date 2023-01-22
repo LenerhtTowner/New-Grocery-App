@@ -49,6 +49,13 @@ class Recipe:
     def __str__(self):
         return self.__name
 
+class Grocery_Item:
+    def __init__(self, amount:int, name:str):
+        self.__amount = amount
+        self.__name = name
+
+    def __str__(self):
+        return "{0} {1}".format(self.__amount, self.__name)
 
 # def EncodeRecipesToJson():
 #     with open('./venv/recipes.json', 'w') as outfile:
