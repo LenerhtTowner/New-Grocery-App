@@ -53,12 +53,13 @@ from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 from kivy.core.window import Window
 from math import ceil
-from Recipies import *
-
 from kivymd.uix.list import MDList
 from kivymd.uix.list import OneLineListItem
 
+#Imports functionality from the Recipies.py file
+from Recipies import *
 
+#Sets a standard window size(*MUST be altered to fit any window size before going into BETA trials)
 Window.size = (600, 900)
 
 
