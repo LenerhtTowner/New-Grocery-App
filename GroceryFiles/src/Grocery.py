@@ -8,17 +8,14 @@
 '''
 ROBERT'S NOTES TO ETHAN
 
-ETHAN'S NOTES TO ROBERT
-    Began construction on the popup window on lines 14 --> 23. It
-    worked at first, but after trying to impliment a dismiss button
-    the whole thing stopped working. you'll see that I had the
-    dismiss() at line 23 and that iteration(minus line 18) was the
-    most promising of all the methods I used to try and fix the 
-    issue. However the whole thing might need refactored to call
-    the pop up windows in a completly different manner. Maybe even
-    setting up a pop up window in the .kv file and calling it from
-    Python.
+I Refactored Recipes.py and changed the name to RecipeDB.py. All database related functions now exist within a RecipeDB class.
+See the comment at the top of RecipeDB.py for an example of usage.
+This was done to that the connection to the db could be managed in one place and to group together similar functionality.
+I also moved the *.py files and the .kv file into a foler named src and The json files into a folder named json.
+The file structure was getting difficult to read so I thought that cleaning and organizing things would be beneficial
 
+ETHAN'S NOTES TO ROBERT
+    
 '''
 
 from kivymd.app import MDApp
@@ -30,13 +27,10 @@ from kivy.core.window import Window
 from RecipeSearchScreen import SearchRecipeScreen
 
 #StubClasses refers to classes that MUST exist to bulster the Kivy framework but have no actual functionality.
-from StubClasses import *
+from StubClasses import NewRecipeScreen
 
 #Imports the recipe screen from external file.
 from RecipeScreen import RecipeScreen
-
-#Imports functionality from the Recipies.py file
-from Recipies import *
 
 #Sets a standard window size(*MUST be altered to fit any window size before going into BETA trials)
 Window.size = (600, 900)

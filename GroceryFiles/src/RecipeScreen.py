@@ -1,7 +1,7 @@
 from kivy.uix.screenmanager import Screen
-from Recipies import fetch_recipe_ID
-from Recipies import Ingredient
-from Recipies import Grocery_Item
+from RecipeDB import recipeDB
+from RecipeDB import Ingredient
+from RecipeDB import Grocery_Item
 from math import ceil
 import json
 
@@ -9,10 +9,10 @@ class RecipeScreen(Screen):
 
     def __init__(self, name: str):
         super().__init__(name=name)
-        self.gram_list = self.LoadJson("./GroceryFiles/gramList.json")
-        self.liter_list = self.LoadJson("./GroceryFiles/literList.json")
-        self.unit_items = self.LoadJson("./GroceryFiles/unitItem.json")
-        self.whole_list = self.LoadJson("./GroceryFiles/wholeList.json")
+        self.gram_list = self.LoadJson("./GroceryFiles/json/gramList.json")
+        self.liter_list = self.LoadJson("./GroceryFiles/json/literList.json")
+        self.unit_items = self.LoadJson("./GroceryFiles/json/unitItem.json")
+        self.whole_list = self.LoadJson("./GroceryFiles/json/wholeList.json")
         self.ingredient_dict = {}
         self.shopping_list = []
 
@@ -29,7 +29,7 @@ class RecipeScreen(Screen):
 
     def GetRecipe(self, recipeID:int, recipeCount:str, value:bool):
         count = int(recipeCount)
-        recipe = fetch_recipe_ID(recipeID)
+        recipe = recipeDB.FetchRecipe_ID(recipeID)
         
         if not value:
             count = 0

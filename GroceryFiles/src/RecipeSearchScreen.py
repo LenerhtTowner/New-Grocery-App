@@ -1,5 +1,5 @@
 from kivy.uix.screenmanager import Screen
-from Recipies import fuzzy_recipe_search
+from RecipeDB import recipeDB
 from kivymd.uix.list import OneLineListItem
 from kivy.uix.popup import Popup 
 from kivy.uix.label import Label
@@ -46,7 +46,7 @@ class SearchRecipeScreen(Screen):
         self.popupPane = None
 
     def search_Rsql(self, searchStr):
-        recipe_matches = fuzzy_recipe_search(searchStr)
+        recipe_matches = recipeDB.FuzzyRecipeSearch(searchStr)
         list = self.ids.recipe_list
 
         for i in self.listItems:
