@@ -194,8 +194,6 @@ def fuzzy_recipe_search(name:str):
 
     return recipeDict
 
-refactor the above code for clarity and extensibility and check to see if any of the code should be placed in a separate file
-
 recipeCount = -1
 
 # Get Recipe by ID
