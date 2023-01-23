@@ -12,38 +12,38 @@
         BoxLayout:
             orientation:'horizontal'
             Label:
-                id: pancakes
-                text: 'pancakes'
+                id: Instant_Pot_Hamburger_Soup
+                text: 'Instant Pot Hamburger Soup'
 
             CheckBox:
-                id: pancakes_checkBox
-                on_active: root.GetRecipe(root.ids.pancakes.text, root.ids.pancakes_count.text, self.active)
+                id: Instant_Pot_Hamburger_Soup_checkBox
+                on_active: root.GetRecipe(1, root.ids.Instant_Pot_Hamburger_Soup_count.text, self.active)
 
             TextInput:
-                id: pancakes_count
+                id: Instant_Pot_Hamburger_Soup_count
                 size_hint: .2,.2
                 pos_hint: {'center_y':.5}
                 multiline: False
                 text: '1'
-                on_text: root.UpdateCount(root.ids.pancakes.text, self.text, root.ids.pancakes_checkBox.active)
+                on_text: root.OnUpdateCount(1, self.text, root.ids.Instant_Pot_Hamburger_Soup_checkBox.active)
 
         BoxLayout:
             orientation:'horizontal'
             Label:
-                id: broccoli_cheddar_soup_label
-                text: 'broccoli cheddar soup'
+                id: Seafood_Pot_Pie_label
+                text: 'Seafood Pot Pie'
 
             CheckBox:
-                id: broccoli_cheddar_soup_checkbox
-                on_active: root.GetRecipe(root.ids.broccoli_cheddar_soup_label.text, root.ids.broccoli_cheddar_soup_count.text, self.active)
+                id: Seafood_Pot_Pie_checkbox
+                on_active: root.GetRecipe(2, root.ids.Seafood_Pot_Pie_count.text, self.active)
 
             TextInput:
-                id: broccoli_cheddar_soup_count
+                id: Seafood_Pot_Pie_count
                 size_hint: .2,.2
                 pos_hint: {'center_y':.5}
                 multiline: False
                 text: '1'
-                on_text: root.UpdateCount(root.ids.broccoli_cheddar_soup_label.text, self.text, root.ids.broccoli_cheddar_soup_checkbox.active)
+                on_text: root.OnUpdateCount(2, self.text, root.ids.Seafood_Pot_Pie_checkbox.active)
 
 
         BoxLayout:

@@ -43,6 +43,7 @@ class SearchRecipeScreen(Screen):
     # close the recipe details popup
     def close_details(self, instance):
         self.popupPane.dismiss()
+        self.popupPane = None
 
     def search_Rsql(self, searchStr):
         recipe_matches = fuzzy_recipe_search(searchStr)

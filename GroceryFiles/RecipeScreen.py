@@ -6,27 +6,21 @@ from math import ceil
 import json
 
 class RecipeScreen(Screen):
-    selected_recipes = []
-    ingredient_dict = {}
-    shopping_list = []
-    gram_list = {}
-    liter_list = {}
-    unit_items = {}
-    whole_list = {}
 
-    def __init__(self, name):
+    def __init__(self, name: str):
         super().__init__(name=name)
-        self.InitJson("./GroceryFiles/gramList.json", self.gram_list)
-        self.InitJson("./GroceryFiles/literList.json", self.liter_list)
-        self.InitJson("./GroceryFiles/unitItem.json", self.unit_items)
-        self.InitJson("./GroceryFiles/wholeList.json", self.whole_list)
+        self.gram_list = self.LoadJson("./GroceryFiles/gramList.json")
+        self.liter_list = self.LoadJson("./GroceryFiles/literList.json")
+        self.unit_items = self.LoadJson("./GroceryFiles/unitItem.json")
+        self.whole_list = self.LoadJson("./GroceryFiles/wholeList.json")
+        self.ingredient_dict = {}
+        self.shopping_list = []
 
-    def InitJson(self, filePath, dictionary):
-        with open(filePath, 'r') as file:
-            # whole conversion for each relevant item
-            dictionary = json.load(file)
+    def LoadJson(self, file_path: str) -> dict:
+        with open(file_path, 'r') as file:
+            return json.load(file)
 
-    def UpdateCount(self, instance, recipeName:str, recipeCount:str, value:bool):
+    def OnUpdateCount(self, instance, recipeName:str, recipeCount:str, value:bool):
         if recipeCount == '' or not recipeCount.isnumeric():
             instance.text = None
 
@@ -69,9 +63,9 @@ class RecipeScreen(Screen):
 
             # if the item was found previously it will be null now
             # otherwise add it to the list
-            if nextIngr != None and nextIngr.GetAmount() > 0:
+            if nextIngr != None and float(nextIngr.GetAmount()) > 0:
                 self.ingredient_dict[recipe.GetName()].append(nextIngr)
-
+ 
 
     def convert_to_g_L(self, ingredient, multi = 1):
         converted_ingredient = None
@@ -80,14 +74,26 @@ class RecipeScreen(Screen):
 
         # calculate converted measure and new unit based on the type of unit used
         if ingredient.GetName() in self.gram_list:
-            converted_measure = ingredient.GetAmount() * multi * self.gram_list[ingredient.GetName()][ingredient.GetUnit()]
-            converted_unit = "grams"
+            try:
+                converted_measure = ingredient.GetAmount() * multi * self.gram_list[ingredient.GetName()][ingredient.GetUnit()]
+                converted_unit = "grams"
+            except:
+                converted_measure = ingredient.GetAmount()
+                converted_unit = ingredient.GetUnit()
         elif ingredient.GetName() in self.liter_list:
-            converted_measure = ingredient.GetAmount() * multi * self.liter_list[ingredient.GetName()][ingredient.GetUnit()]
-            converted_unit = "liters"
+            try:
+                converted_measure = ingredient.GetAmount() * multi * self.liter_list[ingredient.GetName()][ingredient.GetUnit()]
+                converted_unit = "liters"
+            except:
+                converted_measure = ingredient.GetAmount()
+                converted_unit = ingredient.GetUnit()
         else:
-            converted_measure = ingredient.GetAmount() * multi * self.whole_list[ingredient.GetName()][ingredient.GetUnit()]
-            converted_unit = ingredient.GetUnit()
+            try:
+                converted_measure = ingredient.GetAmount() * multi * self.whole_list[ingredient.GetName()][ingredient.GetUnit()]
+                converted_unit = ingredient.GetUnit()
+            except:
+                converted_measure = ceil(ingredient.GetAmount())
+                converted_unit = ingredient.GetUnit()
 
         # create a new ingredient item based on the new unit and measure
         converted_ingredient = Ingredient(converted_measure, converted_unit, ingredient.GetName())

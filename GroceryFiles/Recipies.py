@@ -1,12 +1,10 @@
 import sqlite3
-import json
-from json import JSONEncoder
 
 
 class Ingredient:
     def __init__(self, amount:float, unit:str, name:str):
         self.__name = name
-        self.__amount = amount
+        self.__amount = float(amount)
         self.__unit = unit
 
     def __str__(self):
@@ -49,6 +47,7 @@ class Recipe:
     def __str__(self):
         return self.__name
 
+
 class Grocery_Item:
     def __init__(self, amount:int, name:str):
         self.__amount = amount
@@ -57,39 +56,6 @@ class Grocery_Item:
     def __str__(self):
         return "{0} {1}".format(self.__amount, self.__name)
 
-# def EncodeRecipesToJson():
-#     with open('./venv/recipes.json', 'w') as outfile:
-#         recipeData = {}
-
-#         for key in recipes.keys():
-#             recipeData[key] = recipes[key].ToDict()
-            
-#         json.dump(recipeData, outfile, indent=4)
-
-
-# def LoadRecipesFromJson(filepath = './GroceryFiles/recipes.json'):
-#     newRecipeDict = {}
-#     recipeData = None
-#     with open(filepath, 'r') as inFile:
-#         recipeData = json.load(inFile)
-        
-#         if recipeData == None:
-#             return None
-
-#     for key in recipeData.keys():
-#         recipeName = recipeData[key]['__name']
-#         __ingredients = []
-
-#         for ing in recipeData[key]['__ingredients']:
-#             __ingredients.append(Ingredient(ing['__amount'], ing['__unit'], ing['__name']))
-
-#         newRecipeDict[key] = Recipe(recipeName, __ingredients)
-
-#     return newRecipeDict
-
-
-# #EncodeRecipesToJson()
-# recipes = LoadRecipesFromJson()
 
 def create_tables(cursor):
     cursor.execute('''CREATE TABLE ingredients (
@@ -227,6 +193,8 @@ def fuzzy_recipe_search(name:str):
     conn.close()
 
     return recipeDict
+
+refactor the above code for clarity and extensibility and check to see if any of the code should be placed in a separate file
 
 recipeCount = -1
 

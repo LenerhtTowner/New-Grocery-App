@@ -12,3 +12,39 @@ class NewRecipeScreen(Screen):
     pass
 
 #### DEAD CODE STORAGE ####
+# import json
+# from json import JSONEncoder
+
+# def EncodeRecipesToJson():
+#     with open('./venv/recipes.json', 'w') as outfile:
+#         recipeData = {}
+
+#         for key in recipes.keys():
+#             recipeData[key] = recipes[key].ToDict()
+            
+#         json.dump(recipeData, outfile, indent=4)
+
+
+# def LoadRecipesFromJson(filepath = './GroceryFiles/recipes.json'):
+#     newRecipeDict = {}
+#     recipeData = None
+#     with open(filepath, 'r') as inFile:
+#         recipeData = json.load(inFile)
+        
+#         if recipeData == None:
+#             return None
+
+#     for key in recipeData.keys():
+#         recipeName = recipeData[key]['__name']
+#         __ingredients = []
+
+#         for ing in recipeData[key]['__ingredients']:
+#             __ingredients.append(Ingredient(ing['__amount'], ing['__unit'], ing['__name']))
+
+#         newRecipeDict[key] = Recipe(recipeName, __ingredients)
+
+#     return newRecipeDict
+
+
+# #EncodeRecipesToJson()
+# recipes = LoadRecipesFromJson()
