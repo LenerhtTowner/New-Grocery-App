@@ -22,6 +22,7 @@ from kivymd.app import MDApp
 from kivy.uix.screenmanager import ScreenManager
 from kivy.lang import Builder
 from kivy.core.window import Window
+from RecipeDB import recipeDB
 
 #Imports functionality to allow user to search recipies from the recipes.db database.
 from RecipeSearchScreen import SearchRecipeScreen
@@ -50,3 +51,4 @@ class TestApp(MDApp):
 
 if __name__ == '__main__':
     TestApp().run()
+    recipeDB.Close()

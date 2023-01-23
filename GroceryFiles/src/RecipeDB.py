@@ -81,10 +81,6 @@ class RecipeDb:
         self.conn = sqlite3.connect(db_name)
 
 
-    def __del__(self):
-        self.close()
-
-
     def CreateTables(self):
         cursor = self.conn.cursor()
         cursor.execute('''CREATE TABLE ingredients (
@@ -194,8 +190,10 @@ class RecipeDb:
         return recipeDict
     
 
-    def close(self):
-        self.conn.close()
+    def Close(self):
+        print("RecipeDB.Close()")
+        if (self.conn != None):
+            self.conn.close()
 
 
 recipeDB = RecipeDb("recipes.db")
