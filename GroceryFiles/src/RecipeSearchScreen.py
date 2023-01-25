@@ -4,7 +4,7 @@ from kivymd.uix.list import OneLineListItem
 from kivy.uix.popup import Popup 
 from kivy.uix.label import Label
 from kivy.uix.button import Button
-from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.gridlayout import GridLayout
 
 class SearchRecipeScreen(Screen):
     listItems = []
@@ -15,19 +15,25 @@ class SearchRecipeScreen(Screen):
         # TODO create and display a popup to show the recipe
         recipe = recipeDB.FetchRecipe_ID(self.WidgetToID[instance])
 
-        recipeStr = instance.text
+        recipeStr = ''
 
         for ing in recipe.GetIngredients():
-            recipeStr += f"\n{ing.GetAmount()} {ing.GetUnit()} {ing.GetName()}"
+            if recipeStr != "": recipeStr += "\n"
+            recipeStr += f"{ing.GetAmount()} {ing.GetUnit()} {ing.GetName()}"
 
         # Create a layout for the popup because popup can only contain one widget
-        layout = BoxLayout(orientation="vertical")
+        layout = GridLayout(cols = 1)
 
         # Create the lable for the popup
         label = Label(text=recipeStr)
+        label.padding_y = 16
 
         # Create the Close Button and then bind it to the close details function
-        CloseButton = Button(text = "nvm")
+        CloseButton = Button(text = "nvm",
+                             size_hint = (None, None),
+                             size = (90, 30),
+                            )
+                            
         CloseButton.bind(on_release = self.close_details)
 
         # Add the label and button to the box layout
@@ -35,10 +41,10 @@ class SearchRecipeScreen(Screen):
         layout.add_widget(CloseButton)
 
         # Create the popup window passing in the above layout as the content
-        popup = Popup(title = 'Recipe',
+        popup = Popup(title = instance.text,
                       content = layout,
-                      size_hint = (None, None),
-                      size = (self.height, self.width),
+                      size_hint = (1, None),
+                      height = self.width
                       )
 
         # Save a reference to the popup so that it can be easily closed later                      
