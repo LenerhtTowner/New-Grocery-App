@@ -55,14 +55,6 @@
         BoxLayout:
             orientation: 'vertical'
 
-            Button:
-                text: 'Goto "Make New Recipe" Screen'
-                on_press:
-                    root.manager.current = 'NewRecipe'
-            Button:
-                text: 'Quit'
-                on_press: app.stop()
-
 <NewRecipeScreen>:
     canvas.before:
         Color:
@@ -76,9 +68,11 @@
 
         Label:
             text: 'Add A New Recipe'
+            size_hint: 1, .05
 
         BoxLayout:
             orientation: 'horizontal'
+            size_hint: 1, .05
 
             Label:
                 text: "Recipe Name"
@@ -87,14 +81,6 @@
                 multiline: False
             
         IngredientInfo:
-            
-        Button:
-            text: 'Recipe Screen:'
-            on_press: root.manager.current = 'Recipe'
-            
-        Button:
-            text: 'Search Recipe Screen:'
-            on_press: root.manager.current = 'SearchRecipe'
 
 <IngredientInfo>
     canvas.before:
@@ -107,15 +93,19 @@
     cols: 4
     Label:
         text: 'Ingr 1, Liquid or solid'
+        size_hint: 1, .1
     TextInput:
         multiline: False
+        size_hint: 1, .1
     BoxLayout:
+        size_hint: 1, .1
         orientation: 'horizontal'
         Label:
             text: 'solid'
         CheckBox:
             group: 'sol-liq'
     BoxLayout:
+        size_hint: 1, .1
         orientation: 'horizontal'
         Label:
             text: 'liquid'
@@ -124,16 +114,20 @@
             
     Label:
         text: 'Weight in Cups, Tbs, tsp'
+        size_hint: 1, .1
     TextInput:
         multiline: False
+        size_hint: 1, .1
     TextInput:
         multiline: False
+        size_hint: 1, .1
     TextInput:
         multiline: False
+        size_hint: 1, .1
+    BoxLayout:
 
 
 <SearchRecipeScreen>
-            
     BoxLayout:
         orientation: 'vertical'
 
@@ -152,8 +146,8 @@
                 text: "Q"
                 size_hint: .05, 1
                 on_press: root.search_Rsql(root.ids.URS.text)
-            
-        
+
+
         BoxLayout:
             orientation: "vertical"
 
@@ -162,3 +156,60 @@
                 MDList:
                     id: recipe_list
                     background_color: 0, 0, 0, 1
+
+
+<NavBar>:
+    panel_color: "#eeeaea"
+    selected_color_background: "orange"
+    text_color_active: "lightgrey"
+
+    MDBottomNavigationItem:
+        name: 'screen 1'
+        text: 'Mail'
+        icon: 'gmail'
+
+        BoxLayout:
+            RecipeScreen:
+
+    MDBottomNavigationItem:
+        name: 'screen 2'
+        text: 'Twitter'
+        icon: 'twitter'
+
+        BoxLayout:
+            NewRecipeScreen:
+
+    MDBottomNavigationItem:
+        name: 'screen 3'
+        text: 'LinkedIN'
+        icon: 'linkedin'
+
+        BoxLayout:
+            SearchRecipeScreen:
+
+    # canvas.before:
+    #     Color:
+    #         rgba: 0.2, 0.2, 0.2, 1
+    #     Rectangle:
+    #         pos: self.pos
+    #         size: self.size
+
+    # Button:
+    #     background_normal: "GroceryFiles\\assets\\icons\\HomeIcon.png"
+    #     keep_ratio: True
+    #     on_press: app.sm.current = 'Recipe'
+    # Button:
+    #     background_normal: "GroceryFiles\\assets\\icons\\PlusIcon.png"
+    #     keep_ratio: True
+    #     on_press: app.sm.current = 'NewRecipe'
+    # Button:
+    #     background_normal: "GroceryFiles\\assets\\icons\\ListIcon.png"
+    #     keep_ratio: True
+    #     on_press: app.sm.current = 'SearchRecipe'
+    # Button:
+    #     background_normal: "GroceryFiles\\assets\\icons\\SettingsIcon.png"
+    #     keep_ratio: True
+    #     on_press: pass
+
+<MainScreen>
+    NavBar:

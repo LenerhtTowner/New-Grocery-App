@@ -17,7 +17,7 @@ from typing import List
 class Ingredient:
     def __init__(self, amount:float, unit:str, name:str):
         self.__name = name
-        self.__amount = float(amount)
+        self.__amount = amount
         self.__unit = unit
 
 
@@ -196,4 +196,4 @@ class RecipeDb:
             self.conn.close()
 
 
-recipeDB = RecipeDb("recipes.db")
+recipeDB = RecipeDb("GroceryFiles\\assets\\recipes.db")

@@ -7,14 +7,14 @@ import json
 
 class RecipeScreen(Screen):
 
-    def __init__(self, name: str):
-        super().__init__(name=name)
+    def __init__(self, **kwargs):
         self.gram_list = self.LoadJson("./GroceryFiles/json/gramList.json")
         self.liter_list = self.LoadJson("./GroceryFiles/json/literList.json")
         self.unit_items = self.LoadJson("./GroceryFiles/json/unitItem.json")
         self.whole_list = self.LoadJson("./GroceryFiles/json/wholeList.json")
         self.ingredient_dict = {}
         self.shopping_list = []
+        super(Screen, self).__init__(**kwargs)
 
     def LoadJson(self, file_path: str) -> dict:
         with open(file_path, 'r') as file:

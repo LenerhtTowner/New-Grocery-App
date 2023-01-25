@@ -9,15 +9,22 @@ from kivy.uix.boxlayout import BoxLayout
 class SearchRecipeScreen(Screen):
     listItems = []
     popupPane = None
+    WidgetToID = {}
 
     def show_details(self, instance):
         # TODO create and display a popup to show the recipe
-        
+        recipe = recipeDB.FetchRecipe_ID(self.WidgetToID[instance])
+
+        recipeStr = instance.text
+
+        for ing in recipe.GetIngredients():
+            recipeStr += f"\n{ing.GetAmount()} {ing.GetUnit()} {ing.GetName()}"
+
         # Create a layout for the popup because popup can only contain one widget
         layout = BoxLayout(orientation="vertical")
 
         # Create the lable for the popup
-        label = Label(text = 'The code nessisary to populate the recipe')
+        label = Label(text=recipeStr)
 
         # Create the Close Button and then bind it to the close details function
         CloseButton = Button(text = "nvm")
@@ -61,6 +68,8 @@ class SearchRecipeScreen(Screen):
             listItem.bind(on_release = lambda instance : self.show_details(instance))
             list.add_widget(listItem)
             self.listItems.append(listItem)
+            self.ids[recipe_matches[match]] = listItem
+            self.WidgetToID[listItem] = recipe_matches[match]
             
             label_count += 1
             if label_count >= 100: break

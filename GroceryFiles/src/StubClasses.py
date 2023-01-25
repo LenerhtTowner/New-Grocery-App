@@ -1,6 +1,7 @@
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.carousel import Carousel
 from kivy.uix.screenmanager import Screen
+from kivymd.uix.bottomnavigation import MDBottomNavigation
 
 class RecipeCarousel(Carousel):
     pass
@@ -9,6 +10,12 @@ class IngredientInfo(GridLayout):
     pass
 
 class NewRecipeScreen(Screen):
+    pass
+
+class MainScreen(Screen):
+    pass
+
+class NavBar(MDBottomNavigation):
     pass
 
 #### DEAD CODE STORAGE ####
