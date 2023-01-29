@@ -3,7 +3,6 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.checkbox import CheckBox
 from kivy.uix.button import Button
-from kivy.graphics import Color, Rectangle
 from RecipeDB import recipeDB
 from RecipeDB import Ingredient
 from RecipeDB import Grocery_Item
@@ -32,17 +31,6 @@ class RecipeScreen(Screen):
             li = RecipeListItem()
             li.ids.recipe_label.text = recipe
             self.ids.RecipeScreenBox.add_widget(li)
-            # boxlayout = BoxLayout(orientation = "horizontal", size_hint=(1, None))
-            # boxlayout.bind(on_height=self.adjustHeight)
-            # label = Label(text = recipes[recipe].GetName())
-            # checkbox = CheckBox()
-            # button = Button(text = "Bin it!", size_hint=(None, None), size=(60,30))
-            # self.ids.RecipeScreenBox.add_widget(boxlayout)
-            # boxlayout.add_widget(label)
-            # boxlayout.add_widget(checkbox)
-            # boxlayout.add_widget(button)
-        
-            # button.bind(on_release=lambda a : JsonUtils.DeleteRecipeFromJson(label.text))
             
         self.ids.RecipeScreenBox.add_widget(BoxLayout())
         

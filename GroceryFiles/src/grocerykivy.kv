@@ -1,22 +1,24 @@
 <RecipeScreen>:
     canvas.before:
         Color:
-            rgba: 0, 0, 0, 1
+            rgba: .1, .1, .12, 1
         Rectangle:
             pos: self.pos
             size: self.size
 
-    BoxLayout:
-        orientation: 'vertical'
-
+    ScrollView:
         BoxLayout:
-            id: RecipeScreenBox
             orientation: 'vertical'
             size_hint: 1, None
             height: self.minimum_height
-            spacing: 20
 
-        BoxLayout:
+            BoxLayout:
+                id: RecipeScreenBox
+                orientation: 'vertical'
+                size_hint: 1, None
+                height: self.minimum_height
+                spacing: 20
+                padding: (0, 10)
 
 <NewRecipeScreen>:
     canvas.before:
@@ -42,7 +44,7 @@
 
             TextInput:
                 multiline: False
-            
+
         IngredientInfo:
 
 <IngredientInfo>
@@ -74,7 +76,7 @@
             text: 'liquid'
         CheckBox:
             group: 'sol-liq'
-            
+
     Label:
         text: 'Weight in Cups, Tbs, tsp'
         size_hint: 1, .1
@@ -122,7 +124,7 @@
 
 
 <NavBar>:
-    panel_color: "#eeeaea"
+    panel_color: (.93, .9, .9)
     selected_color_background: "orange"
     text_color_active: "lightgrey"
 
@@ -150,32 +152,35 @@
         BoxLayout:
             SearchRecipeScreen:
 
-<MainScreen>
-    NavBar:
-
 <RecipeListItem>
     canvas.before:
         Color:
-            rgba: .8, .8, .8, 1
-        Rectangle:
-            pos: self.pos
-            size: self.size
+            rgba: 1, 1, 1, 1
+        Line:
+            width:
+            rectangle: self.x, self.y, self.width, self.height
     size_hint: 1, None
     height: 40
+    padding: (10, 5)
+    CheckBox:
+        background_normal: None
+        color: 1, 1, 1, 1
+        id: recipe_check
+        size_hint: (None, None)
+        size: (50, 30)
     Label:
         id: recipe_label
         valign: "center"
+        halign: "left"
         text: ""
+        text_size: self.size
         size_hint: 1, 1
-    CheckBox:
-        background_normal: None
-        color: 0, 0, 0, 1
-        id: recipe_check
-        size_hint: (1, None)
-        size: (40, 40)
     TextInput:
         id: recipe_count
         size_hint: (None,None)
-        size: (40, 40)
+        size: (30, 30)
         multiline: False
         text: '1'
+
+<MainScreen>
+    NavBar:
