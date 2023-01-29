@@ -1,96 +1,801 @@
 {
-    "pancakes": {
-        "__name": "pancakes",
+    "Chicken and Broccoli Braid": {
+        "__name": "Chicken and Broccoli Braid",
         "__ingredients": [
             {
-                "__name": "all-purpose flour",
-                "__amount": 1.5,
-                "__unit": "cup"
+                "_Ingredient__name": "diced, cooked chicken meat",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "cups"
             },
             {
-                "__name": "baking powder",
-                "__amount": 3.5,
-                "__unit": "tbs"
+                "_Ingredient__name": "fresh broccoli, chopped",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "cup"
             },
             {
-                "__name": "salt",
-                "__amount": 0.25,
-                "__unit": "tsp"
+                "_Ingredient__name": "red bell pepper, chopped",
+                "_Ingredient__amount": "0.5",
+                "_Ingredient__unit": "cup"
             },
             {
-                "__name": "milk",
-                "__amount": 1.25,
-                "__unit": "cup"
+                "_Ingredient__name": "crushed garlic",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "clove"
             },
             {
-                "__name": "butter",
-                "__amount": 3,
-                "__unit": "tbs"
+                "_Ingredient__name": "shredded Cheddar cheese",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "cup"
             },
             {
-                "__name": "egg",
-                "__amount": 1,
-                "__unit": "whole"
+                "_Ingredient__name": "mayonnaise",
+                "_Ingredient__amount": "0.5",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "dried dill weed",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "teaspoons"
+            },
+            {
+                "_Ingredient__name": "salt",
+                "_Ingredient__amount": "0.25",
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "slivered almonds",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "diced onion",
+                "_Ingredient__amount": "0.25",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "refrigerated crescent rolls",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "(8 ounce) packages"
+            },
+            {
+                "_Ingredient__name": "egg white, beaten",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": ""
             }
         ]
     },
-    "broccoli cheddar soup": {
-        "__name": "broccoli cheddar soup",
+    "Chicken Tortilla Soup": {
+        "__name": "Chicken Tortilla Soup",
         "__ingredients": [
             {
-                "__name": "onion",
-                "__amount": 1,
-                "__unit": "whole"
+                "_Ingredient__name": "olive oil",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "tablespoon"
             },
             {
-                "__name": "garlic",
-                "__amount": 3,
-                "__unit": "clove"
+                "_Ingredient__name": "onion, chopped",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "medium"
             },
             {
-                "__name": "potato",
-                "__amount": 1,
-                "__unit": "whole"
+                "_Ingredient__name": "garlic, minced",
+                "_Ingredient__amount": "3",
+                "_Ingredient__unit": "cloves"
             },
             {
-                "__name": "broccoli",
-                "__amount": 1,
-                "__unit": "whole"
+                "_Ingredient__name": "crushed tomatoes",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "(28 ounce) can"
             },
             {
-                "__name": "spinach",
-                "__amount": 200,
-                "__unit": "gram"
+                "_Ingredient__name": "condensed chicken broth",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "(10.5 ounce) can"
             },
             {
-                "__name": "chicken stock",
-                "__amount": 1,
-                "__unit": "liter"
+                "_Ingredient__name": "water",
+                "_Ingredient__amount": "1.25",
+                "_Ingredient__unit": "cups"
             },
             {
-                "__name": "cream",
-                "__amount": 100,
-                "__unit": "ml"
+                "_Ingredient__name": "chili powder",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "teaspoons"
             },
             {
-                "__name": "cheddar",
-                "__amount": 400,
-                "__unit": "gram"
+                "_Ingredient__name": "dried oregano",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "teaspoon"
             },
             {
-                "__name": "olive oil",
-                "__amount": 2,
-                "__unit": "tbs"
+                "_Ingredient__name": "black beans, rinsed and drained",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "(15 ounce) can"
+            },
+            {
+                "_Ingredient__name": "boneless chicken breast halves, cooked and cut into bite-sized pieces",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "large"
+            },
+            {
+                "_Ingredient__name": "whole corn kernels, cooked",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "white hominy",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "chopped green chile peppers",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "(4 ounce) can"
+            },
+            {
+                "_Ingredient__name": "chopped fresh cilantro",
+                "_Ingredient__amount": "0.25",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "crushed tortilla chips, or to taste",
+                "_Ingredient__amount": "0.5",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "avocados, sliced, or to taste",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "medium"
+            },
+            {
+                "_Ingredient__name": "shredded Monterey Jack cheese, or to taste",
+                "_Ingredient__amount": "0.5",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "chopped green onions, or to taste",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "tablespoons"
             }
         ]
     },
-    "new Recipe": {
-        "__name": "new Recipe",
+    "Healthy Waldorf Chicken Salad": {
+        "__name": "Healthy Waldorf Chicken Salad",
         "__ingredients": [
             {
-                "__name": "baking pop",
-                "__amount": 1.5,
-                "__unit": "ox"
+                "_Ingredient__name": "plain Greek yogurt",
+                "_Ingredient__amount": "3",
+                "_Ingredient__unit": "ounces"
+            },
+            {
+                "_Ingredient__name": "apple cider vinegar",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "poppy seeds",
+                "_Ingredient__amount": "0.125",
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "maple pepper seasoning (such as Savory Spice Shop Park Hill)",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "teaspoons"
+            },
+            {
+                "_Ingredient__name": "salt to taste",
+                "_Ingredient__amount": "",
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "chopped, cooked chicken",
+                "_Ingredient__amount": "6",
+                "_Ingredient__unit": "ounces"
+            },
+            {
+                "_Ingredient__name": "chopped Honeycrisp apple",
+                "_Ingredient__amount": "0.5",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "chopped toasted walnuts",
+                "_Ingredient__amount": "0.25",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "milk, or as needed (Optional)",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "tablespoon"
+            }
+        ]
+    },
+    "Slow Cooker Buffalo Chicken Sandwiches": {
+        "__name": "Slow Cooker Buffalo Chicken Sandwiches",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "skinless, boneless chicken breast halves",
+                "_Ingredient__amount": "4",
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "Buffalo wing sauce, divided",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "(17.5 fluid ounce) bottle"
+            },
+            {
+                "_Ingredient__name": "dry ranch salad dressing mix",
+                "_Ingredient__amount": "0.5",
+                "_Ingredient__unit": "(1 ounce) package"
+            },
+            {
+                "_Ingredient__name": "butter",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "hoagie rolls, split lengthwise",
+                "_Ingredient__amount": "6",
+                "_Ingredient__unit": ""
+            }
+        ]
+    },
+    "Buffalo Chicken Wing Sauce": {
+        "__name": "Buffalo Chicken Wing Sauce",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "hot pepper sauce (such as Frank's RedHot)",
+                "_Ingredient__amount": "0.66",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "cold unsalted butter",
+                "_Ingredient__amount": "0.5",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "white vinegar",
+                "_Ingredient__amount": "1.5",
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "Worcestershire sauce",
+                "_Ingredient__amount": "0.25",
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "cayenne pepper",
+                "_Ingredient__amount": "0.25",
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "garlic powder",
+                "_Ingredient__amount": "0.125",
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "salt to taste",
+                "_Ingredient__amount": "",
+                "_Ingredient__unit": ""
+            }
+        ]
+    },
+    "Boneless Buffalo Wings": {
+        "__name": "Boneless Buffalo Wings",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "oil for deep frying",
+                "_Ingredient__amount": "",
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "unbleached all-purpose flour",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "salt",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "teaspoons"
+            },
+            {
+                "_Ingredient__name": "ground black pepper",
+                "_Ingredient__amount": "0.5",
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "cayenne pepper",
+                "_Ingredient__amount": "0.5",
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "paprika",
+                "_Ingredient__amount": "0.5",
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "garlic powder",
+                "_Ingredient__amount": "0.25",
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "egg",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "milk",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "skinless, boneless chicken breasts, cut into 1/2-inch strips",
+                "_Ingredient__amount": "3",
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "hot pepper sauce",
+                "_Ingredient__amount": "0.25",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "butter",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "tablespoon"
+            }
+        ]
+    },
+    "Buffalo Chicken Lasagna": {
+        "__name": "Buffalo Chicken Lasagna",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "bone-in chicken breasts with skin",
+                "_Ingredient__amount": "1.5",
+                "_Ingredient__unit": "pounds"
+            },
+            {
+                "_Ingredient__name": "chicken stock, or as needed",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "cups"
+            },
+            {
+                "_Ingredient__name": "paprika",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "tablespoon"
+            },
+            {
+                "_Ingredient__name": "salt, or more to taste ",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "cayenne pepper",
+                "_Ingredient__amount": "0.5",
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "lasagna noodles",
+                "_Ingredient__amount": "12",
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "cooking spray",
+                "_Ingredient__amount": "",
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "olive oil, or more as needed",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "tablespoon"
+            },
+            {
+                "_Ingredient__name": "celery, finely chopped",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "stalks"
+            },
+            {
+                "_Ingredient__name": "onion, finely chopped",
+                "_Ingredient__amount": "0.5",
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "buffalo wing sauce",
+                "_Ingredient__amount": "0.66",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "crumbled blue cheese",
+                "_Ingredient__amount": "0.5",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "ricotta cheese",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "(16 ounce) container"
+            },
+            {
+                "_Ingredient__name": "blue cheese dressing",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "egg",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "shredded mozzarella cheese",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "(8 ounce) package"
+            }
+        ]
+    },
+    "Creamy Buffalo Chicken Noodle Soup": {
+        "__name": "Creamy Buffalo Chicken Noodle Soup",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "extra-wide egg noodles",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "(8 ounce) package"
+            },
+            {
+                "_Ingredient__name": "butter",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "onion, chopped",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "medium"
+            },
+            {
+                "_Ingredient__name": "celery, chopped",
+                "_Ingredient__amount": "3",
+                "_Ingredient__unit": "stalks"
+            },
+            {
+                "_Ingredient__name": "carrots, peeled and chopped",
+                "_Ingredient__amount": "3",
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "garlic, chopped",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "clove"
+            },
+            {
+                "_Ingredient__name": "flour",
+                "_Ingredient__amount": "0.25",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "Swanson Chicken Broth",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "(32 ounce) carton"
+            },
+            {
+                "_Ingredient__name": "cooked chicken breast meat, chopped",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "pound"
+            },
+            {
+                "_Ingredient__name": "hot pepper sauce",
+                "_Ingredient__amount": "0.33",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "dried parsley flakes",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "half-and-half",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "crumbled blue cheese",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "ranch-flavored croutons",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "tablespoon"
+            }
+        ]
+    },
+    "Buffalo Shrimp": {
+        "__name": "Buffalo Shrimp",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "all-purpose flour",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "cups"
+            },
+            {
+                "_Ingredient__name": "Creole-style seasoning",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "garlic powder",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "tablespoon"
+            },
+            {
+                "_Ingredient__name": "ground cayenne pepper",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "tablespoon"
+            },
+            {
+                "_Ingredient__name": "onion powder",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "freshly ground black pepper",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "large shrimp, peeled and deveined with tails attached",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "pound"
+            },
+            {
+                "_Ingredient__name": "oil for frying",
+                "_Ingredient__amount": "4",
+                "_Ingredient__unit": "cups"
+            }
+        ]
+    },
+    "Eggplant Sandwiches": {
+        "__name": "Eggplant Sandwiches",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "eggplant, halved and sliced",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "small"
+            },
+            {
+                "_Ingredient__name": "olive oil, or as needed",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "tablespoon"
+            },
+            {
+                "_Ingredient__name": "mayonnaise",
+                "_Ingredient__amount": "0.25",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "garlic, minced",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "cloves"
+            },
+            {
+                "_Ingredient__name": "French sandwich rolls ",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "(6 inch)"
+            },
+            {
+                "_Ingredient__name": "tomato, sliced",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "small"
+            },
+            {
+                "_Ingredient__name": "crumbled feta cheese",
+                "_Ingredient__amount": "0.5",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "chopped fresh basil leaves",
+                "_Ingredient__amount": "0.25",
+                "_Ingredient__unit": "cup"
+            }
+        ]
+    },
+    "Grilled Cheese Sandwich": {
+        "__name": "Grilled Cheese Sandwich",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "white bread",
+                "_Ingredient__amount": "4",
+                "_Ingredient__unit": "slices"
+            },
+            {
+                "_Ingredient__name": "butter, divided",
+                "_Ingredient__amount": "3",
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "Cheddar cheese",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "slices"
+            }
+        ]
+    },
+    "Griddle Style Philly Steak Sandwiches": {
+        "__name": "Griddle Style Philly Steak Sandwiches",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "sliced mushrooms, drained",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "(8 ounce) can"
+            },
+            {
+                "_Ingredient__name": "onion, sliced",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "small"
+            },
+            {
+                "_Ingredient__name": "green bell pepper, seeded and sliced into strips",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "provolone cheese",
+                "_Ingredient__amount": "8",
+                "_Ingredient__unit": "slices"
+            },
+            {
+                "_Ingredient__name": "salt to taste",
+                "_Ingredient__amount": "",
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "seasoned salt to taste",
+                "_Ingredient__amount": "",
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "thinly sliced roast beef",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "pound"
+            },
+            {
+                "_Ingredient__name": "submarine rolls, halved",
+                "_Ingredient__amount": "4",
+                "_Ingredient__unit": ""
+            }
+        ]
+    },
+    "Reuben Sandwich": {
+        "__name": "Reuben Sandwich",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "rye bread",
+                "_Ingredient__amount": "8",
+                "_Ingredient__unit": "slices"
+            },
+            {
+                "_Ingredient__name": "Thousand Island dressing",
+                "_Ingredient__amount": "0.5",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "Swiss cheese",
+                "_Ingredient__amount": "8",
+                "_Ingredient__unit": "slices"
+            },
+            {
+                "_Ingredient__name": "deli sliced corned beef",
+                "_Ingredient__amount": "8",
+                "_Ingredient__unit": "slices"
+            },
+            {
+                "_Ingredient__name": "sauerkraut, drained",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "butter, softened",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "tablespoons"
+            }
+        ]
+    },
+    "Easy French Dip Sandwiches": {
+        "__name": "Easy French Dip Sandwiches",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "hoagie rolls, split lengthwise",
+                "_Ingredient__amount": "4",
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "beef consomme",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "(10.5 ounce) can"
+            },
+            {
+                "_Ingredient__name": "water",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "thinly sliced deli roast beef",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "pound"
+            },
+            {
+                "_Ingredient__name": "provolone cheese",
+                "_Ingredient__amount": "8",
+                "_Ingredient__unit": "slices"
+            }
+        ]
+    },
+    "Sandy's Summer Sausage": {
+        "__name": "Sandy's Summer Sausage",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "ground beef",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "pounds"
+            },
+            {
+                "_Ingredient__name": "mustard seed",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "liquid smoke flavoring",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "sugar-based curing mixture (such as Morton Tender Quick)",
+                "_Ingredient__amount": "2",
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "garlic powder",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "tablespoon"
+            },
+            {
+                "_Ingredient__name": "coarse ground black pepper",
+                "_Ingredient__amount": "1",
+                "_Ingredient__unit": "teaspoon"
+            }
+        ]
+    },
+    "Donut Pan Egg Sandwiches": {
+        "__name": "Donut Pan Egg Sandwiches",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "eggs",
+                "_Ingredient__amount": "10",
+                "_Ingredient__unit": "large"
+            },
+            {
+                "_Ingredient__name": "salt and freshly ground black pepper to taste",
+                "_Ingredient__amount": "",
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "cooked breakfast sausage",
+                "_Ingredient__amount": "6",
+                "_Ingredient__unit": "ounces"
+            },
+            {
+                "_Ingredient__name": "fresh chives, chopped",
+                "_Ingredient__amount": "3",
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "mini bagels",
+                "_Ingredient__amount": "6",
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "Cheddar cheese",
+                "_Ingredient__amount": "6",
+                "_Ingredient__unit": "slices"
+            },
+            {
+                "_Ingredient__name": "Sriracha sauce or hot sauce (optional)",
+                "_Ingredient__amount": "",
+                "_Ingredient__unit": ""
             }
         ]
     }

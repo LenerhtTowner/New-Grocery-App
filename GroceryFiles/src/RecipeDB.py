@@ -138,6 +138,8 @@ class RecipeDb:
 
     def FetchRecipe_ID(self, recipe_id:int):
         cursor = self.conn.cursor()
+        cursor.execute(f"SELECT name FROM recipes WHERE id = {recipe_id}")
+        name = cursor.fetchone()
         cursor.execute('''SELECT recipe_ingredient.amount, recipe_ingredient.unit, ingredients.name
                           FROM recipes
                           JOIN recipe_ingredient ON recipes.id = recipe_ingredient.recipe_id
@@ -147,7 +149,7 @@ class RecipeDb:
         ingredients = []
         for row in result:
             ingredients.append(Ingredient(row[0], row[1], row[2]))
-        recipe = Recipe(result[0][0], ingredients)
+        recipe = Recipe(name[0], ingredients)
         return recipe
 
 

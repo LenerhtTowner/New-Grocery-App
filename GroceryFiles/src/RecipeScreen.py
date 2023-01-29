@@ -1,21 +1,58 @@
 from kivy.uix.screenmanager import Screen
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.label import Label
+from kivy.uix.checkbox import CheckBox
+from kivy.uix.button import Button
+from kivy.graphics import Color, Rectangle
 from RecipeDB import recipeDB
 from RecipeDB import Ingredient
 from RecipeDB import Grocery_Item
+from StubClasses import RecipeListItem
 from math import ceil
+from kivy.clock import Clock
 import json
+import JsonUtils
 
 class RecipeScreen(Screen):
 
     def __init__(self, **kwargs):
-        self.gram_list = self.LoadJson("./GroceryFiles/json/gramList.json")
-        self.liter_list = self.LoadJson("./GroceryFiles/json/literList.json")
-        self.unit_items = self.LoadJson("./GroceryFiles/json/unitItem.json")
-        self.whole_list = self.LoadJson("./GroceryFiles/json/wholeList.json")
+        super().__init__(**kwargs) 
+        self.gram_list = self.LoadJson("GroceryFiles/json/gramList.json")
+        self.liter_list = self.LoadJson("GroceryFiles/json/literList.json")
+        self.unit_items = self.LoadJson("GroceryFiles/json/unitItem.json")
+        self.whole_list = self.LoadJson("GroceryFiles/json/wholeList.json")
         self.ingredient_dict = {}
         self.shopping_list = []
-        super(Screen, self).__init__(**kwargs)
+        Clock.schedule_once(self.loadLocalRecipes, 0)
 
+    def loadLocalRecipes(self, *args):
+        recipes = JsonUtils.recipes
+        
+        for i, recipe in enumerate(recipes):
+            li = RecipeListItem()
+            li.ids.recipe_label.text = recipe
+            self.ids.RecipeScreenBox.add_widget(li)
+            # boxlayout = BoxLayout(orientation = "horizontal", size_hint=(1, None))
+            # boxlayout.bind(on_height=self.adjustHeight)
+            # label = Label(text = recipes[recipe].GetName())
+            # checkbox = CheckBox()
+            # button = Button(text = "Bin it!", size_hint=(None, None), size=(60,30))
+            # self.ids.RecipeScreenBox.add_widget(boxlayout)
+            # boxlayout.add_widget(label)
+            # boxlayout.add_widget(checkbox)
+            # boxlayout.add_widget(button)
+        
+            # button.bind(on_release=lambda a : JsonUtils.DeleteRecipeFromJson(label.text))
+            
+        self.ids.RecipeScreenBox.add_widget(BoxLayout())
+        
+    def adjustHeight(self, instance):
+        instance.height = instance.minimum_height
+    
+    def removeFromLocal(self, instance):
+        JsonUtils.removeFromJson(self.selectedRecipe.GetName())
+        self.popupPane.dismiss()
+    
     def LoadJson(self, file_path: str) -> dict:
         with open(file_path, 'r') as file:
             return json.load(file)

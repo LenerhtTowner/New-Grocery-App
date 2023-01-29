@@ -5,40 +5,61 @@ from kivy.uix.popup import Popup
 from kivy.uix.label import Label
 from kivy.uix.button import Button
 from kivy.uix.gridlayout import GridLayout
+from kivy.uix.boxlayout import BoxLayout
+import JsonUtils
+
+class test():
+    def printstuff(self, instance):
+        pass
 
 class SearchRecipeScreen(Screen):
+    test = test()
     listItems = []
     popupPane = None
     WidgetToID = {}
+    selectedRecipe = None
 
+    def addToLocal(self, instance):
+        JsonUtils.AddRecipeToJson(self.selectedRecipe)
+        self.popupPane.dismiss()
+    
     def show_details(self, instance):
         # TODO create and display a popup to show the recipe
-        recipe = recipeDB.FetchRecipe_ID(self.WidgetToID[instance])
+        self.selectedRecipe = recipeDB.FetchRecipe_ID(self.WidgetToID[instance])
 
         recipeStr = ''
 
-        for ing in recipe.GetIngredients():
+        for ing in self.selectedRecipe.GetIngredients():
             if recipeStr != "": recipeStr += "\n"
             recipeStr += f"{ing.GetAmount()} {ing.GetUnit()} {ing.GetName()}"
 
         # Create a layout for the popup because popup can only contain one widget
         layout = GridLayout(cols = 1)
-
+        buttonLayout = BoxLayout(orientation="horizontal", size_hint=(1, None), height=30)
         # Create the lable for the popup
         label = Label(text=recipeStr)
         label.padding_y = 16
 
         # Create the Close Button and then bind it to the close details function
+        AddButton = Button(text = "add",
+                             size_hint = (None, None),
+                             size = (90, 30),
+                            )
+        
         CloseButton = Button(text = "nvm",
                              size_hint = (None, None),
                              size = (90, 30),
                             )
                             
         CloseButton.bind(on_release = self.close_details)
+        AddButton.bind(on_release = self.addToLocal)
+
+        buttonLayout.add_widget(CloseButton)
+        buttonLayout.add_widget(AddButton)
 
         # Add the label and button to the box layout
         layout.add_widget(label)
-        layout.add_widget(CloseButton)
+        layout.add_widget(buttonLayout)
 
         # Create the popup window passing in the above layout as the content
         popup = Popup(title = instance.text,
@@ -51,7 +72,7 @@ class SearchRecipeScreen(Screen):
         self.popupPane = popup
 
         # Open the popup window
-        popup.open()
+        self.popupPane.open()
 
     # close the recipe details popup
     def close_details(self, instance):

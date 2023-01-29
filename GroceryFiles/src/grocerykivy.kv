@@ -10,50 +10,13 @@
         orientation: 'vertical'
 
         BoxLayout:
-            orientation:'horizontal'
-            Label:
-                id: Instant_Pot_Hamburger_Soup
-                text: 'Instant Pot Hamburger Soup'
-
-            CheckBox:
-                id: Instant_Pot_Hamburger_Soup_checkBox
-                on_active: root.GetRecipe(1, root.ids.Instant_Pot_Hamburger_Soup_count.text, self.active)
-
-            TextInput:
-                id: Instant_Pot_Hamburger_Soup_count
-                size_hint: .2,.2
-                pos_hint: {'center_y':.5}
-                multiline: False
-                text: '1'
-                on_text: root.OnUpdateCount(1, self.text, root.ids.Instant_Pot_Hamburger_Soup_checkBox.active)
-
-        BoxLayout:
-            orientation:'horizontal'
-            Label:
-                id: Seafood_Pot_Pie_label
-                text: 'Seafood Pot Pie'
-
-            CheckBox:
-                id: Seafood_Pot_Pie_checkbox
-                on_active: root.GetRecipe(2, root.ids.Seafood_Pot_Pie_count.text, self.active)
-
-            TextInput:
-                id: Seafood_Pot_Pie_count
-                size_hint: .2,.2
-                pos_hint: {'center_y':.5}
-                multiline: False
-                text: '1'
-                on_text: root.OnUpdateCount(2, self.text, root.ids.Seafood_Pot_Pie_checkbox.active)
-
-
-        BoxLayout:
-            size_hint: 1, .5
-            Label:
-                id: Recipe_List
-                text: "test"
-
-        BoxLayout:
+            id: RecipeScreenBox
             orientation: 'vertical'
+            size_hint: 1, None
+            height: self.minimum_height
+            spacing: 20
+
+        BoxLayout:
 
 <NewRecipeScreen>:
     canvas.before:
@@ -187,29 +150,32 @@
         BoxLayout:
             SearchRecipeScreen:
 
-    # canvas.before:
-    #     Color:
-    #         rgba: 0.2, 0.2, 0.2, 1
-    #     Rectangle:
-    #         pos: self.pos
-    #         size: self.size
-
-    # Button:
-    #     background_normal: "GroceryFiles\\assets\\icons\\HomeIcon.png"
-    #     keep_ratio: True
-    #     on_press: app.sm.current = 'Recipe'
-    # Button:
-    #     background_normal: "GroceryFiles\\assets\\icons\\PlusIcon.png"
-    #     keep_ratio: True
-    #     on_press: app.sm.current = 'NewRecipe'
-    # Button:
-    #     background_normal: "GroceryFiles\\assets\\icons\\ListIcon.png"
-    #     keep_ratio: True
-    #     on_press: app.sm.current = 'SearchRecipe'
-    # Button:
-    #     background_normal: "GroceryFiles\\assets\\icons\\SettingsIcon.png"
-    #     keep_ratio: True
-    #     on_press: pass
-
 <MainScreen>
     NavBar:
+
+<RecipeListItem>
+    canvas.before:
+        Color:
+            rgba: .8, .8, .8, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    size_hint: 1, None
+    height: 40
+    Label:
+        id: recipe_label
+        valign: "center"
+        text: ""
+        size_hint: 1, 1
+    CheckBox:
+        background_normal: None
+        color: 0, 0, 0, 1
+        id: recipe_check
+        size_hint: (1, None)
+        size: (40, 40)
+    TextInput:
+        id: recipe_count
+        size_hint: (None,None)
+        size: (40, 40)
+        multiline: False
+        text: '1'
