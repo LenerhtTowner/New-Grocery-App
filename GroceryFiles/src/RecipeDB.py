@@ -89,7 +89,7 @@ class RecipeDb:
         cursor.execute('''CREATE TABLE recipes (
                             id INTEGER PRIMARY KEY,
                             name TEXT);''')
-        cursor.execute('''CREATE TABLE recipe_ingredient (
+        cursor.execute('''CREATE TABLE recipe_ingredients (
                             id INTEGER PRIMARY KEY,
                             recipe_id INTEGER,
                             ingredient_id INTEGER,
@@ -118,7 +118,7 @@ class RecipeDb:
 
     def InsertRecipeIngredient(self, recipe_id: int, ingredient_id: int, amount: float, unit: str):
         cursor = self.conn.cursor()
-        cursor.execute("INSERT INTO recipe_ingredient (recipe_id, ingredient_id, amount, unit) VALUES (?,?,?,?)", (recipe_id, ingredient_id, amount, unit))
+        cursor.execute("INSERT INTO recipe_ingredients (recipe_id, ingredient_id, amount, unit) VALUES (?,?,?,?)", (recipe_id, ingredient_id, amount, unit))
         self.conn.commit()
 
 
@@ -133,17 +133,17 @@ class RecipeDb:
 
             for ingredient in ingredients:
                 ingredient_id = self.insert_ingredient(ingredient)
-                self.insert_recipe_ingredient(recipe_id, ingredient_id, ingredient.get_amount(), ingredient.get_unit())
+                self.insert_recipe_ingredients(recipe_id, ingredient_id, ingredient.get_amount(), ingredient.get_unit())
 
 
     def FetchRecipe_ID(self, recipe_id:int):
         cursor = self.conn.cursor()
         cursor.execute(f"SELECT name FROM recipes WHERE id = {recipe_id}")
         name = cursor.fetchone()
-        cursor.execute('''SELECT recipe_ingredient.amount, recipe_ingredient.unit, ingredients.name
+        cursor.execute('''SELECT recipe_ingredients.amount, recipe_ingredients.unit, ingredients.name
                           FROM recipes
-                          JOIN recipe_ingredient ON recipes.id = recipe_ingredient.recipe_id
-                          JOIN ingredients ON recipe_ingredient.ingredient_id = ingredients.id
+                          JOIN recipe_ingredients ON recipes.id = recipe_ingredients.recipe_id
+                          JOIN ingredients ON recipe_ingredients.ingredient_id = ingredients.id
                           WHERE recipes.id = ?''', (recipe_id,))
         result = cursor.fetchall()
         ingredients = []
@@ -160,10 +160,10 @@ class RecipeDb:
         recipe_id = cursor.fetchone()[0]
 
         # Execute the query
-        cursor.execute("""SELECT recipe_ingredient.amount, recipe_ingredient.unit, ingredients.name
+        cursor.execute("""SELECT recipe_ingredients.amount, recipe_ingredients.unit, ingredients.name
                       FROM recipes
-                      JOIN recipe_ingredient ON recipes.id = recipe_ingredient.recipe_id
-                      JOIN ingredients ON recipe_ingredient.ingredient_id = ingredients.id
+                      JOIN recipe_ingredients ON recipes.id = recipe_ingredients.recipe_id
+                      JOIN ingredients ON recipe_ingredients.ingredient_id = ingredients.id
                       WHERE recipes.id = ?
                       """, (recipe_id,))
         results = cursor.fetchall()
