@@ -3,10 +3,11 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.uix.checkbox import CheckBox
 from kivy.uix.button import Button
-from RecipeDB import recipeDB
-from RecipeDB import Ingredient
-from RecipeDB import Grocery_Item
-from StubClasses import RecipeListItem
+from kivy.uix.popup import Popup
+from kivy.uix.widget import Widget
+from kivy.uix.scrollview import ScrollView
+from RecipeDB import recipeDB, Ingredient, Grocery_Item
+from StubClasses import RecipeListItem, RecipeDataPanel
 from math import ceil
 from kivy.clock import Clock
 import json
@@ -22,22 +23,68 @@ class RecipeScreen(Screen):
         self.whole_list = self.LoadJson("GroceryFiles/json/wholeList.json")
         self.ingredient_dict = {}
         self.shopping_list = []
-        Clock.schedule_once(self.loadLocalRecipes, 0)
+        Clock.schedule_once(self.LoadLocalRecipes, 0)
 
-    def loadLocalRecipes(self, *args):
-        recipes = JsonUtils.recipes
+    def adjustLabelTextWidth(self, instance):
+        instance.text_size = (instance.width, instance.text_size[1])
+
+    def adjustLabelHeight(self, instance):
+        instance.height = instance.texture_size[1]
+ 
+    def wrapText(self, instance, *args):
+        print(args)
+        instance.text_size = (instance.width, None)
+        instance.size_hint=(1, None)
+        instance.height = instance.texture_size[1]
+
+    def ShowSelectedRecipe(self, instance:Widget, recipeName):
+        recipe = recipeDB.FetchRecipe_Name(recipeName)
+
+        popup = Popup(title=recipe.GetName(), title_size="30dp")
+
+        content = BoxLayout(orientation="vertical")
+        popup.content = content        
+
+        recipeDataPanel = RecipeDataPanel()
+        content.add_widget(recipeDataPanel)
+        # add ingredient List
+        for i, ing in enumerate(recipe.GetIngredients()):
+            recipeDataPanel.ids.IngredientLabel.text += "\u2022 " + str(ing) + "\n"
+
+        # add method
+        recipeDataPanel.ids.MethodLabel.text=recipe.GetMethod()
+
+        # add button to close popup
+        testButton = Button(text="test", size_hint=(1, None), height=60)
+        testButton.bind(on_release=popup.dismiss)
+        content.add_widget(testButton)
+        
+        popup.open()
+
+    def ResetRecipes(self, *args):
+        print("Reset")
+        self.ClearRecipes()
+        self.LoadLocalRecipes()
+
+    def ClearRecipes(self, *args):
+        self.ids.RecipeScreenBox.clear_widgets()
+
+    def LoadLocalRecipes(self, *args):
+        recipes = JsonUtils.LoadRecipesFromJson()
         
         for i, recipe in enumerate(recipes):
             li = RecipeListItem()
-            li.ids.recipe_label.text = recipe
+            li.ids.recipe_label.text = f"[ref={recipe}]{recipe}[/ref]"
+            li.ids.recipe_label.bind(on_ref_press = self.ShowSelectedRecipe)
+            #li.ids.recipe_check.bind(active = self.ShowSelectedRecipe)
             self.ids.RecipeScreenBox.add_widget(li)
             
         self.ids.RecipeScreenBox.add_widget(BoxLayout())
         
-    def adjustHeight(self, instance):
+    def SetMinimumHeight(self, instance, *args):
         instance.height = instance.minimum_height
     
-    def removeFromLocal(self, instance):
+    def RemoveFromLocal(self, instance):
         JsonUtils.removeFromJson(self.selectedRecipe.GetName())
         self.popupPane.dismiss()
     

@@ -1,942 +1,647 @@
 {
-    "Chicken and Broccoli Braid": {
-        "__name": "Chicken and Broccoli Braid",
-        "__ingredients": [
-            {
-                "_Ingredient__name": "diced, cooked chicken meat",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "cups"
-            },
-            {
-                "_Ingredient__name": "fresh broccoli, chopped",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "red bell pepper, chopped",
-                "_Ingredient__amount": "0.5",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "crushed garlic",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "clove"
-            },
-            {
-                "_Ingredient__name": "shredded Cheddar cheese",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "mayonnaise",
-                "_Ingredient__amount": "0.5",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "dried dill weed",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "teaspoons"
-            },
-            {
-                "_Ingredient__name": "salt",
-                "_Ingredient__amount": "0.25",
-                "_Ingredient__unit": "teaspoon"
-            },
-            {
-                "_Ingredient__name": "slivered almonds",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "tablespoons"
-            },
-            {
-                "_Ingredient__name": "diced onion",
-                "_Ingredient__amount": "0.25",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "refrigerated crescent rolls",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "(8 ounce) packages"
-            },
-            {
-                "_Ingredient__name": "egg white, beaten",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": ""
-            }
-        ]
-    },
-    "Chicken Tortilla Soup": {
-        "__name": "Chicken Tortilla Soup",
+    "Chicken Zoodle Soup": {
+        "__name": "Chicken Zoodle Soup",
         "__ingredients": [
             {
                 "_Ingredient__name": "olive oil",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "tablespoon"
+                "_Ingredient__amount": 2.0,
+                "_Ingredient__unit": "tablespoons"
             },
             {
-                "_Ingredient__name": "onion, chopped",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "medium"
+                "_Ingredient__name": "diced onions",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "diced celery",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "cup"
             },
             {
                 "_Ingredient__name": "garlic, minced",
-                "_Ingredient__amount": "3",
+                "_Ingredient__amount": 3.0,
                 "_Ingredient__unit": "cloves"
             },
             {
-                "_Ingredient__name": "crushed tomatoes",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "(28 ounce) can"
+                "_Ingredient__name": "low-sodium chicken broth",
+                "_Ingredient__amount": 5.0,
+                "_Ingredient__unit": "(14.5 ounce) cans"
             },
             {
-                "_Ingredient__name": "condensed chicken broth",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "(10.5 ounce) can"
+                "_Ingredient__name": "sliced carrots",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "cup"
             },
             {
-                "_Ingredient__name": "water",
-                "_Ingredient__amount": "1.25",
-                "_Ingredient__unit": "cups"
+                "_Ingredient__name": "cooked chicken breast, cut into bite sized pieces",
+                "_Ingredient__amount": 0.75,
+                "_Ingredient__unit": "pound"
             },
             {
-                "_Ingredient__name": "chili powder",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "teaspoons"
+                "_Ingredient__name": "dried basil",
+                "_Ingredient__amount": 0.5,
+                "_Ingredient__unit": "teaspoon"
             },
             {
                 "_Ingredient__name": "dried oregano",
-                "_Ingredient__amount": "1",
+                "_Ingredient__amount": 0.5,
                 "_Ingredient__unit": "teaspoon"
             },
             {
-                "_Ingredient__name": "black beans, rinsed and drained",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "(15 ounce) can"
+                "_Ingredient__name": "dried thyme (Optional)",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "pinch"
             },
             {
-                "_Ingredient__name": "boneless chicken breast halves, cooked and cut into bite-sized pieces",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "large"
+                "_Ingredient__name": "salt and ground black pepper to taste",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": ""
             },
             {
-                "_Ingredient__name": "whole corn kernels, cooked",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "white hominy",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "chopped green chile peppers",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "(4 ounce) can"
-            },
-            {
-                "_Ingredient__name": "chopped fresh cilantro",
-                "_Ingredient__amount": "0.25",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "crushed tortilla chips, or to taste",
-                "_Ingredient__amount": "0.5",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "avocados, sliced, or to taste",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "medium"
-            },
-            {
-                "_Ingredient__name": "shredded Monterey Jack cheese, or to taste",
-                "_Ingredient__amount": "0.5",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "chopped green onions, or to taste",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "tablespoons"
+                "_Ingredient__name": "zucchini squash, cut into 'noodles' using a spiral slicer or vegetable peeler",
+                "_Ingredient__amount": 3.0,
+                "_Ingredient__unit": ""
             }
-        ]
+        ],
+        "__method": "STEP 1:\nHeat olive oil in a large pot over medium-high heat. Saute onion, celery, and garlic in hot oil until just tender, about 5 minutes.\n\nSTEP 2:\nPour chicken broth into the pot; add carrots, chicken, basil, oregano, thyme, salt, and pepper. Bring the broth to a boil, reduce heat to medium-low, and simmer mixture until the vegetables are tender, about 20 minutes.\n\nSTEP 3:\nDivide zucchini 'noodles' between six soup bowls; ladle broth mixture over the 'noodles.'\n"
     },
-    "Healthy Waldorf Chicken Salad": {
-        "__name": "Healthy Waldorf Chicken Salad",
+    "Chicken Al Pastor": {
+        "__name": "Chicken Al Pastor",
         "__ingredients": [
             {
-                "_Ingredient__name": "plain Greek yogurt",
-                "_Ingredient__amount": "3",
-                "_Ingredient__unit": "ounces"
+                "_Ingredient__name": "dried guajillo chiles, stemmed and seeded",
+                "_Ingredient__amount": 4.0,
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "achiote paste",
+                "_Ingredient__amount": 2.0,
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "garlic, peeled",
+                "_Ingredient__amount": 6.0,
+                "_Ingredient__unit": "large cloves"
+            },
+            {
+                "_Ingredient__name": "chipotle peppers in adobo sauce, drained",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "(7 ounce) can"
+            },
+            {
+                "_Ingredient__name": "finely chopped onion, divided",
+                "_Ingredient__amount": 1.33,
+                "_Ingredient__unit": "cups"
+            },
+            {
+                "_Ingredient__name": "orange juice",
+                "_Ingredient__amount": 0.66,
+                "_Ingredient__unit": "cup"
             },
             {
                 "_Ingredient__name": "apple cider vinegar",
-                "_Ingredient__amount": "1",
+                "_Ingredient__amount": 3.0,
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "olive oil",
+                "_Ingredient__amount": 3.0,
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "ground cumin",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "tablespoon"
+            },
+            {
+                "_Ingredient__name": "light brown sugar",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "tablespoon"
+            },
+            {
+                "_Ingredient__name": "kosher salt",
+                "_Ingredient__amount": 1.0,
                 "_Ingredient__unit": "teaspoon"
             },
             {
-                "_Ingredient__name": "poppy seeds",
-                "_Ingredient__amount": "0.125",
-                "_Ingredient__unit": "teaspoon"
+                "_Ingredient__name": "skinless, boneless chicken thighs, cut in half",
+                "_Ingredient__amount": 3.0,
+                "_Ingredient__unit": "pounds"
             },
             {
-                "_Ingredient__name": "maple pepper seasoning (such as Savory Spice Shop Park Hill)",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "teaspoons"
-            },
-            {
-                "_Ingredient__name": "salt to taste",
-                "_Ingredient__amount": "",
+                "_Ingredient__name": "8 (12-inch) jumbo wooden skewers",
+                "_Ingredient__amount": 1.0,
                 "_Ingredient__unit": ""
             },
             {
-                "_Ingredient__name": "chopped, cooked chicken",
-                "_Ingredient__amount": "6",
-                "_Ingredient__unit": "ounces"
+                "_Ingredient__name": "fresh pineapple - peeled, cored, and sliced",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "large"
             },
             {
-                "_Ingredient__name": "chopped Honeycrisp apple",
-                "_Ingredient__amount": "0.5",
+                "_Ingredient__name": "corn tortillas",
+                "_Ingredient__amount": 20.0,
+                "_Ingredient__unit": "(6 inch)"
+            },
+            {
+                "_Ingredient__name": "roughly chopped fresh cilantro",
+                "_Ingredient__amount": 0.25,
                 "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "chopped toasted walnuts",
-                "_Ingredient__amount": "0.25",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "milk, or as needed (Optional)",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "tablespoon"
             }
-        ]
+        ],
+        "__method": "STEP 1:\nHeat a skillet over medium-high heat. Add dried chiles; cook, turning occasionally, until toasted and blistered in spots, 3 to 5 minutes. Add 1 cup water to just cover the chiles, and bring to a simmer over medium-high. Cover and cook, undisturbed, until softened, about 5 minutes. Drain well.\n\nSTEP 2:\nCombine chiles, achiote, garlic, chipotles, 2/3 cup onion, orange juice, vinegar, oil, cumin, brown sugar, and salt in a blender; process until smooth, about 30 seconds. Reserve 1/2 cup marinade, cover, and refrigerate until ready to use.\n\nSTEP 3:\nPlace remaining marinade in a shallow dish or large resealable plastic bag, add chicken; toss to evenly coat. Cover chicken with plastic wrap, and refrigerate at least 8 hours or up to 24 hours. Place wooden skewers in a shallow dish; cover with water by 1 inch. Let stand at room temperature while chicken marinates.\n\nSTEP 4:\nPreheat the oven to 400 degrees F (200 degrees C). Position oven rack 8 inches away from heating element. Line a small roasting pan or 13- x 9-inch baking dish with aluminum foil.\n\nSTEP 5:\nThread 1 pineapple slice onto 2 skewers, being sure to pierce through the center core, (skewers will be about 1 inch apart), leaving a 1 1/2-inch space from end of skewer. Thread 5 to 6 pieces of marinated chicken, stacking on top of pineapple; thread 1 pineapple slice. Repeat process, ending with pineapple slice, until all chicken pieces and pineapple slices are used, making 4 stacks total. Brush with any remaining marinade from chicken. Place stacked skewers in the prepared pan, resting skewer ends on edge of pan so that the chicken doesn't touch the bottom of the pan.\n\nSTEP 6:\nBake in the preheated oven for 30 minutes. Flip skewers over, brush with reserved 1/2 cup marinade. Bake until chicken is no longer pink in the center and the juices run clear, about 30 minutes longer. An instant-read thermometer inserted into the center should read 160 degrees F (71 degrees C). Increase oven temperature to broil; broil until browned and crispy, 3 to 5 minutes. Flip, and broil until browned and crispy, 3 to 5 minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C) F. Let stand 10 minutes.\n\nSTEP 7:\nMeanwhile, heat a large skillet over high heat. Working two at a time, add tortillas; cook, turning once, until heated and browning in some spots, 1 to 2 minutes per side. Repeat with remaining tortillas. Remove chicken and pineapple from skewers, place on cutting board, roughly chop. Divide chicken and pineapple between heated tortillas; top with remaining onion and cilantro.\n"
     },
-    "Slow Cooker Buffalo Chicken Sandwiches": {
-        "__name": "Slow Cooker Buffalo Chicken Sandwiches",
+    "Chicken Pot Pie": {
+        "__name": "Chicken Pot Pie",
         "__ingredients": [
             {
-                "_Ingredient__name": "skinless, boneless chicken breast halves",
-                "_Ingredient__amount": "4",
-                "_Ingredient__unit": ""
+                "_Ingredient__name": "skinless, boneless chicken breast halves - cubed",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "pound"
             },
             {
-                "_Ingredient__name": "Buffalo wing sauce, divided",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "(17.5 fluid ounce) bottle"
+                "_Ingredient__name": "sliced carrots",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "cup"
             },
             {
-                "_Ingredient__name": "dry ranch salad dressing mix",
-                "_Ingredient__amount": "0.5",
-                "_Ingredient__unit": "(1 ounce) package"
+                "_Ingredient__name": "frozen green peas",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "sliced celery",
+                "_Ingredient__amount": 0.5,
+                "_Ingredient__unit": "cup"
             },
             {
                 "_Ingredient__name": "butter",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "tablespoons"
-            },
-            {
-                "_Ingredient__name": "hoagie rolls, split lengthwise",
-                "_Ingredient__amount": "6",
-                "_Ingredient__unit": ""
-            }
-        ]
-    },
-    "Buffalo Chicken Wing Sauce": {
-        "__name": "Buffalo Chicken Wing Sauce",
-        "__ingredients": [
-            {
-                "_Ingredient__name": "hot pepper sauce (such as Frank's RedHot)",
-                "_Ingredient__amount": "0.66",
+                "_Ingredient__amount": 0.33,
                 "_Ingredient__unit": "cup"
             },
             {
-                "_Ingredient__name": "cold unsalted butter",
-                "_Ingredient__amount": "0.5",
+                "_Ingredient__name": "chopped onion",
+                "_Ingredient__amount": 0.33,
                 "_Ingredient__unit": "cup"
             },
             {
-                "_Ingredient__name": "white vinegar",
-                "_Ingredient__amount": "1.5",
-                "_Ingredient__unit": "tablespoons"
-            },
-            {
-                "_Ingredient__name": "Worcestershire sauce",
-                "_Ingredient__amount": "0.25",
-                "_Ingredient__unit": "teaspoon"
-            },
-            {
-                "_Ingredient__name": "cayenne pepper",
-                "_Ingredient__amount": "0.25",
-                "_Ingredient__unit": "teaspoon"
-            },
-            {
-                "_Ingredient__name": "garlic powder",
-                "_Ingredient__amount": "0.125",
-                "_Ingredient__unit": "teaspoon"
-            },
-            {
-                "_Ingredient__name": "salt to taste",
-                "_Ingredient__amount": "",
-                "_Ingredient__unit": ""
-            }
-        ]
-    },
-    "Boneless Buffalo Wings": {
-        "__name": "Boneless Buffalo Wings",
-        "__ingredients": [
-            {
-                "_Ingredient__name": "oil for deep frying",
-                "_Ingredient__amount": "",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "unbleached all-purpose flour",
-                "_Ingredient__amount": "1",
+                "_Ingredient__name": "all-purpose flour",
+                "_Ingredient__amount": 0.33,
                 "_Ingredient__unit": "cup"
             },
             {
                 "_Ingredient__name": "salt",
-                "_Ingredient__amount": "2",
+                "_Ingredient__amount": 0.5,
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "black pepper",
+                "_Ingredient__amount": 0.25,
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "celery seed",
+                "_Ingredient__amount": 0.25,
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "chicken broth",
+                "_Ingredient__amount": 1.75,
+                "_Ingredient__unit": "cups"
+            },
+            {
+                "_Ingredient__name": "milk",
+                "_Ingredient__amount": 0.66,
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "unbaked pie crusts",
+                "_Ingredient__amount": 2.0,
+                "_Ingredient__unit": "(9 inch) "
+            }
+        ],
+        "__method": "STEP 1:\nGather all ingredients.\n\nSTEP 2:\nPreheat the oven to 425 degrees F (220 degrees C.)\n\nSTEP 3:\nCombine chicken, carrots, peas, and celery in a saucepan; add water to cover and bring to a boil. Boil for 15 minutes, then remove from the heat and drain.\n\nSTEP 4:\nWhile the chicken is cooking, melt butter in another saucepan over medium heat. Add onion and cook until soft and translucent, 5 to 7 minutes. Stir in flour, salt, pepper, and celery seed\n\nSTEP 5:\nSlowly stir in chicken broth and milk. Reduce heat to medium-low and simmer until thick, 5 to 10 minutes. Remove from heat and set aside.\n\nSTEP 6:\nPlace chicken and vegetables in the bottom pie crust. Pour hot liquid mixture over top. Cover with top crust, seal the edges, and cut away any excess dough. Make several small slits in the top crust to allow steam to escape.\n\nSTEP 7:\nBake in the preheated oven until pastry is golden brown and filling is bubbly, 30 to 35 minutes. Cool for 10 minutes before serving.\n"
+    },
+    "Spicy Thai Basil Chicken (Pad Krapow Gai)": {
+        "__name": "Spicy Thai Basil Chicken (Pad Krapow Gai)",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "chicken broth",
+                "_Ingredient__amount": 0.33,
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "oyster sauce",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "tablespoon"
+            },
+            {
+                "_Ingredient__name": "soy sauce, or as needed",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "tablespoon"
+            },
+            {
+                "_Ingredient__name": "fish sauce",
+                "_Ingredient__amount": 2.0,
+                "_Ingredient__unit": "teaspoons"
+            },
+            {
+                "_Ingredient__name": "white sugar",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "brown sugar",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "vegetable oil",
+                "_Ingredient__amount": 2.0,
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "skinless, boneless chicken thighs, coarsely chopped",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "pound"
+            },
+            {
+                "_Ingredient__name": "sliced shallots",
+                "_Ingredient__amount": 0.25,
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "garlic, minced",
+                "_Ingredient__amount": 4.0,
+                "_Ingredient__unit": "cloves"
+            },
+            {
+                "_Ingredient__name": "minced Thai chilies, Serrano, or other hot pepper",
+                "_Ingredient__amount": 2.0,
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "very thinly sliced fresh basil leaves",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "hot cooked rice",
+                "_Ingredient__amount": 2.0,
+                "_Ingredient__unit": "cups"
+            }
+        ],
+        "__method": "STEP 1:\nWhisk chicken broth, oyster sauce, soy sauce, fish sauce, white sugar, and brown sugar together in a bowl until well blended.\n\nSTEP 2:\nHeat large skillet over high heat. Drizzle in oil. Add chicken and stir fry until it loses its raw color, 2 to 3 minutes. Stir in shallots, garlic, and sliced chilies. Continue cooking on high heat until some of the juices start to caramelize in the bottom of the pan, about 2 or 3 more minutes. Add about a tablespoon of the sauce mixture to the skillet; cook and stir until sauce begins to caramelize, about 1 minute.\n\nSTEP 3:\nPour in the rest of the sauce. Cook and stir until sauce has deglazed the bottom of the pan. Continue to cook until sauce glazes onto the meat, 1 or 2 more minutes. Remove from heat.\n\nSTEP 4:\nStir in basil. Cook and stir until basil is wilted, about 20 seconds. Serve with rice.\n"
+    },
+    "Simple Baked Chicken Breasts": {
+        "__name": "Simple Baked Chicken Breasts",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "skinless, boneless chicken breast halves",
+                "_Ingredient__amount": 4.0,
+                "_Ingredient__unit": "(5 ounce)"
+            },
+            {
+                "_Ingredient__name": "olive oil",
+                "_Ingredient__amount": 2.0,
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "coarse sea salt, or to taste",
+                "_Ingredient__amount": 0.5,
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "Creole seasoning (such as Tony Chachere's\u00ae), or more to taste",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "pinch"
+            },
+            {
+                "_Ingredient__name": "chicken broth, or more to taste",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "tablespoon"
+            }
+        ],
+        "__method": "STEP 1:\nPreheat the oven to 400 degrees F (200 degrees C).\n\nSTEP 2:\nRub chicken breasts with olive oil and sprinkle both sides with salt and Creole seasoning. Place chicken in a broiler pan.\n\nSTEP 3:\nBake in the preheated oven for 10 minutes. Flip chicken and cook until no longer pink in the center and the juices run clear, about 15 minutes more. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C).\n\nSTEP 4:\nRemove chicken to a plate.\n\nSTEP 5:\nPour chicken broth into the pan and scrape any browned bits off the bottom with a flat-edged wooden spatula. Add more broth if needed to dislodge the browned bits, but not too much or it will be watery.\n\nSTEP 6:\nTo serve, drizzle the pan sauce over the chicken.\n"
+    },
+    "Chicken Cordon Bleu": {
+        "__name": "Chicken Cordon Bleu",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "nonstick cooking spray",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "skinless, boneless chicken breast halves",
+                "_Ingredient__amount": 4.0,
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "salt",
+                "_Ingredient__amount": 0.25,
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "ground black pepper",
+                "_Ingredient__amount": 0.125,
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "Swiss cheese",
+                "_Ingredient__amount": 6.0,
+                "_Ingredient__unit": "slices"
+            },
+            {
+                "_Ingredient__name": "cooked ham",
+                "_Ingredient__amount": 4.0,
+                "_Ingredient__unit": "slices"
+            },
+            {
+                "_Ingredient__name": "seasoned bread crumbs",
+                "_Ingredient__amount": 0.5,
+                "_Ingredient__unit": "cup"
+            }
+        ],
+        "__method": "STEP 1:\nPreheat oven to 350 degrees F (175 degrees C). Coat a 7x11-inch baking dish with nonstick cooking spray.\n\nSTEP 2:\nPound chicken breasts to 1/4 inch thickness.\n\nSTEP 3:\nSprinkle each piece of chicken on both sides with salt and pepper. Place 1 Swiss cheese slice and 1 ham slice on top of each breast. Roll up each breast, and secure with a toothpick. Place in the prepared baking dish, and sprinkle chicken evenly with bread crumbs.\n\nSTEP 4:\nBake in the preheated oven until chicken is no longer pink, 30 to 35 minutes.\n\nSTEP 5:\nRemove from the oven, and place 1/2 Swiss cheese slice on top of each breast. Return to the oven until cheese has melted, 3 to 5 minutes. Remove toothpicks and serve immediately.\n"
+    },
+    "Honey Glazed Chicken": {
+        "__name": "Honey Glazed Chicken",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "honey",
+                "_Ingredient__amount": 0.25,
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "soy sauce",
+                "_Ingredient__amount": 2.0,
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "red pepper flakes",
+                "_Ingredient__amount": 0.125,
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "olive oil",
+                "_Ingredient__amount": 1.5,
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "skinless, boneless chicken breast halves, cut into bite-size pieces",
+                "_Ingredient__amount": 2.0,
+                "_Ingredient__unit": ""
+            }
+        ],
+        "__method": "STEP 1:\nWhisk honey, soy sauce, and red pepper flakes in a bowl; set aside.\n\nSTEP 2:\nHeat olive oil in a skillet over medium heat; cook and stir chicken in hot oil until lightly brown, about 5 minutes.\n\nSTEP 3:\nPour honey mixture into the skillet; continue to cook and stir until chicken is no longer pink in the center and sauce is thickened, about 5 minutes more.\n"
+    },
+    "Three-Ingredient Baked Chicken Breasts": {
+        "__name": "Three-Ingredient Baked Chicken Breasts",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "butter, melted",
+                "_Ingredient__amount": 0.25,
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "salt",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "skinless, boneless chicken breast halves",
+                "_Ingredient__amount": 4.0,
+                "_Ingredient__unit": ""
+            }
+        ],
+        "__method": "STEP 1:\nPreheat the oven to 350 degrees F (175 degrees C). Lightly butter a baking dish.\n\nSTEP 2:\nStir together melted butter and salt in a bowl.\n\nSTEP 3:\nArrange chicken in the prepared baking dish. Brush butter mixture onto chicken until thoroughly coated, pouring any extra over chicken.\n\nSTEP 4:\nBake in the preheated oven until no longer pink in the center and juices run clear, 30 to 45 minutes. An instant-read thermometer inserted into the center should read at least 165 degrees F (74 degrees C).\n"
+    },
+    "Salsa Chicken": {
+        "__name": "Salsa Chicken",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "skinless, boneless chicken breast halves",
+                "_Ingredient__amount": 4.0,
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "taco seasoning mix",
+                "_Ingredient__amount": 4.0,
+                "_Ingredient__unit": "teaspoons"
+            },
+            {
+                "_Ingredient__name": "salsa",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "shredded Cheddar cheese",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "sour cream (Optional)",
+                "_Ingredient__amount": 2.0,
+                "_Ingredient__unit": "tablespoons"
+            }
+        ],
+        "__method": "STEP 1:\nPreheat the oven to 375 degrees F (190 degrees C). Lightly grease a 9x13-inch baking dish.\n\nSTEP 2:\nPlace chicken breasts in the prepared dish. Sprinkle seasoning mix on both sides of chicken breasts; pour salsa on top.\n\nSTEP 3:\nBake in the preheated oven until chicken is tender and juicy and the juices run clear, 25 to 35 minutes.\n\nSTEP 4:\nSprinkle chicken evenly with cheese. Continue baking until cheese is melted and bubbly, 3 to 5 minutes more. Top with sour cream and serve.\n"
+    },
+    "Fiesta Slow Cooker Shredded Chicken Tacos": {
+        "__name": "Fiesta Slow Cooker Shredded Chicken Tacos",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "chicken broth",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "taco seasoning mix",
+                "_Ingredient__amount": 3.0,
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "skinless, boneless chicken breasts",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "pound"
+            }
+        ],
+        "__method": "STEP 1:\nCombine chicken broth and taco seasoning mix in a bowl.\n\nSTEP 2:\nPlace chicken in a slow cooker. Pour chicken broth mixture over chicken.\n\nSTEP 3:\nCook on Low for 6 to 8 hours. Shred chicken.\n"
+    },
+    "Smoked Chicken Drumsticks": {
+        "__name": "Smoked Chicken Drumsticks",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "chicken drumsticks",
+                "_Ingredient__amount": 12.0,
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "vegetable oil, or as needed",
+                "_Ingredient__amount": 0.25,
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "BBQ rub",
+                "_Ingredient__amount": 0.33,
+                "_Ingredient__unit": "cup"
+            }
+        ],
+        "__method": "STEP 1:\nPlace drumsticks on a rack over a drip tray or baking sheet. Air-dry in the refrigerator, 8 hours to overnight.\n\nSTEP 2:\nPreheat an electric smoker to 275 degrees F (135 degrees C) and add wood chips according to manufacturer's instructions.\n\nSTEP 3:\nBrush drumsticks lightly with vegetable oil. Place drumsticks in a resealable plastic bag and sprinkle with the rub. Toss to coat evenly.\n\nSTEP 4:\nPlace drumsticks on the rack in the smoker. Smoke until chicken has reached an internal temperature of 165 degrees F (74 degrees C), about 2 hours.\n"
+    },
+    "Brown Sugar Ham Steak": {
+        "__name": "Brown Sugar Ham Steak",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "bone-in fully cooked ham steak",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "(8 ounce)"
+            },
+            {
+                "_Ingredient__name": "butter, cubed",
+                "_Ingredient__amount": 5.0,
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "brown sugar",
+                "_Ingredient__amount": 5.0,
+                "_Ingredient__unit": "tablespoons"
+            }
+        ],
+        "__method": "STEP 1:\nCook ham steak in a large skillet over medium heat until browned, 3 to 4 minutes per side.\n\nSTEP 2:\nRemove ham from skillet; drain off any fat.\n\nSTEP 3:\nMelt butter in the same skillet over medium-low heat. Stir in brown sugar.\n\nSTEP 4:\nReturn ham to skillet. Cook, turning ham often, until heated through and brown sugar has dissolved, about 10 minutes. Reduce heat if brown sugar/butter mixture starts to pop or splatter.\n"
+    },
+    "Turkey and Quinoa Meatloaf": {
+        "__name": "Turkey and Quinoa Meatloaf",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "quinoa",
+                "_Ingredient__amount": 0.25,
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "water",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "olive oil",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "onion, chopped",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "small"
+            },
+            {
+                "_Ingredient__name": "garlic, chopped",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "large clove"
+            },
+            {
+                "_Ingredient__name": "ground turkey",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "(20 ounce) package"
+            },
+            {
+                "_Ingredient__name": "tomato paste",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "tablespoon"
+            },
+            {
+                "_Ingredient__name": "hot pepper sauce",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "tablespoon"
+            },
+            {
+                "_Ingredient__name": "Worcestershire sauce",
+                "_Ingredient__amount": 2.0,
+                "_Ingredient__unit": "teaspoons"
+            },
+            {
+                "_Ingredient__name": "egg",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "salt",
+                "_Ingredient__amount": 1.5,
                 "_Ingredient__unit": "teaspoons"
             },
             {
                 "_Ingredient__name": "ground black pepper",
-                "_Ingredient__amount": "0.5",
+                "_Ingredient__amount": 1.0,
                 "_Ingredient__unit": "teaspoon"
             },
             {
-                "_Ingredient__name": "cayenne pepper",
-                "_Ingredient__amount": "0.5",
-                "_Ingredient__unit": "teaspoon"
-            },
-            {
-                "_Ingredient__name": "paprika",
-                "_Ingredient__amount": "0.5",
-                "_Ingredient__unit": "teaspoon"
-            },
-            {
-                "_Ingredient__name": "garlic powder",
-                "_Ingredient__amount": "0.25",
-                "_Ingredient__unit": "teaspoon"
-            },
-            {
-                "_Ingredient__name": "egg",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "milk",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "skinless, boneless chicken breasts, cut into 1/2-inch strips",
-                "_Ingredient__amount": "3",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "hot pepper sauce",
-                "_Ingredient__amount": "0.25",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "butter",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "tablespoon"
+                "_Ingredient__name": "brown sugar",
+                "_Ingredient__amount": 2.0,
+                "_Ingredient__unit": "tablespoons"
             }
-        ]
+        ],
+        "__method": "STEP 1:\nBring the quinoa and water to a boil in a saucepan over high heat. Reduce heat to medium-low, cover, and simmer until the quinoa is tender, and the water has been absorbed, about 15 to 20 minutes. Set aside to cool.\n\nSTEP 2:\nPreheat an oven to 350 degrees F (175 degrees C).\n\nSTEP 3:\nHeat the olive oil in a skillet over medium heat. Stir in the onion; cook and stir until the onion has softened and turned translucent, about 5 minutes. Add the garlic and cook for another minute; remove from heat to cool.\n\nSTEP 4:\nStir the turkey, cooked quinoa, onions, tomato paste, hot sauce, 2 tablespoons Worcestershire, egg, salt, and pepper in a large bowl until well combined. The mixture will be very moist. Shape into a loaf on a foil lined baking sheet. Combine the brown sugar, 2 teaspoons Worcestershire, and 1 teaspoon water in a small bowl. Rub the paste over the top of the meatloaf.\n\nSTEP 5:\nBake in the preheated oven until no longer pink in the center, about 50 minutes. An instant-read thermometer inserted into the center should read at least 160 degrees F (70 degrees C). Let the meatloaf cool for 10 minutes before slicing and serving.\n"
     },
-    "Buffalo Chicken Lasagna": {
-        "__name": "Buffalo Chicken Lasagna",
+    "Basil Lemonade": {
+        "__name": "Basil Lemonade",
         "__ingredients": [
             {
-                "_Ingredient__name": "bone-in chicken breasts with skin",
-                "_Ingredient__amount": "1.5",
-                "_Ingredient__unit": "pounds"
-            },
-            {
-                "_Ingredient__name": "chicken stock, or as needed",
-                "_Ingredient__amount": "2",
+                "_Ingredient__name": "cold water",
+                "_Ingredient__amount": 12.0,
                 "_Ingredient__unit": "cups"
             },
             {
-                "_Ingredient__name": "paprika",
-                "_Ingredient__amount": "1",
+                "_Ingredient__name": "frozen lemonade concentrate, thawed",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "(12 ounce) can"
+            },
+            {
+                "_Ingredient__name": "white sugar",
+                "_Ingredient__amount": 0.33,
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "fresh lime juice",
+                "_Ingredient__amount": 0.25,
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "firmly packed torn basil leaves",
+                "_Ingredient__amount": 0.5,
+                "_Ingredient__unit": "cup"
+            }
+        ],
+        "__method": "STEP 1:\nStir water, lemonade, sugar, and lime juice together in a pitcher. Add 1/2 cup basil leaves, stir to combine, cover the pitcher, and refrigerate until flavors combine, 8 hours to overnight. Remove basil leaves and discard.\n"
+    },
+    "Juicy Roasted Chicken": {
+        "__name": "Juicy Roasted Chicken",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "whole chicken, giblets removed",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "(3 pound)"
+            },
+            {
+                "_Ingredient__name": "salt and black pepper to taste",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "onion powder, or to taste",
+                "_Ingredient__amount": 1.0,
                 "_Ingredient__unit": "tablespoon"
             },
             {
-                "_Ingredient__name": "salt, or more to taste ",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "teaspoon"
-            },
-            {
-                "_Ingredient__name": "cayenne pepper",
-                "_Ingredient__amount": "0.5",
-                "_Ingredient__unit": "teaspoon"
-            },
-            {
-                "_Ingredient__name": "lasagna noodles",
-                "_Ingredient__amount": "12",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "cooking spray",
-                "_Ingredient__amount": "",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "olive oil, or more as needed",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "tablespoon"
-            },
-            {
-                "_Ingredient__name": "celery, finely chopped",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "stalks"
-            },
-            {
-                "_Ingredient__name": "onion, finely chopped",
-                "_Ingredient__amount": "0.5",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "buffalo wing sauce",
-                "_Ingredient__amount": "0.66",
+                "_Ingredient__name": "butter or margarine",
+                "_Ingredient__amount": 0.5,
                 "_Ingredient__unit": "cup"
             },
             {
-                "_Ingredient__name": "crumbled blue cheese",
-                "_Ingredient__amount": "0.5",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "ricotta cheese",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "(16 ounce) container"
-            },
-            {
-                "_Ingredient__name": "blue cheese dressing",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "egg",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "shredded mozzarella cheese",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "(8 ounce) package"
+                "_Ingredient__name": "celery, leaves removed",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "stalk"
             }
-        ]
-    },
-    "Creamy Buffalo Chicken Noodle Soup": {
-        "__name": "Creamy Buffalo Chicken Noodle Soup",
-        "__ingredients": [
-            {
-                "_Ingredient__name": "extra-wide egg noodles",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "(8 ounce) package"
-            },
-            {
-                "_Ingredient__name": "butter",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "tablespoons"
-            },
-            {
-                "_Ingredient__name": "onion, chopped",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "medium"
-            },
-            {
-                "_Ingredient__name": "celery, chopped",
-                "_Ingredient__amount": "3",
-                "_Ingredient__unit": "stalks"
-            },
-            {
-                "_Ingredient__name": "carrots, peeled and chopped",
-                "_Ingredient__amount": "3",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "garlic, chopped",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "clove"
-            },
-            {
-                "_Ingredient__name": "flour",
-                "_Ingredient__amount": "0.25",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "Swanson Chicken Broth",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "(32 ounce) carton"
-            },
-            {
-                "_Ingredient__name": "cooked chicken breast meat, chopped",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "pound"
-            },
-            {
-                "_Ingredient__name": "hot pepper sauce",
-                "_Ingredient__amount": "0.33",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "dried parsley flakes",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "teaspoon"
-            },
-            {
-                "_Ingredient__name": "half-and-half",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "crumbled blue cheese",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "teaspoon"
-            },
-            {
-                "_Ingredient__name": "ranch-flavored croutons",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "tablespoon"
-            }
-        ]
-    },
-    "Buffalo Shrimp": {
-        "__name": "Buffalo Shrimp",
-        "__ingredients": [
-            {
-                "_Ingredient__name": "all-purpose flour",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "cups"
-            },
-            {
-                "_Ingredient__name": "Creole-style seasoning",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "tablespoons"
-            },
-            {
-                "_Ingredient__name": "garlic powder",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "tablespoon"
-            },
-            {
-                "_Ingredient__name": "ground cayenne pepper",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "tablespoon"
-            },
-            {
-                "_Ingredient__name": "onion powder",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "teaspoon"
-            },
-            {
-                "_Ingredient__name": "freshly ground black pepper",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "teaspoon"
-            },
-            {
-                "_Ingredient__name": "large shrimp, peeled and deveined with tails attached",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "pound"
-            },
-            {
-                "_Ingredient__name": "oil for frying",
-                "_Ingredient__amount": "4",
-                "_Ingredient__unit": "cups"
-            }
-        ]
-    },
-    "Eggplant Sandwiches": {
-        "__name": "Eggplant Sandwiches",
-        "__ingredients": [
-            {
-                "_Ingredient__name": "eggplant, halved and sliced",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "small"
-            },
-            {
-                "_Ingredient__name": "olive oil, or as needed",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "tablespoon"
-            },
-            {
-                "_Ingredient__name": "mayonnaise",
-                "_Ingredient__amount": "0.25",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "garlic, minced",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "cloves"
-            },
-            {
-                "_Ingredient__name": "French sandwich rolls ",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "(6 inch)"
-            },
-            {
-                "_Ingredient__name": "tomato, sliced",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "small"
-            },
-            {
-                "_Ingredient__name": "crumbled feta cheese",
-                "_Ingredient__amount": "0.5",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "chopped fresh basil leaves",
-                "_Ingredient__amount": "0.25",
-                "_Ingredient__unit": "cup"
-            }
-        ]
-    },
-    "Grilled Cheese Sandwich": {
-        "__name": "Grilled Cheese Sandwich",
-        "__ingredients": [
-            {
-                "_Ingredient__name": "white bread",
-                "_Ingredient__amount": "4",
-                "_Ingredient__unit": "slices"
-            },
-            {
-                "_Ingredient__name": "butter, divided",
-                "_Ingredient__amount": "3",
-                "_Ingredient__unit": "tablespoons"
-            },
-            {
-                "_Ingredient__name": "Cheddar cheese",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "slices"
-            }
-        ]
-    },
-    "Griddle Style Philly Steak Sandwiches": {
-        "__name": "Griddle Style Philly Steak Sandwiches",
-        "__ingredients": [
-            {
-                "_Ingredient__name": "sliced mushrooms, drained",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "(8 ounce) can"
-            },
-            {
-                "_Ingredient__name": "onion, sliced",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "small"
-            },
-            {
-                "_Ingredient__name": "green bell pepper, seeded and sliced into strips",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "provolone cheese",
-                "_Ingredient__amount": "8",
-                "_Ingredient__unit": "slices"
-            },
-            {
-                "_Ingredient__name": "salt to taste",
-                "_Ingredient__amount": "",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "seasoned salt to taste",
-                "_Ingredient__amount": "",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "thinly sliced roast beef",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "pound"
-            },
-            {
-                "_Ingredient__name": "submarine rolls, halved",
-                "_Ingredient__amount": "4",
-                "_Ingredient__unit": ""
-            }
-        ]
-    },
-    "Reuben Sandwich": {
-        "__name": "Reuben Sandwich",
-        "__ingredients": [
-            {
-                "_Ingredient__name": "rye bread",
-                "_Ingredient__amount": "8",
-                "_Ingredient__unit": "slices"
-            },
-            {
-                "_Ingredient__name": "Thousand Island dressing",
-                "_Ingredient__amount": "0.5",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "Swiss cheese",
-                "_Ingredient__amount": "8",
-                "_Ingredient__unit": "slices"
-            },
-            {
-                "_Ingredient__name": "deli sliced corned beef",
-                "_Ingredient__amount": "8",
-                "_Ingredient__unit": "slices"
-            },
-            {
-                "_Ingredient__name": "sauerkraut, drained",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "butter, softened",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "tablespoons"
-            }
-        ]
-    },
-    "Easy French Dip Sandwiches": {
-        "__name": "Easy French Dip Sandwiches",
-        "__ingredients": [
-            {
-                "_Ingredient__name": "hoagie rolls, split lengthwise",
-                "_Ingredient__amount": "4",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "beef consomme",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "(10.5 ounce) can"
-            },
-            {
-                "_Ingredient__name": "water",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "thinly sliced deli roast beef",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "pound"
-            },
-            {
-                "_Ingredient__name": "provolone cheese",
-                "_Ingredient__amount": "8",
-                "_Ingredient__unit": "slices"
-            }
-        ]
-    },
-    "Sandy's Summer Sausage": {
-        "__name": "Sandy's Summer Sausage",
-        "__ingredients": [
-            {
-                "_Ingredient__name": "ground beef",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "pounds"
-            },
-            {
-                "_Ingredient__name": "mustard seed",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "tablespoons"
-            },
-            {
-                "_Ingredient__name": "liquid smoke flavoring",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "tablespoons"
-            },
-            {
-                "_Ingredient__name": "sugar-based curing mixture (such as Morton Tender Quick)",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "tablespoons"
-            },
-            {
-                "_Ingredient__name": "garlic powder",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "tablespoon"
-            },
-            {
-                "_Ingredient__name": "coarse ground black pepper",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "teaspoon"
-            }
-        ]
-    },
-    "Donut Pan Egg Sandwiches": {
-        "__name": "Donut Pan Egg Sandwiches",
-        "__ingredients": [
-            {
-                "_Ingredient__name": "eggs",
-                "_Ingredient__amount": "10",
-                "_Ingredient__unit": "large"
-            },
-            {
-                "_Ingredient__name": "salt and freshly ground black pepper to taste",
-                "_Ingredient__amount": "",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "cooked breakfast sausage",
-                "_Ingredient__amount": "6",
-                "_Ingredient__unit": "ounces"
-            },
-            {
-                "_Ingredient__name": "fresh chives, chopped",
-                "_Ingredient__amount": "3",
-                "_Ingredient__unit": "tablespoons"
-            },
-            {
-                "_Ingredient__name": "mini bagels",
-                "_Ingredient__amount": "6",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "Cheddar cheese",
-                "_Ingredient__amount": "6",
-                "_Ingredient__unit": "slices"
-            },
-            {
-                "_Ingredient__name": "Sriracha sauce or hot sauce (optional)",
-                "_Ingredient__amount": "",
-                "_Ingredient__unit": ""
-            }
-        ]
-    },
-    "To Die For Fettuccine Alfredo": {
-        "__name": "To Die For Fettuccine Alfredo",
-        "__ingredients": [
-            {
-                "_Ingredient__name": "dry fettuccine pasta",
-                "_Ingredient__amount": "24",
-                "_Ingredient__unit": "ounces"
-            },
-            {
-                "_Ingredient__name": "butter",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "heavy cream",
-                "_Ingredient__amount": "0.75",
-                "_Ingredient__unit": "pint"
-            },
-            {
-                "_Ingredient__name": "salt and pepper to taste",
-                "_Ingredient__amount": "",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "garlic salt",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "dash"
-            },
-            {
-                "_Ingredient__name": "grated Romano cheese",
-                "_Ingredient__amount": "0.75",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "grated Parmesan cheese",
-                "_Ingredient__amount": "0.5",
-                "_Ingredient__unit": "cup"
-            }
-        ]
-    },
-    "Lasagna Alfredo Roll Ups": {
-        "__name": "Lasagna Alfredo Roll Ups",
-        "__ingredients": [
-            {
-                "_Ingredient__name": "lasagna noodles",
-                "_Ingredient__amount": "8",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "olive oil",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "tablespoon"
-            },
-            {
-                "_Ingredient__name": "frozen chopped spinach",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "(10 ounce) package"
-            },
-            {
-                "_Ingredient__name": "thinly sliced green onion",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "tablespoons"
-            },
-            {
-                "_Ingredient__name": "part-skim ricotta cheese",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "pint"
-            },
-            {
-                "_Ingredient__name": "grated Parmesan cheese",
-                "_Ingredient__amount": "0.25",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "salt",
-                "_Ingredient__amount": "0.5",
-                "_Ingredient__unit": "teaspoon"
-            },
-            {
-                "_Ingredient__name": "egg",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": ""
-            },
-            {
-                "_Ingredient__name": "Alfredo-style pasta sauce",
-                "_Ingredient__amount": "21",
-                "_Ingredient__unit": "ounces"
-            },
-            {
-                "_Ingredient__name": "shredded mozzarella cheese",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "cup"
-            }
-        ]
-    },
-    "Easy Keto Alfredo Sauce": {
-        "__name": "Easy Keto Alfredo Sauce",
-        "__ingredients": [
-            {
-                "_Ingredient__name": "unsalted butter",
-                "_Ingredient__amount": "0.5",
-                "_Ingredient__unit": "cup"
-            },
-            {
-                "_Ingredient__name": "garlic, crushed",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "cloves"
-            },
-            {
-                "_Ingredient__name": "heavy whipping cream",
-                "_Ingredient__amount": "2",
-                "_Ingredient__unit": "cups"
-            },
-            {
-                "_Ingredient__name": "cream cheese, softened",
-                "_Ingredient__amount": "0.5",
-                "_Ingredient__unit": "(4 ounce) package"
-            },
-            {
-                "_Ingredient__name": "grated Parmesan cheese",
-                "_Ingredient__amount": "1.5",
-                "_Ingredient__unit": "cups"
-            },
-            {
-                "_Ingredient__name": "salt, or to taste",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "pinch"
-            },
-            {
-                "_Ingredient__name": "ground nutmeg, or to taste",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "pinch"
-            },
-            {
-                "_Ingredient__name": "ground white pepper, or to taste",
-                "_Ingredient__amount": "1",
-                "_Ingredient__unit": "pinch"
-            }
-        ]
+        ],
+        "__method": "STEP 1:\nPreheat the oven to 350 degrees F (175 degrees C).\n\nSTEP 2:\nPlace chicken in a roasting pan; season generously inside and out with onion powder, salt, and pepper. Place 3 tablespoons of butter in chicken cavity; arrange dollops of remaining butter on the outside of chicken. Cut celery into 3 or 4 pieces; place in the chicken cavity.\n\nSTEP 3:\nBake chicken uncovered in the preheated oven until no longer pink at the bone and the juices run clear, about 1 hour and 15 minutes. An instant-read thermometer inserted into the thickest part of the thigh, near the bone, should read 165 degrees F (74 degrees C).\n\nSTEP 4:\nRemove from the oven and baste with drippings. Cover with aluminum foil and allow to rest for about 30 minutes before serving.\n"
     }
 }

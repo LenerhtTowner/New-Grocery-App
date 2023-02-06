@@ -22,4 +22,7 @@ class NavBar(MDBottomNavigation):
 class RecipeListItem(BoxLayout):
     pass
 
+class RecipeDataPanel(BoxLayout):
+    pass
+
 #### DEAD CODE STORAGE ####

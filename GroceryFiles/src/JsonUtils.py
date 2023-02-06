@@ -54,15 +54,14 @@ def LoadRecipesFromJson(filepath = 'GroceryFiles/json/recipes.json'):
 
     for key in recipeData.keys():
         recipeName = recipeData[key]['__name']
-        __ingredients = []
+        ingredients = []
 
         for ing in recipeData[key]['__ingredients']:
-            __ingredients.append(Ingredient(ing['_Ingredient__amount'], ing['_Ingredient__unit'], ing['_Ingredient__name']))
+            if ing['_Ingredient__amount'] == '':
+                ing['_Ingredient__amount'] = 0
+            ingredients.append(Ingredient(ing['_Ingredient__amount'], ing['_Ingredient__unit'], ing['_Ingredient__name']))
 
-        newRecipeDict[key] = Recipe(recipeName, __ingredients)
+        recipeMethod = recipeData[key]['__method']
 
+        newRecipeDict[key] = Recipe(recipeName, ingredients, recipeMethod)
     return newRecipeDict
-
-
-#EncodeRecipesToJson()
-recipes = LoadRecipesFromJson()

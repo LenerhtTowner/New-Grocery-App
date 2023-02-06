@@ -132,9 +132,12 @@
         name: 'screen 1'
         text: 'Home'
         icon: 'home'
+        on_tab_press: root.ids.recipeScreen.resetRecipes()
 
         BoxLayout:
             RecipeScreen:
+                id: recipeScreen
+            
 
     MDBottomNavigationItem:
         name: 'screen 2'
@@ -162,19 +165,19 @@
     size_hint: 1, None
     height: 40
     padding: (10, 5)
-    CheckBox:
-        background_normal: None
-        color: 1, 1, 1, 1
-        id: recipe_check
-        size_hint: (None, None)
-        size: (50, 30)
+    # CheckBox:
+    #     background_normal: None
+    #     color: 1, 1, 1, 1
+    #     id: recipe_check
+    #     size_hint: (None, None)
+    #     size: (50, 30)
     Label:
         id: recipe_label
         valign: "center"
         halign: "left"
-        text: ""
         text_size: self.size
         size_hint: 1, 1
+        markup: True
     TextInput:
         id: recipe_count
         size_hint: (None,None)
@@ -184,3 +187,39 @@
 
 <MainScreen>
     NavBar:
+
+<RecipeDataPanel>
+    padding: "20dp"
+    orientation: "vertical"
+    Label:
+        markup: True
+        text: "[u]Ingredients[/u]"
+        font_size: 24
+        size_hint: 1, None
+        height: self.font_size * 2
+        text_size: self.size
+        halign: "left"
+        valign: "center"
+    Label:
+        id: IngredientLabel
+        text_size: self.width, None
+        size_hint: 1, None
+        height: self.texture_size[1]
+
+    Label:
+        markup: True
+        text: "[u]Method[/u]"
+        font_size: 24
+        size_hint: 1, None
+        height: self.font_size * 2
+        text_size: self.size
+        halign: "left"
+        valign: "center"
+
+    BoxLayout:
+        ScrollView:
+            Label:
+                id: MethodLabel
+                text_size: self.width, None
+                size_hint: 1, None
+                height: self.texture_size[1]

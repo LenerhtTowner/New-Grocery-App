@@ -16,9 +16,9 @@ from typing import List
 
 class Ingredient:
     def __init__(self, amount:float, unit:str, name:str):
-        self.__name = name
-        self.__amount = amount
-        self.__unit = unit
+        self.__name = str(name)
+        self.__amount = float(amount)
+        self.__unit = str(unit)
 
 
     def __str__(self):
@@ -42,9 +42,10 @@ class Ingredient:
 
 
 class Recipe:
-    def __init__(self, name:str, ingredients:List[Ingredient]):
+    def __init__(self, name:str, ingredients:List[Ingredient], method:str):
         self.__name = name
         self.__ingredients = ingredients
+        self.__method = method
 
 
     def GetName(self):
@@ -55,8 +56,12 @@ class Recipe:
         return self.__ingredients
 
 
+    def GetMethod(self):
+        return self.__method
+
+
     def ToDict(self):
-        jsonData = {'__name': self.__name, '__ingredients': []}
+        jsonData = {'__name': self.__name, '__ingredients': [], '__method': self.__method}
         for ing in self.__ingredients:
             jsonData['__ingredients'].append(ing.__dict__)
 
@@ -88,7 +93,8 @@ class RecipeDb:
                             name TEXT);''')
         cursor.execute('''CREATE TABLE recipes (
                             id INTEGER PRIMARY KEY,
-                            name TEXT);''')
+                            name TEXT,
+                            method TEXT);''')
         cursor.execute('''CREATE TABLE recipe_ingredients (
                             id INTEGER PRIMARY KEY,
                             recipe_id INTEGER,
@@ -100,17 +106,17 @@ class RecipeDb:
         self.conn.commit()
 
 
-    def InsertIngredient(self, ingredient: Ingredient):
+    def __InsertIngredient(self, ingredient: Ingredient):
         cursor = self.conn.cursor()
-        cursor.execute("INSERT INTO ingredients (name) VALUES (?)", (ingredient.get_name(),))
+        cursor.execute("INSERT INTO ingredients (name) VALUES (?)", (ingredient.GetName(),))
         ingredient_id = cursor.lastrowid
         self.conn.commit()
         return ingredient_id
 
 
-    def InsertRecipe(self, recipe: Recipe):
+    def __InsertRecipe(self, recipe: Recipe):
         cursor = self.conn.cursor()
-        cursor.execute("INSERT INTO recipes (name) VALUES (?)", (recipe.get_name(),))
+        cursor.execute("INSERT INTO recipes (name, method) VALUES (?, ?)", (recipe.GetName(), recipe.GetMethod()))
         recipe_id = cursor.lastrowid
         self.conn.commit()
         return recipe_id
@@ -124,22 +130,32 @@ class RecipeDb:
 
     def PushRecipe(self, recipe: Recipe):
         cursor = self.conn.cursor()
-        cursor.execute("Select name from recipes where name = ?", (recipe.get_name(),))
+        cursor.execute("Select name from recipes where name = ?", (recipe.GetName(),))
         result = cursor.fetchall()
 
         if len(result) == 0:
-            recipe_id = self.insert_recipe(recipe)
-            ingredients = recipe.get_ingredients()
+            recipe_id = self.__InsertRecipe(recipe)
+            ingredients = recipe.GetIngredients()
 
             for ingredient in ingredients:
-                ingredient_id = self.insert_ingredient(ingredient)
-                self.insert_recipe_ingredients(recipe_id, ingredient_id, ingredient.get_amount(), ingredient.get_unit())
+                ingredient_id = self.PushIngredient(ingredient)
+                self.InsertRecipeIngredient(recipe_id, ingredient_id, ingredient.GetAmount(), ingredient.GetUnit())
 
+    
+    def PushIngredient(self, ingredient:Ingredient):
+        cursor = self.conn.cursor()
+        cursor.execute("Select id from ingredients where name = ?", (ingredient.GetName(),))
+        result = cursor.fetchall()
+
+        if len(result) == 0:
+            return(self.__InsertIngredient(ingredient))
+        
+        return result[0]
 
     def FetchRecipe_ID(self, recipe_id:int):
         cursor = self.conn.cursor()
-        cursor.execute(f"SELECT name FROM recipes WHERE id = {recipe_id}")
-        name = cursor.fetchone()
+        cursor.execute(f"SELECT name, method FROM recipes WHERE id = {recipe_id}")
+        name, method = cursor.fetchone()
         cursor.execute('''SELECT recipe_ingredients.amount, recipe_ingredients.unit, ingredients.name
                           FROM recipes
                           JOIN recipe_ingredients ON recipes.id = recipe_ingredients.recipe_id
@@ -149,15 +165,14 @@ class RecipeDb:
         ingredients = []
         for row in result:
             ingredients.append(Ingredient(row[0], row[1], row[2]))
-        recipe = Recipe(name[0], ingredients)
+        recipe = Recipe(name, ingredients, method)
         return recipe
 
 
     def FetchRecipe_Name(self, name:str):
         cursor = self.conn.cursor()
-        query = "SELECT id FROM recipes WHERE name = ?"
-        cursor.execute(query, (name,))
-        recipe_id = cursor.fetchone()[0]
+        cursor.execute("SELECT id, method FROM recipes WHERE name = ?", (name,))
+        recipe_id, method = cursor.fetchone()
 
         # Execute the query
         cursor.execute("""SELECT recipe_ingredients.amount, recipe_ingredients.unit, ingredients.name
@@ -174,7 +189,7 @@ class RecipeDb:
             ingredient = Ingredient(i[0], i[1], i[2])
             ingredients.append(ingredient)
 
-        recipe = Recipe(name, ingredients)
+        recipe = Recipe(name, ingredients, method)
 
         return recipe
         

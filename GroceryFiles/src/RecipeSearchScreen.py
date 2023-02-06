@@ -6,6 +6,7 @@ from kivy.uix.label import Label
 from kivy.uix.button import Button
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.boxlayout import BoxLayout
+from StubClasses import RecipeDataPanel
 import JsonUtils
 
 class test():
@@ -27,18 +28,16 @@ class SearchRecipeScreen(Screen):
         # TODO create and display a popup to show the recipe
         self.selectedRecipe = recipeDB.FetchRecipe_ID(self.WidgetToID[instance])
 
-        recipeStr = ''
+        recipeDataPanel = RecipeDataPanel()
 
         for ing in self.selectedRecipe.GetIngredients():
-            if recipeStr != "": recipeStr += "\n"
-            recipeStr += f"{ing.GetAmount()} {ing.GetUnit()} {ing.GetName()}"
+            recipeDataPanel.ids.IngredientLabel.text += f"{ing.GetAmount()} {ing.GetUnit()} {ing.GetName()}\n"
 
         # Create a layout for the popup because popup can only contain one widget
         layout = GridLayout(cols = 1)
         buttonLayout = BoxLayout(orientation="horizontal", size_hint=(1, None), height=30)
-        # Create the lable for the popup
-        label = Label(text=recipeStr)
-        label.padding_y = 16
+        
+        recipeDataPanel.ids.MethodLabel.text = self.selectedRecipe.GetMethod()
 
         # Create the Close Button and then bind it to the close details function
         AddButton = Button(text = "add",
@@ -58,14 +57,13 @@ class SearchRecipeScreen(Screen):
         buttonLayout.add_widget(AddButton)
 
         # Add the label and button to the box layout
-        layout.add_widget(label)
+        layout.add_widget(recipeDataPanel)
         layout.add_widget(buttonLayout)
 
         # Create the popup window passing in the above layout as the content
         popup = Popup(title = instance.text,
                       content = layout,
-                      size_hint = (1, None),
-                      height = self.width
+                      size_hint = (1, .9)
                       )
 
         # Save a reference to the popup so that it can be easily closed later                      
