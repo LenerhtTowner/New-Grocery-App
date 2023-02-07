@@ -13,7 +13,7 @@ from kivy.clock import Clock
 import json
 import JsonUtils
 
-class RecipeScreen(Screen):
+class RecipeScreen(Popup):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs) 

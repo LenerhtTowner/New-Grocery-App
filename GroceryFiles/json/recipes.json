@@ -643,5 +643,46 @@
             }
         ],
         "__method": "STEP 1:\nPreheat the oven to 350 degrees F (175 degrees C).\n\nSTEP 2:\nPlace chicken in a roasting pan; season generously inside and out with onion powder, salt, and pepper. Place 3 tablespoons of butter in chicken cavity; arrange dollops of remaining butter on the outside of chicken. Cut celery into 3 or 4 pieces; place in the chicken cavity.\n\nSTEP 3:\nBake chicken uncovered in the preheated oven until no longer pink at the bone and the juices run clear, about 1 hour and 15 minutes. An instant-read thermometer inserted into the thickest part of the thigh, near the bone, should read 165 degrees F (74 degrees C).\n\nSTEP 4:\nRemove from the oven and baste with drippings. Cover with aluminum foil and allow to rest for about 30 minutes before serving.\n"
+    },
+    "Baked Split Chicken Breast": {
+        "__name": "Baked Split Chicken Breast",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "large bone-in chicken breast halves with skin",
+                "_Ingredient__amount": 2.0,
+                "_Ingredient__unit": ""
+            },
+            {
+                "_Ingredient__name": "extra-virgin olive oil",
+                "_Ingredient__amount": 0.25,
+                "_Ingredient__unit": "cup"
+            },
+            {
+                "_Ingredient__name": "garlic, minced",
+                "_Ingredient__amount": 0.5,
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "coarse sea salt",
+                "_Ingredient__amount": 0.5,
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "cracked black pepper",
+                "_Ingredient__amount": 0.5,
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "dried rosemary",
+                "_Ingredient__amount": 0.25,
+                "_Ingredient__unit": "teaspoon"
+            },
+            {
+                "_Ingredient__name": "dried basil",
+                "_Ingredient__amount": 0.25,
+                "_Ingredient__unit": "teaspoon"
+            }
+        ],
+        "__method": "STEP 1:\nRub chicken breasts with olive oil and garlic; sprinkle with salt, black pepper, rosemary, and basil. Arrange chicken in a large baking dish and refrigerate for at least 45 minutes.\n\nSTEP 2:\nMeanwhile, preheat oven to 375 degrees F (190 degrees C).\n\nSTEP 3:\nBake in the preheated oven until chicken meat is no longer pink at the bone and the juices run clear, 45 to 60 minutes. An instant-read thermometer inserted in the thickest part of the breast meat should read 165 degrees F (75 degrees C).\n"
     }
 }

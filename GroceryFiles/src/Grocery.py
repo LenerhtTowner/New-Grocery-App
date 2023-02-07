@@ -15,7 +15,7 @@ from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivy.core.window import Window
 from RecipeDB import recipeDB
-from RecipeScreen import RecipeScreen
+from GroceryListScreen import GroceryListScreen
 from RecipeSearchScreen import SearchRecipeScreen
 from StubClasses import *
 
