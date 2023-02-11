@@ -31,7 +31,7 @@ class GroceryListScreen(Screen):
 
         groceryItemBox = BoxLayout(orientation="vertical")
         mainLayout.add_widget(groceryItemBox)
-        
+
         mainLayout.add_widget(Button(text="New List", size_hint=(1, None), height=40))
 
         
