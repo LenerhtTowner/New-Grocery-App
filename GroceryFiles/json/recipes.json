@@ -644,6 +644,7 @@
         ],
         "__method": "STEP 1:\nPreheat the oven to 350 degrees F (175 degrees C).\n\nSTEP 2:\nPlace chicken in a roasting pan; season generously inside and out with onion powder, salt, and pepper. Place 3 tablespoons of butter in chicken cavity; arrange dollops of remaining butter on the outside of chicken. Cut celery into 3 or 4 pieces; place in the chicken cavity.\n\nSTEP 3:\nBake chicken uncovered in the preheated oven until no longer pink at the bone and the juices run clear, about 1 hour and 15 minutes. An instant-read thermometer inserted into the thickest part of the thigh, near the bone, should read 165 degrees F (74 degrees C).\n\nSTEP 4:\nRemove from the oven and baste with drippings. Cover with aluminum foil and allow to rest for about 30 minutes before serving.\n"
     },
+<<<<<<< HEAD
     "Baked Split Chicken Breast": {
         "__name": "Baked Split Chicken Breast",
         "__ingredients": [
@@ -684,5 +685,42 @@
             }
         ],
         "__method": "STEP 1:\nRub chicken breasts with olive oil and garlic; sprinkle with salt, black pepper, rosemary, and basil. Arrange chicken in a large baking dish and refrigerate for at least 45 minutes.\n\nSTEP 2:\nMeanwhile, preheat oven to 375 degrees F (190 degrees C).\n\nSTEP 3:\nBake in the preheated oven until chicken meat is no longer pink at the bone and the juices run clear, 45 to 60 minutes. An instant-read thermometer inserted in the thickest part of the breast meat should read 165 degrees F (75 degrees C).\n"
+=======
+    "Oregano-Lemon Chicken": {
+        "__name": "Oregano-Lemon Chicken",
+        "__ingredients": [
+            {
+                "_Ingredient__name": "skinless, boneless chicken breast halves",
+                "_Ingredient__amount": 3.0,
+                "_Ingredient__unit": "pounds"
+            },
+            {
+                "_Ingredient__name": "lemon juice",
+                "_Ingredient__amount": 3.0,
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "honey",
+                "_Ingredient__amount": 2.0,
+                "_Ingredient__unit": "tablespoons"
+            },
+            {
+                "_Ingredient__name": "olive oil",
+                "_Ingredient__amount": 1.0,
+                "_Ingredient__unit": "tablespoon"
+            },
+            {
+                "_Ingredient__name": "garlic, minced",
+                "_Ingredient__amount": 3.0,
+                "_Ingredient__unit": "cloves"
+            },
+            {
+                "_Ingredient__name": "dried oregano",
+                "_Ingredient__amount": 2.0,
+                "_Ingredient__unit": "teaspoons"
+            }
+        ],
+        "__method": "STEP 1:\nPreheat oven to 375 degrees F (190 degrees C). Grease a 9x13-inch baking dish.\n\nSTEP 2:\nPlace chicken breast halves into prepared baking dish. Whisk lemon juice, honey, olive oil, garlic, and oregano together in a bowl and pour the mixture over chicken breasts.\n\nSTEP 3:\nBake in the preheated oven until chicken is no longer pink inside, the juices run clear, and an instant-read meat thermometer inserted into the thickest part of a breast reads 180 degrees F (80 degrees C), about 45 minutes. Baste chicken with pan juices every 15 minutes while baking.\n"
+>>>>>>> 5e71da370bc93fd5b787727bb10b1ac0b7164c3c
     }
 }
