@@ -17,6 +17,7 @@ class GroceryListScreen(Screen):
 
         # create a dropdown menu
         dropdown = DropDown()
+        self.ids["dropdown"] = dropdown
         for listName in lists:
             btn = Button(text=listName, size_hint_y=None, height=35)
             btn.bind(on_release=lambda btn: dropdown.select(btn.text))
@@ -24,7 +25,7 @@ class GroceryListScreen(Screen):
 
         # create a big main button
         mainbutton = Button(text='Saved Lists', size_hint=(1, None), height=40)
-        mainbutton.bind(on_release=dropdown.open)
+        mainbutton.bind(on_release=self.ids.dropdown.open)
         
         dropdown.bind(on_select=lambda instance, x: setattr(mainbutton, 'text', x))
         mainLayout.add_widget(mainbutton)
@@ -34,4 +35,14 @@ class GroceryListScreen(Screen):
 
         mainLayout.add_widget(Button(text="New List", size_hint=(1, None), height=40))
 
-        
+    # <CustomDropDown>:
+    #     Button:
+    #         text: 'My first Item'
+    #         size_hint_y: None
+    #         height: 44
+    #         on_release: root.select('item1')
+    #     Button:
+    #         text: 'My second Item'
+    #         size_hint_y: None
+    #         height: 44
+    #         on_release: root.select('item2')
