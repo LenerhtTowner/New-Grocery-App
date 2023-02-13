@@ -13,10 +13,12 @@ from kivy.clock import Clock
 import json
 import JsonUtils
 
+from kivymd.app import App, Builder
+
 class RecipeScreen(Screen):
 
     def __init__(self, **kwargs):
-        super().__init__(**kwargs) 
+        super().__init__(**kwargs)
         self.gram_list = self.LoadJson("GroceryFiles/json/gramList.json")
         self.liter_list = self.LoadJson("GroceryFiles/json/literList.json")
         self.unit_items = self.LoadJson("GroceryFiles/json/unitItem.json")
@@ -43,7 +45,7 @@ class RecipeScreen(Screen):
         popup = Popup(title=recipe.GetName(), title_size="30dp")
 
         content = BoxLayout(orientation="vertical")
-        popup.content = content        
+        popup.content = content
 
         recipeDataPanel = RecipeDataPanel()
         content.add_widget(recipeDataPanel)

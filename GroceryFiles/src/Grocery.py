@@ -14,6 +14,7 @@ ETHAN'S NOTES TO ROBERT
 from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivy.core.window import Window
+from kivy.uix.widget import Widget
 from RecipeDB import recipeDB
 from GroceryListScreen import GroceryListScreen
 from RecipeSearchScreen import SearchRecipeScreen
@@ -26,10 +27,39 @@ Window.size = (600, 900)
 kv = Builder.load_file("grocerykivy.kv")
 
 class TestApp(MDApp):
-    active_list = None
+    ctrl = False
+    shft = False
 
     def build(self):
+        main = MainScreen()
+
+        main._keyboard = Window.request_keyboard(self._keyboard_closed, main)
+        main._keyboard.bind(on_key_down=self._on_keyboard_down)
+
         return MainScreen()
+
+    def _keyboard_closed(self):
+        self._keyboard.unbind(on_key_down=self._on_keyboard_down)
+        self._keyboard = None
+
+    def _on_keyboard_down(self, keyboard, keycode, text, modifiers):
+        if 't' in keycode and "shift" in modifiers and "ctrl" in modifiers:
+            appRoot = MDApp.get_running_app().root
+            self.printTree(appRoot)
+        
+    def printTree(self, widget:Widget, indent = "", marker = "", isLast = True, isRoot = True):
+        print(indent + marker + widget.__class__.__name__)
+
+        if not isRoot:
+            indent += "   " if isLast else "│  "
+
+        try:
+            lastChild = widget.children[-1]
+        except:
+            lastChild = None
+
+        for i in widget.children:
+            self.printTree(i, indent, "└──" if i == lastChild else "├──", i == lastChild, False)
 
 if __name__ == '__main__':
     TestApp().run()

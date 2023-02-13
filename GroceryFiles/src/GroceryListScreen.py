@@ -3,6 +3,8 @@ from kivy.uix.dropdown import DropDown
 from kivy.uix.button import Button 
 from kivy.uix.label import Label
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.widget import Widget
+from kivymd.app import App
 import json
 
 class GroceryListScreen(Screen):
@@ -33,16 +35,5 @@ class GroceryListScreen(Screen):
         groceryItemBox = BoxLayout(orientation="vertical")
         mainLayout.add_widget(groceryItemBox)
 
-        mainLayout.add_widget(Button(text="New List", size_hint=(1, None), height=40))
-
-    # <CustomDropDown>:
-    #     Button:
-    #         text: 'My first Item'
-    #         size_hint_y: None
-    #         height: 44
-    #         on_release: root.select('item1')
-    #     Button:
-    #         text: 'My second Item'
-    #         size_hint_y: None
-    #         height: 44
-    #         on_release: root.select('item2')
+        newListButton = Button(text="New List", size_hint=(1, None), height=40)
+        mainLayout.add_widget(newListButton)
