@@ -17,6 +17,7 @@ from kivy.core.window import Window
 from RecipeDB import recipeDB
 from GroceryListScreen import GroceryListScreen
 from RecipeSearchScreen import SearchRecipeScreen
+from RecipeScreen import RecipeScreen
 from StubClasses import *
 
 #Sets a standard window size(*MUST be altered to fit any window size before going into BETA trials)
@@ -25,6 +26,7 @@ Window.size = (600, 900)
 kv = Builder.load_file("grocerykivy.kv")
 
 class TestApp(MDApp):
+    active_list = None
 
     def build(self):
         return MainScreen()

@@ -136,7 +136,6 @@
         BoxLayout:
             GroceryListScreen:
                 id: groceryListScreen
-            
 
     MDBottomNavigationItem:
         name: 'screen 2'
@@ -145,11 +144,20 @@
 
         BoxLayout:
             NewRecipeScreen:
+            
 
     MDBottomNavigationItem:
         name: 'screen 3'
-        text: 'Find Recipe'
+        text: 'Local Recipes'
         icon: 'view-list'
+
+        BoxLayout:
+            RecipeScreen:
+
+    MDBottomNavigationItem:
+        name: 'screen 4'
+        text: 'Find Recipe'
+        icon: 'twitter'
 
         BoxLayout:
             SearchRecipeScreen:
