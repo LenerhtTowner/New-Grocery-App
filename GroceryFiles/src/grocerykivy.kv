@@ -230,3 +230,15 @@
                 text_size: self.width, None
                 size_hint: 1, None
                 height: self.texture_size[1]
+
+<CreateNewGroceryList>
+    BoxLayout:
+        orientation: 'vertical'
+        Label:
+            text: 'New List Name:'
+        TextInput:
+            id: newListName
+            multiline: False
+        Button:
+            text: "Create New List!"
+            on_release: root.addNewListToJson(root.ids.newListName)
