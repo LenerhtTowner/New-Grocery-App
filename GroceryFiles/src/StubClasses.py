@@ -13,9 +13,6 @@ class IngredientInfo(GridLayout):
 class NewRecipeScreen(Screen):
     pass
 
-class MainScreen(Screen):
-    pass
-
 class NavBar(MDBottomNavigation):
     pass
 

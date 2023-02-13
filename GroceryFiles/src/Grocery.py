@@ -19,6 +19,7 @@ from RecipeDB import recipeDB
 from GroceryListScreen import GroceryListScreen
 from RecipeSearchScreen import SearchRecipeScreen
 from RecipeScreen import RecipeScreen
+from MainScreen import MainScreen
 from StubClasses import *
 
 #Sets a standard window size(*MUST be altered to fit any window size before going into BETA trials)
