@@ -1,19 +1,30 @@
 import json
 from RecipeDB import Ingredient, Recipe
-from JsonFiles import JsonFiles
+from termcolor import colored
 
 jsonDirectory = "./GroceryFiles/json/"
+
+
+class JsonFiles():
+    GRAM_LIST = "gramList.json"
+    GROCERY_LISTS = "groceryLists.json"
+    LITER_LIST = "literList.json"
+    RECIPES = "recipes.json"
+    UNIT_ITEM = "unitItem.json"
+    WHOLE_LIST = "wholeList.json"
 
 
 def AppendToJson(key:str, value:dict, jsonFilename:str, overwrite=True):
     try:
         with open(jsonDirectory + jsonFilename, "r") as infile:
             jsonData = json.load(infile)
-    except:
+    except Exception as e:
+        print(e)
         jsonData = {}
 
     if not overwrite and key in jsonData:
-        pass
+        print(colored("ERROR: a list with the name '{key}' already exists", "red"))
+        return False
     else:
         jsonData[key] = value
 
@@ -51,7 +62,7 @@ def LoadFromJson(jsonFilename:str):
             result = json.load(infile)
         return result
     except IOError as e:
-        print(e)
+        print(colored(e, "red"))
 
     return {}
 

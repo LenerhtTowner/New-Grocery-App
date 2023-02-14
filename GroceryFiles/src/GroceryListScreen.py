@@ -3,7 +3,7 @@ from kivy.uix.dropdown import DropDown
 from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
 from JsonUtils import LoadFromJson
-from JsonFiles import JsonFiles
+from JsonUtils import JsonFiles
 from CreatNewList import CreateNewGroceryList
 import JsonUtils
 

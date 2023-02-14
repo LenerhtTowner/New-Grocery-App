@@ -1,4 +1,6 @@
 import json
+import JsonUtils
+from JsonUtils import JsonFiles
 from kivy.uix.popup import Popup
 
 class CreateNewGroceryList(Popup):
@@ -13,18 +15,11 @@ class CreateNewGroceryList(Popup):
     
 
     def addNewListToJson(self, textInput):
-        newListDict = {}
+        newListName = textInput.text
 
-        with open('GroceryFiles\json\groceryLists.json', 'r') as infile:
-            listDict = json.load(infile)
-
-        if self.recipe in listDict:
-            pass
-
-        elif self.recipe != None:
-            listDict[textInput.text] = {self.recipe.GetName(): self.recipe.ToDict()}
+        if self.recipe != None:
+            newList = {self.recipe.GetName(): self.recipe.ToDict()}
         else:
-            listDict[textInput.text] = {}
+            newList = {}
 
-        with open('GroceryFiles\json\groceryLists.json', 'w') as outfile:
-            json.dump(listDict, outfile, indent=4)
+        success = JsonUtils.AppendToJson(newListName, newList, JsonFiles.GROCERY_LISTS, False)

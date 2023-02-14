@@ -6,7 +6,7 @@ from kivy.uix.widget import Widget
 from RecipeDB import recipeDB, Ingredient, Grocery_Item
 from CreatNewList import CreateNewGroceryList
 from StubClasses import RecipeListItem, RecipeDataPanel
-from JsonFiles import JsonFiles
+from JsonUtils import JsonFiles
 import JsonUtils
 from math import ceil
 from kivy.clock import Clock
