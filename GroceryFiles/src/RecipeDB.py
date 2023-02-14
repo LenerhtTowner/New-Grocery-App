@@ -208,9 +208,8 @@ class RecipeDb:
     
 
     def Close(self):
-        print("RecipeDB.Close()")
         if (self.conn != None):
             self.conn.close()
 
 
-recipeDB = RecipeDb("GroceryFiles\\assets\\recipes.db")
+recipeDB = RecipeDb("GroceryFiles/assets/recipes.db")

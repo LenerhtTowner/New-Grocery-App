@@ -27,27 +27,32 @@ Window.size = (600, 900)
 
 kv = Builder.load_file("grocerykivy.kv")
 
+
 class TestApp(MDApp):
     ctrl = False
     shft = False
+    main = None
+
 
     def build(self):
-        main = MainScreen()
+        self.main = MainScreen()
+        self.main._keyboard = Window.request_keyboard(self._keyboard_closed, self.main)
+        self.main._keyboard.bind(on_key_down=self._on_keyboard_down)
 
-        main._keyboard = Window.request_keyboard(self._keyboard_closed, main)
-        main._keyboard.bind(on_key_down=self._on_keyboard_down)
+        return self.main
 
-        return MainScreen()
 
     def _keyboard_closed(self):
-        self._keyboard.unbind(on_key_down=self._on_keyboard_down)
-        self._keyboard = None
+        self.main._keyboard.unbind(on_key_down=self._on_keyboard_down)
+        self.main._keyboard = None
+
 
     def _on_keyboard_down(self, keyboard, keycode, text, modifiers):
         if 't' in keycode and "shift" in modifiers and "ctrl" in modifiers:
             appRoot = MDApp.get_running_app().root
             self.printTree(appRoot)
-        
+
+
     def printTree(self, widget:Widget, indent = "", marker = "", isLast = True, isRoot = True):
         print(indent + marker + widget.__class__.__name__)
 
@@ -61,6 +66,7 @@ class TestApp(MDApp):
 
         for i in widget.children:
             self.printTree(i, indent, "└──" if i == lastChild else "├──", i == lastChild, False)
+
 
 if __name__ == '__main__':
     TestApp().run()

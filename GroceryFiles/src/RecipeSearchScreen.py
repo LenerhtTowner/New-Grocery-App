@@ -1,29 +1,28 @@
 from kivy.uix.screenmanager import Screen
 from RecipeDB import recipeDB
 from kivymd.uix.list import OneLineListItem
-from kivy.uix.popup import Popup 
-from kivy.uix.label import Label
+from kivy.uix.popup import Popup
 from kivy.uix.button import Button
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.boxlayout import BoxLayout
 from StubClasses import RecipeDataPanel
+from JsonFiles import JsonFiles
 import JsonUtils
 
-class test():
-    def printstuff(self, instance):
-        pass
 
 class SearchRecipeScreen(Screen):
-    test = test()
     listItems = []
     popupPane = None
     WidgetToID = {}
     selectedRecipe = None
 
+
     def addToLocal(self, instance):
-        JsonUtils.AddRecipeToJson(self.selectedRecipe)
+        JsonUtils.AppendToJson(self.selectedRecipe.GetName(), self.selectedRecipe, JsonFiles.RECIPES)
         self.popupPane.dismiss()
     
+
+    # open a popup to show recipe details
     def show_details(self, instance):
         # TODO create and display a popup to show the recipe
         self.selectedRecipe = recipeDB.FetchRecipe_ID(self.WidgetToID[instance])
@@ -72,18 +71,22 @@ class SearchRecipeScreen(Screen):
         # Open the popup window
         self.popupPane.open()
 
+
     # close the recipe details popup
     def close_details(self, instance):
         self.popupPane.dismiss()
         self.popupPane = None
 
+
+    # search for recipes and display the results in a list
     def search_Rsql(self, searchStr):
         recipe_matches = recipeDB.FuzzyRecipeSearch(searchStr)
         list = self.ids.recipe_list
 
+        list.clear_widgets()
         for i in self.listItems:
             list.remove_widget(i)
-        listItem = []
+        self.listItems = []
 
         label_count = 0
         for match in recipe_matches:

@@ -1,43 +1,42 @@
 from kivy.uix.screenmanager import Screen
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.label import Label
-from kivy.uix.checkbox import CheckBox
 from kivy.uix.button import Button
 from kivy.uix.popup import Popup
 from kivy.uix.widget import Widget
-from kivy.uix.scrollview import ScrollView
 from RecipeDB import recipeDB, Ingredient, Grocery_Item
 from StubClasses import RecipeListItem, RecipeDataPanel
+from JsonFiles import JsonFiles
+import JsonUtils
 from math import ceil
 from kivy.clock import Clock
-import json
-import JsonUtils
-
-from kivymd.app import App, Builder
 
 class RecipeScreen(Screen):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.gram_list = self.LoadJson("GroceryFiles/json/gramList.json")
-        self.liter_list = self.LoadJson("GroceryFiles/json/literList.json")
-        self.unit_items = self.LoadJson("GroceryFiles/json/unitItem.json")
-        self.whole_list = self.LoadJson("GroceryFiles/json/wholeList.json")
+        self.gram_list  = self.LoadJson(JsonFiles.GRAM_LIST)
+        self.liter_list = self.LoadJson(JsonFiles.LITER_LIST)
+        self.unit_items = self.LoadJson(JsonFiles.UNIT_ITEM)
+        self.whole_list = self.LoadJson(JsonFiles.WHOLE_LIST)
         self.ingredient_dict = {}
         self.shopping_list = []
         Clock.schedule_once(self.LoadLocalRecipes, 0)
 
+
     def adjustLabelTextWidth(self, instance):
         instance.text_size = (instance.width, instance.text_size[1])
+
 
     def adjustLabelHeight(self, instance):
         instance.height = instance.texture_size[1]
  
+
     def wrapText(self, instance, *args):
         print(args)
         instance.text_size = (instance.width, None)
         instance.size_hint=(1, None)
         instance.height = instance.texture_size[1]
+
 
     def ShowSelectedRecipe(self, instance:Widget, recipeName):
         recipe = recipeDB.FetchRecipe_Name(recipeName)
@@ -63,13 +62,15 @@ class RecipeScreen(Screen):
         
         popup.open()
 
+
     def ResetRecipes(self, *args):
-        print("Reset")
         self.ClearRecipes()
         self.LoadLocalRecipes()
 
+
     def ClearRecipes(self, *args):
         self.ids.RecipeScreenBox.clear_widgets()
+
 
     def LoadLocalRecipes(self, *args):
         recipes = JsonUtils.LoadRecipesFromJson()
@@ -83,23 +84,27 @@ class RecipeScreen(Screen):
             
         self.ids.RecipeScreenBox.add_widget(BoxLayout())
         
+
     def SetMinimumHeight(self, instance, *args):
         instance.height = instance.minimum_height
     
+
     def RemoveFromLocal(self, instance):
-        JsonUtils.removeFromJson(self.selectedRecipe.GetName())
+        JsonUtils.DeleteFromJson(self.selectedRecipe.GetName(), JsonFiles.RECIPES)
         self.popupPane.dismiss()
     
-    def LoadJson(self, file_path: str) -> dict:
-        with open(file_path, 'r') as file:
-            return json.load(file)
 
-    def OnUpdateCount(self, instance, recipeName:str, recipeCount:str, value:bool):
+    def LoadJson(self, file_name: str) -> dict:
+        return JsonUtils.LoadFromJson(file_name)
+
+
+    def OnUpdateCount(self, instance:Widget, recipeName:str, recipeCount:str, value:bool):
         if recipeCount == '' or not recipeCount.isnumeric():
             instance.text = None
 
         if value:
             self.GetRecipe(recipeName, recipeCount, value)
+
 
     def GetRecipe(self, recipeID:int, recipeCount:str, value:bool):
         count = int(recipeCount)

@@ -1,49 +1,65 @@
 import json
 from RecipeDB import Ingredient, Recipe
+from JsonFiles import JsonFiles
 
-def AddRecipeToJson(recipe:Recipe):
-    recipeData = {}
-    with open('./GroceryFiles/json/recipes.json', 'r') as infile:
-        try:
-            recipeData = json.load(infile)
-        except:
-            pass
-            
-    with open('./GroceryFiles/json/recipes.json', 'w') as outfile:
-        recipeData[recipe.GetName()] = recipe.ToDict()
-        json.dump(recipeData, outfile, indent=4)
-        LoadRecipesFromJson()
-
-def DeleteRecipeFromJson(recipe_name:str):
-    recipeData = {}
-    with open('./GroceryFiles/json/recipes.json', 'r') as infile:
-        try:
-            recipeData = json.load(infile)
-        except:
-            return
-    
-    with open('./GroceryFiles/json/recipes.json', 'w') as outfile:
-        try:
-            del recipeData[recipe_name]
-        except:
-            pass
-        
-        json.dump(recipeData, outfile, indent=4)
-
-def EncodeRecipesToJson():
-    with open('GroceryFiles/json/recipes.json', 'w') as outfile:
-        recipeData = {}
-
-        for key in recipes.keys():
-            recipeData[key] = recipes[key].ToDict()
-            
-        json.dump(recipeData, outfile, indent=4)
+jsonDirectory = "./GroceryFiles/json/"
 
 
-def LoadRecipesFromJson(filepath = 'GroceryFiles/json/recipes.json'):
+def AppendToJson(key:str, value:dict, jsonFilename:str, overwrite=True):
+    try:
+        with open(jsonDirectory + jsonFilename, "r") as infile:
+            jsonData = json.load(infile)
+    except:
+        jsonData = {}
+
+    if not overwrite and key in jsonData:
+        pass
+    else:
+        jsonData[key] = value
+
+    try:
+        with open(jsonDirectory + jsonFilename, "w") as outfile:
+            json.dump(jsonData, outfile, indent=4)
+
+        return True
+    except:
+        return False
+
+
+def DeleteFromJson(key:str, jsonFilename:str):
+    try:
+        with open(jsonDirectory + jsonFilename, "r") as infile:
+            jsonData = json.load(infile)
+    except:
+        jsonData = {}
+
+    if key in jsonData:
+        del jsonData[key]
+
+    try:
+        with open(jsonDirectory + jsonFilename, "w") as outfile:
+            json.dump(jsonData, outfile, indent=4)
+
+        return True
+    except:
+        return False
+
+
+def LoadFromJson(jsonFilename:str):
+    try:
+        with open(jsonDirectory + jsonFilename, "r") as infile:
+            result = json.load(infile)
+        return result
+    except IOError as e:
+        print(e)
+
+    return {}
+
+
+def LoadRecipesFromJson():
     newRecipeDict = {}
     recipeData = None
-    with open(filepath, 'r') as inFile:
+    with open(jsonDirectory + JsonFiles.RECIPES, 'r') as inFile:
         try:
             recipeData = json.load(inFile)
         except:

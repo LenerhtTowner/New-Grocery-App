@@ -1,11 +1,9 @@
 from kivy.uix.screenmanager import Screen
 from kivy.uix.dropdown import DropDown
-from kivy.uix.button import Button 
-from kivy.uix.label import Label
+from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.widget import Widget
-from kivymd.app import App
-import json
+from JsonUtils import LoadFromJson
+from JsonFiles import JsonFiles
 
 class GroceryListScreen(Screen):
 
@@ -14,8 +12,7 @@ class GroceryListScreen(Screen):
         mainLayout = BoxLayout(orientation="vertical")
         self.add_widget(mainLayout)
 
-        with open("GroceryFiles\\json\\groceryLists.json", 'r') as infile:
-            lists = json.load(infile)
+        lists = LoadFromJson(JsonFiles.GROCERY_LISTS)
 
         # create a dropdown menu
         dropdown = DropDown()
