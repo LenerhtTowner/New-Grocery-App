@@ -15,10 +15,10 @@ class RecipeScreen(Screen):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.gram_list  = self.LoadJson(JsonFiles.GRAM_LIST)
-        self.liter_list = self.LoadJson(JsonFiles.LITER_LIST)
-        self.unit_items = self.LoadJson(JsonFiles.UNIT_ITEM)
-        self.whole_list = self.LoadJson(JsonFiles.WHOLE_LIST)
+        self.gram_list  = JsonUtils.LoadFromJson(JsonFiles.GRAM_LIST)
+        self.liter_list = JsonUtils.LoadFromJson(JsonFiles.LITER_LIST)
+        self.unit_items = JsonUtils.LoadFromJson(JsonFiles.UNIT_ITEM)
+        self.whole_list = JsonUtils.LoadFromJson(JsonFiles.WHOLE_LIST)
         self.ingredient_dict = {}
         self.shopping_list = []
         self.selectedRecipe = None
@@ -69,8 +69,7 @@ class RecipeScreen(Screen):
 
     def on_add_to_list(self, *args, ):
         # load saved lists from the json file
-        with open("GroceryFiles\\json\\groceryLists.json", 'r+') as file:
-            lists = json.load(file)
+        lists = JsonUtils.LoadFromJson(JsonFiles.GROCERY_LISTS)
 
         newPopup = Popup(title="Select a list")
         self.ids["popup2"] = newPopup
@@ -104,13 +103,11 @@ class RecipeScreen(Screen):
     def on_list_select(self, instance):
         print(instance.text)
 
-        with open("GroceryFiles\\json\\groceryLists.json", 'r+') as file:
-            lists = json.load(file)
+        lists = JsonUtils.LoadFromJson(JsonFiles.GROCERY_LISTS)
 
         lists[instance.text][self.selectedRecipe.GetName()] = self.selectedRecipe.ToDict()
 
-        with open("GroceryFiles\\json\\groceryLists.json", 'r+') as file:
-            json.dump(lists, file, indent=4)
+        JsonUtils.AppendToJson(instance.text, lists[instance.text], JsonFiles.GROCERY_LISTS)
 
         self.close_popups()
             
@@ -151,11 +148,6 @@ class RecipeScreen(Screen):
     def RemoveFromLocal(self, instance):
         JsonUtils.DeleteFromJson(self.selectedRecipe.GetName(), JsonFiles.RECIPES)
         self.popupPane.dismiss()
-
-
-    def LoadJson(self, file_path: str) -> dict:
-        with open(file_path, 'r') as file:
-            return json.load(file)
 
 
     def OnUpdateCount(self, instance, recipeName:str, recipeCount:str, value:bool):

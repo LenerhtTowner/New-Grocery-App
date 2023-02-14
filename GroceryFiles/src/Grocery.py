@@ -45,6 +45,8 @@ class TestApp(MDApp):
         self.mainScreen._keyboard = Window.request_keyboard(self._keyboard_closed, self.mainScreen)
         self.mainScreen._keyboard.bind(on_key_down=self._on_keyboard_down)
 
+        return self.mainScreen
+
 
     def _keyboard_closed(self):
         self.mainScreen._keyboard.unbind(on_key_down=self._on_keyboard_down)
