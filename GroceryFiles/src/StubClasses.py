@@ -2,6 +2,7 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.carousel import Carousel
 from kivy.uix.screenmanager import Screen
 from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.popup import Popup
 from kivymd.uix.bottomnavigation import MDBottomNavigation
 
 class RecipeCarousel(Carousel):
@@ -21,6 +22,7 @@ class RecipeListItem(BoxLayout):
 
 class RecipeDataPanel(BoxLayout):
     pass
+
 
 #### DEAD CODE STORAGE ####
 

@@ -36,8 +36,6 @@ kv = Builder.load_file("grocerykivy.kv")
 class TestApp(MDApp):
     ctrl = False
     shft = False
-    main = None
-
 
     mainScreen = None
 

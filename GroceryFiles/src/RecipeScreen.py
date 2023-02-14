@@ -4,6 +4,7 @@ from kivy.uix.button import Button
 from kivy.uix.popup import Popup
 from kivy.uix.widget import Widget
 from RecipeDB import recipeDB, Ingredient, Grocery_Item
+from CreatNewList import CreateNewGroceryList
 from StubClasses import RecipeListItem, RecipeDataPanel
 from JsonFiles import JsonFiles
 import JsonUtils
@@ -20,6 +21,7 @@ class RecipeScreen(Screen):
         self.whole_list = self.LoadJson(JsonFiles.WHOLE_LIST)
         self.ingredient_dict = {}
         self.shopping_list = []
+        self.selectedRecipe = None
         Clock.schedule_once(self.LoadLocalRecipes, 0)
 
 
@@ -40,8 +42,10 @@ class RecipeScreen(Screen):
 
     def ShowSelectedRecipe(self, instance:Widget, recipeName):
         recipe = recipeDB.FetchRecipe_Name(recipeName)
+        self.selectedRecipe = recipe
 
         popup = Popup(title=recipe.GetName(), title_size="30dp")
+        self.ids["popup"] = popup
 
         content = BoxLayout(orientation="vertical")
         popup.content = content
@@ -56,11 +60,66 @@ class RecipeScreen(Screen):
         recipeDataPanel.ids.MethodLabel.text=recipe.GetMethod()
 
         # add button to close popup
-        testButton = Button(text="test", size_hint=(1, None), height=60)
-        testButton.bind(on_release=popup.dismiss)
+        testButton = Button(text="Add To List", size_hint=(1, None), height=60)
+        testButton.bind(on_release=self.on_add_to_list)
         content.add_widget(testButton)
         
         popup.open()
+
+
+    def on_add_to_list(self, *args, ):
+        # load saved lists from the json file
+        with open("GroceryFiles\\json\\groceryLists.json", 'r+') as file:
+            lists = json.load(file)
+
+        newPopup = Popup(title="Select a list")
+        self.ids["popup2"] = newPopup
+        popupLayout = BoxLayout(orientation="vertical")
+        newPopup.content = popupLayout
+
+        # if we have lists saved then create options to select one
+        if len(lists) > 0:
+            for i in lists:
+                listButton = Button(text=str(i), size_hint_y=None, height=35)
+                popupLayout.add_widget(listButton)
+                listButton.bind(on_release=self.on_list_select)
+
+            newPopup.content.add_widget(BoxLayout())
+
+        newListButton = Button(text="Create new list", size_hint=(1, None), height = 40)
+        popupLayout.add_widget(newListButton)
+
+        createListPopup = CreateNewGroceryList(recipe=self.selectedRecipe)
+        self.ids["createListPopup"] = createListPopup
+
+        newListButton.bind(on_release = self.ids.createListPopup.open)
+
+        exitButton = Button(text="cancel", size_hint=(1, None), height = 40)
+        exitButton.bind(on_release=self.close_popups)
+        popupLayout.add_widget(exitButton)
+
+        newPopup.open()
+
+
+    def on_list_select(self, instance):
+        print(instance.text)
+
+        with open("GroceryFiles\\json\\groceryLists.json", 'r+') as file:
+            lists = json.load(file)
+
+        lists[instance.text][self.selectedRecipe.GetName()] = self.selectedRecipe.ToDict()
+
+        with open("GroceryFiles\\json\\groceryLists.json", 'r+') as file:
+            json.dump(lists, file, indent=4)
+
+        self.close_popups()
+            
+
+    def close_popups(self, *args):
+        self.ids.popup.dismiss()
+        self.ids.popup2.dismiss()
+        self.ids.createListPopup.dismiss()
+        self.selectedRecipe = None
 
 
     def ResetRecipes(self, *args):
@@ -76,29 +135,30 @@ class RecipeScreen(Screen):
         recipes = JsonUtils.LoadRecipesFromJson()
         
         for i, recipe in enumerate(recipes):
-            li = RecipeListItem()
-            li.ids.recipe_label.text = f"[ref={recipe}]{recipe}[/ref]"
-            li.ids.recipe_label.bind(on_ref_press = self.ShowSelectedRecipe)
+            list_item = RecipeListItem()
+            list_item.ids.recipe_label.text = f"[ref={recipe}]{recipe}[/ref]"
+            list_item.ids.recipe_label.bind(on_ref_press = self.ShowSelectedRecipe)
             #li.ids.recipe_check.bind(active = self.ShowSelectedRecipe)
-            self.ids.RecipeScreenBox.add_widget(li)
+            self.ids.RecipeScreenBox.add_widget(list_item)
             
         self.ids.RecipeScreenBox.add_widget(BoxLayout())
-        
+
 
     def SetMinimumHeight(self, instance, *args):
         instance.height = instance.minimum_height
-    
+
 
     def RemoveFromLocal(self, instance):
         JsonUtils.DeleteFromJson(self.selectedRecipe.GetName(), JsonFiles.RECIPES)
         self.popupPane.dismiss()
-    
-
-    def LoadJson(self, file_name: str) -> dict:
-        return JsonUtils.LoadFromJson(file_name)
 
 
-    def OnUpdateCount(self, instance:Widget, recipeName:str, recipeCount:str, value:bool):
+    def LoadJson(self, file_path: str) -> dict:
+        with open(file_path, 'r') as file:
+            return json.load(file)
+
+
+    def OnUpdateCount(self, instance, recipeName:str, recipeCount:str, value:bool):
         if recipeCount == '' or not recipeCount.isnumeric():
             instance.text = None
 
@@ -130,20 +190,20 @@ class RecipeScreen(Screen):
     def Add_Recipe_To_Ingredient_List(self, recipe, mult):
         self.ingredient_dict[recipe.GetName()] = []
         for ingredient in recipe.GetIngredients():
-            nextIngr = self.convert_to_g_L(ingredient, mult)
+            nextIngredient = self.convert_to_g_L(ingredient, mult)
 
             # check to see if this ingredient is already in the list
             for ingr in self.ingredient_dict[recipe.GetName()]:
-                if ingr.GetName() == nextIngr.GetName():
+                if ingr.GetName() == nextIngredient.GetName():
                     # the ingredient already exists so add it to the existing item
-                    ingr.Add(nextIngr.GetAmount())
-                    nextIngr = None
+                    ingr.Add(nextIngredient.GetAmount())
+                    nextIngredient = None
                     break
 
             # if the item was found previously it will be null now
             # otherwise add it to the list
-            if nextIngr != None and float(nextIngr.GetAmount()) > 0:
-                self.ingredient_dict[recipe.GetName()].append(nextIngr)
+            if nextIngredient != None and float(nextIngredient.GetAmount()) > 0:
+                self.ingredient_dict[recipe.GetName()].append(nextIngredient)
  
 
     def convert_to_g_L(self, ingredient, multi = 1):

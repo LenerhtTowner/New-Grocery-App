@@ -1,14 +1,204 @@
 {
-    "list 1": {
-        "item 1": "item 1",
-        "item 2": "item 2",
-        "item 3": "item 3",
-        "item 4": "item 4"
+    "List1": {},
+    "List10": {
+        "Juicy Roasted Chicken": {
+            "__name": "Juicy Roasted Chicken",
+            "__ingredients": [
+                {
+                    "_Ingredient__name": "whole chicken, giblets removed",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "(3 pound)"
+                },
+                {
+                    "_Ingredient__name": "salt and black pepper to taste",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": ""
+                },
+                {
+                    "_Ingredient__name": "onion powder, or to taste",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "tablespoon"
+                },
+                {
+                    "_Ingredient__name": "butter or margarine",
+                    "_Ingredient__amount": 0.5,
+                    "_Ingredient__unit": "cup"
+                },
+                {
+                    "_Ingredient__name": "celery, leaves removed",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "stalk"
+                }
+            ],
+            "__method": "STEP 1:\nPreheat the oven to 350 degrees F (175 degrees C).\n\nSTEP 2:\nPlace chicken in a roasting pan; season generously inside and out with onion powder, salt, and pepper. Place 3 tablespoons of butter in chicken cavity; arrange dollops of remaining butter on the outside of chicken. Cut celery into 3 or 4 pieces; place in the chicken cavity.\n\nSTEP 3:\nBake chicken uncovered in the preheated oven until no longer pink at the bone and the juices run clear, about 1 hour and 15 minutes. An instant-read thermometer inserted into the thickest part of the thigh, near the bone, should read 165 degrees F (74 degrees C).\n\nSTEP 4:\nRemove from the oven and baste with drippings. Cover with aluminum foil and allow to rest for about 30 minutes before serving.\n"
+        },
+        "Chicken Tortilla Soup": {
+            "__name": "Chicken Tortilla Soup",
+            "__ingredients": [
+                {
+                    "_Ingredient__name": "olive oil",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "tablespoon"
+                },
+                {
+                    "_Ingredient__name": "onion, chopped",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "medium"
+                },
+                {
+                    "_Ingredient__name": "garlic, minced",
+                    "_Ingredient__amount": 3.0,
+                    "_Ingredient__unit": "cloves"
+                },
+                {
+                    "_Ingredient__name": "crushed tomatoes",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "(28 ounce) can"
+                },
+                {
+                    "_Ingredient__name": "condensed chicken broth",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "(10.5 ounce) can"
+                },
+                {
+                    "_Ingredient__name": "water",
+                    "_Ingredient__amount": 1.25,
+                    "_Ingredient__unit": "cups"
+                },
+                {
+                    "_Ingredient__name": "chili powder",
+                    "_Ingredient__amount": 2.0,
+                    "_Ingredient__unit": "teaspoons"
+                },
+                {
+                    "_Ingredient__name": "dried oregano",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "teaspoon"
+                },
+                {
+                    "_Ingredient__name": "black beans, rinsed and drained",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "(15 ounce) can"
+                },
+                {
+                    "_Ingredient__name": "boneless chicken breast halves, cooked and cut into bite-sized pieces",
+                    "_Ingredient__amount": 2.0,
+                    "_Ingredient__unit": "large"
+                },
+                {
+                    "_Ingredient__name": "whole corn kernels, cooked",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "cup"
+                },
+                {
+                    "_Ingredient__name": "white hominy",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "cup"
+                },
+                {
+                    "_Ingredient__name": "chopped green chile peppers",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "(4 ounce) can"
+                },
+                {
+                    "_Ingredient__name": "chopped fresh cilantro",
+                    "_Ingredient__amount": 0.25,
+                    "_Ingredient__unit": "cup"
+                },
+                {
+                    "_Ingredient__name": "crushed tortilla chips, or to taste",
+                    "_Ingredient__amount": 0.5,
+                    "_Ingredient__unit": "cup"
+                },
+                {
+                    "_Ingredient__name": "avocados, sliced, or to taste",
+                    "_Ingredient__amount": 2.0,
+                    "_Ingredient__unit": "medium"
+                },
+                {
+                    "_Ingredient__name": "shredded Monterey Jack cheese, or to taste",
+                    "_Ingredient__amount": 0.5,
+                    "_Ingredient__unit": "cup"
+                },
+                {
+                    "_Ingredient__name": "chopped green onions, or to taste",
+                    "_Ingredient__amount": 2.0,
+                    "_Ingredient__unit": "tablespoons"
+                }
+            ],
+            "__method": "STEP 1:\nHeat oil in a stockpot over medium heat. Add onion and garlic; saute until soft, about 5 minutes. Stir in crushed tomatoes, condensed broth, water, chili powder, and oregano; bring to a boil. Reduce heat and simmer for 5 to 10 minutes.\n\nSTEP 2:\nStir in black beans, cooked chicken, corn, hominy, chile peppers, and cilantro. Simmer for 10 minutes.\n\nSTEP 3:\nLadle soup into individual serving bowls, and top with crushed tortilla chips, avocado slices, Monterey Jack cheese, and green onions.\n"
+        },
+        "Spicy Thai Basil Chicken (Pad Krapow Gai)": {
+            "__name": "Spicy Thai Basil Chicken (Pad Krapow Gai)",
+            "__ingredients": [
+                {
+                    "_Ingredient__name": "chicken broth",
+                    "_Ingredient__amount": 0.33,
+                    "_Ingredient__unit": "cup"
+                },
+                {
+                    "_Ingredient__name": "oyster sauce",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "tablespoon"
+                },
+                {
+                    "_Ingredient__name": "soy sauce, or as needed",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "tablespoon"
+                },
+                {
+                    "_Ingredient__name": "fish sauce",
+                    "_Ingredient__amount": 2.0,
+                    "_Ingredient__unit": "teaspoons"
+                },
+                {
+                    "_Ingredient__name": "white sugar",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "teaspoon"
+                },
+                {
+                    "_Ingredient__name": "brown sugar",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "teaspoon"
+                },
+                {
+                    "_Ingredient__name": "vegetable oil",
+                    "_Ingredient__amount": 2.0,
+                    "_Ingredient__unit": "tablespoons"
+                },
+                {
+                    "_Ingredient__name": "skinless, boneless chicken thighs, coarsely chopped",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "pound"
+                },
+                {
+                    "_Ingredient__name": "sliced shallots",
+                    "_Ingredient__amount": 0.25,
+                    "_Ingredient__unit": "cup"
+                },
+                {
+                    "_Ingredient__name": "garlic, minced",
+                    "_Ingredient__amount": 4.0,
+                    "_Ingredient__unit": "cloves"
+                },
+                {
+                    "_Ingredient__name": "minced Thai chilies, Serrano, or other hot pepper",
+                    "_Ingredient__amount": 2.0,
+                    "_Ingredient__unit": "tablespoons"
+                },
+                {
+                    "_Ingredient__name": "very thinly sliced fresh basil leaves",
+                    "_Ingredient__amount": 1.0,
+                    "_Ingredient__unit": "cup"
+                },
+                {
+                    "_Ingredient__name": "hot cooked rice",
+                    "_Ingredient__amount": 2.0,
+                    "_Ingredient__unit": "cups"
+                }
+            ],
+            "__method": "STEP 1:\nWhisk chicken broth, oyster sauce, soy sauce, fish sauce, white sugar, and brown sugar together in a bowl until well blended.\n\nSTEP 2:\nHeat large skillet over high heat. Drizzle in oil. Add chicken and stir fry until it loses its raw color, 2 to 3 minutes. Stir in shallots, garlic, and sliced chilies. Continue cooking on high heat until some of the juices start to caramelize in the bottom of the pan, about 2 or 3 more minutes. Add about a tablespoon of the sauce mixture to the skillet; cook and stir until sauce begins to caramelize, about 1 minute.\n\nSTEP 3:\nPour in the rest of the sauce. Cook and stir until sauce has deglazed the bottom of the pan. Continue to cook until sauce glazes onto the meat, 1 or 2 more minutes. Remove from heat.\n\nSTEP 4:\nStir in basil. Cook and stir until basil is wilted, about 20 seconds. Serve with rice.\n"
+        }
     },
-    "list 2": {
-        "item 1": "item 1",
-        "item 2": "item 2",
-        "item 3": "item 3",
-        "item 4": "item 4"
-    }
+    "list11": {}
 }
